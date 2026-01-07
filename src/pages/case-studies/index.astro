@@ -1,0 +1,233 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Section from '../../components/Section.astro';
+import Card from '../../components/Card.astro';
+
+const caseStudies = await getCollection('case-studies');
+const sortedCaseStudies = caseStudies.sort((a, b) => b.data.year - a.data.year);
+
+const normalizeCategory = (value: string) => value.trim().toLowerCase();
+
+// Derive categories from real data (sector)
+const categoryMap = new Map<string, string>();
+for (const cs of sortedCaseStudies) {
+	const raw = cs.data.sector ?? '';
+	const norm = normalizeCategory(raw);
+	if (!norm) continue;
+	if (!categoryMap.has(norm)) categoryMap.set(norm, raw.trim());
+}
+const categories = Array.from(categoryMap.entries())
+	.map(([value, label]) => ({ value, label }))
+	.sort((a, b) => a.label.localeCompare(b.label, 'it'));
+---
+
+<Layout 
+	title="Case Studies - Portfolio di progetti web"
+	description="Case studies di progetti web completati: design, sviluppo, accessibilità e performance. Ogni progetto racconta obiettivi, scelte e risultati."
+	canonical="https://www.lucasanna.eu/case-studies/"
+>
+	<Header />
+	<main>
+		<Section>
+			<div class="reveal mb-12 md:mb-16">
+				<div class="max-w-3xl">
+					<h1 
+						class="font-bold mb-6"
+						style="font-size: var(--text-5xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight); line-height: var(--line-height-tight);"
+					>
+						Case Studies
+					</h1>
+					<p 
+						style="font-size: var(--text-xl); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
+					>
+						Ogni progetto nasce da un obiettivo chiaro e si evolve attraverso scelte consapevoli. Qui documentiamo processi, sfide e risultati, senza numeri inventati ma con onestà su cosa ha funzionato e cosa rifaremmo oggi.
+					</p>
+				</div>
+			</div>
+
+			<!-- Category filters (no tag filters) -->
+			{categories.length > 0 && (
+				<div
+					class="reveal mb-12 md:mb-16 pb-8 md:pb-12"
+					style="border-bottom: 1px solid rgb(var(--border) / 0.15);"
+					data-case-studies-filters
+				>
+					<p class="mb-4" style="font-size: var(--text-sm); color: rgb(var(--muted)); font-weight: var(--font-weight-medium);">
+						Filtra per categoria:
+					</p>
+					<div class="filterChips">
+						<button type="button" class="filterChip" aria-pressed="true" data-cat="all">
+							Tutti
+						</button>
+						{categories.map((cat) => (
+							<button type="button" class="filterChip" aria-pressed="false" data-cat={cat.value}>
+								{cat.label}
+							</button>
+						))}
+					</div>
+					<p class="mt-4" style="font-size: var(--text-sm); color: rgb(var(--muted));" aria-live="polite">
+						<span data-results-count>{sortedCaseStudies.length}</span> progetti
+					</p>
+				</div>
+			)}
+
+			<div class="stagger grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8" data-case-studies-grid>
+				{sortedCaseStudies.map((caseStudy, index) => (
+					<Card
+						href={`/case-studies/${caseStudy.slug}`}
+						title={caseStudy.data.title}
+						sector={caseStudy.data.sector}
+						year={caseStudy.data.year}
+						tags={caseStudy.data.tags}
+						variant={index === 0 ? 'featured' : 'default'}
+						dataCategory={normalizeCategory(caseStudy.data.sector)}
+						cover={caseStudy.data.cover}
+						data-hidden={index >= 6 ? 'true' : 'false'}
+					/>
+				))}
+			</div>
+
+			{sortedCaseStudies.length > 6 && (
+				<div class="mt-12 md:mt-16 text-center">
+					<button 
+						type="button"
+						class="button-link button-secondary button-md"
+						data-load-more
+						aria-label="Carica altri case studies"
+					>
+						Carica altri
+					</button>
+				</div>
+			)}
+
+			<script type="module">
+				const filtersRoot = document.querySelector('[data-case-studies-filters]');
+				const grid = document.querySelector('[data-case-studies-grid]');
+				const loadMoreBtn = document.querySelector('[data-load-more]');
+				const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+				// Load more functionality
+				if (loadMoreBtn && grid) {
+					const cards = Array.from(grid.querySelectorAll('[data-case-card]'));
+					let visibleCount = 6;
+					const step = 6;
+
+					function updateLoadMoreButton() {
+						const hiddenCards = cards.filter(card => card.dataset.hidden === 'true' && !card.hidden);
+						loadMoreBtn.hidden = hiddenCards.length === 0;
+					}
+
+					loadMoreBtn.addEventListener('click', () => {
+						const hiddenCards = cards.filter(card => card.dataset.hidden === 'true');
+						const toShow = hiddenCards.slice(0, step);
+						
+						toShow.forEach(card => {
+							card.dataset.hidden = 'false';
+							card.hidden = false;
+						});
+						
+						visibleCount += step;
+						updateLoadMoreButton();
+					});
+
+					// Initially hide cards beyond first 6
+					cards.forEach((card, index) => {
+						if (index >= 6) {
+							card.hidden = true;
+						}
+					});
+					
+					updateLoadMoreButton();
+				}
+
+				// Filter functionality
+				if (filtersRoot && grid) {
+					const buttons = Array.from(filtersRoot.querySelectorAll('button[data-cat]'));
+					const cards = Array.from(grid.querySelectorAll('[data-case-card]'));
+					const countEl = filtersRoot.querySelector('[data-results-count]');
+
+					function setPressed(activeCat) {
+						for (const btn of buttons) {
+							const isActive = btn.dataset.cat === activeCat;
+							btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+						}
+					}
+
+					function applyFilter(activeCat, { updateUrl } = { updateUrl: true }) {
+						setPressed(activeCat);
+
+						let visibleCount = 0;
+						let shownCount = 0;
+						for (const el of cards) {
+							const cat = (el.dataset.category || '').trim();
+							const show = activeCat === 'all' || cat === activeCat;
+							const isHidden = el.dataset.hidden === 'true';
+							
+							if (show && !isHidden) {
+								el.hidden = false;
+								visibleCount++;
+								shownCount++;
+							} else if (show && isHidden) {
+								el.hidden = true;
+								visibleCount++;
+							} else {
+								el.hidden = true;
+							}
+						}
+
+						if (countEl) countEl.textContent = String(visibleCount);
+
+						// Show/hide load more button based on filtered hidden cards
+						if (loadMoreBtn) {
+							const hiddenVisible = cards.filter(c => {
+								const cat = (c.dataset.category || '').trim();
+								const matches = activeCat === 'all' || cat === activeCat;
+								return matches && c.dataset.hidden === 'true';
+							});
+							loadMoreBtn.hidden = hiddenVisible.length === 0;
+						}
+
+						if (updateUrl) {
+							const url = new URL(window.location.href);
+							if (activeCat === 'all') url.searchParams.delete('cat');
+							else url.searchParams.set('cat', activeCat);
+							window.history.replaceState({}, '', url.toString());
+						}
+
+						if (prefersReducedMotion) return;
+					}
+
+					function normalize(value) {
+						return String(value || '').trim().toLowerCase();
+					}
+
+					function initFromUrl() {
+						const url = new URL(window.location.href);
+						const cat = normalize(url.searchParams.get('cat'));
+						const available = new Set(buttons.map((b) => b.dataset.cat));
+						if (cat && available.has(cat)) applyFilter(cat, { updateUrl: false });
+						else applyFilter('all', { updateUrl: false });
+					}
+
+					for (const btn of buttons) {
+						btn.addEventListener('click', () => {
+							applyFilter(btn.dataset.cat || 'all');
+						});
+					}
+
+					initFromUrl();
+				}
+			</script>
+
+			<style>
+				[data-hidden="true"] {
+					display: none !important;
+				}
+			</style>
+		</Section>
+	</main>
+	<Footer />
+</Layout>

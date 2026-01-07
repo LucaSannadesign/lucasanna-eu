@@ -1,22 +1,192 @@
+---
+import '../styles/global.css';
+import ScrollToTop from '../components/ScrollToTop.astro';
+
+interface Props {
+	title?: string;
+	description?: string;
+	canonical?: string;
+	ogImage?: string;
+}
+
+const { 
+	title = 'Luca Sanna - Portfolio', 
+	description = 'Portfolio personale di Luca Sanna. Case studies, metodo di lavoro e contatti.',
+	canonical,
+	ogImage = 'https://www.lucasanna.eu/og-image.jpg'
+} = Astro.props;
+
+const siteUrl = 'https://www.lucasanna.eu';
+const finalCanonical = canonical || `${siteUrl}${Astro.url.pathname}`;
+const finalTitle = title.includes('Luca Sanna') ? title : `${title} | Luca Sanna`;
+
+// Robots meta: noindex on preview/dev, index on production
+const vercelEnv = import.meta.env.VERCEL_ENV || import.meta.env.MODE;
+const isProduction = vercelEnv === 'production';
+const robotsContent = isProduction ? 'index,follow' : 'noindex,nofollow';
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="it">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="192x192" href="/favicons/icon-192x192.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+		<meta name="msapplication-TileImage" content="/favicons/mstile-270x270.png" />
+		<meta name="msapplication-TileColor" content="#eb3422" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<meta name="robots" content={robotsContent} />
+		<meta name="theme-color" content="#eb3422" />
+		<title>{finalTitle}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={finalCanonical} />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={finalCanonical} />
+		<meta property="og:title" content={finalTitle} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={ogImage} />
+		
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content={finalCanonical} />
+		<meta name="twitter:title" content={finalTitle} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={ogImage} />
 	</head>
-	<body>
+	<body class="antialiased" style="background: rgb(var(--paper)); color: rgb(var(--ink));">
 		<slot />
+		<ScrollToTop />
+		<script is:inline>
+			(function() {
+				const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+				
+				// Header auto-hide
+				function initHeaderAutoHide() {
+					const header = document.querySelector('[data-site-header]');
+					if (!header) return;
+
+					if (prefersReducedMotion) {
+						header.classList.remove('is-hidden');
+						return;
+					}
+
+					let lastScrollY = window.scrollY;
+					let ticking = false;
+					const SCROLL_THRESHOLD = 20;
+					const SCROLL_DELTA_THRESHOLD = 10;
+
+					function updateHeader() {
+						if (!header) return;
+
+						const currentScrollY = window.scrollY;
+						const scrollDelta = currentScrollY - lastScrollY;
+
+						// Always show header near top
+						if (currentScrollY < SCROLL_THRESHOLD) {
+							header.classList.remove('is-hidden');
+							lastScrollY = currentScrollY;
+							ticking = false;
+							return;
+						}
+
+						// Only update if delta is significant (avoid flicker)
+						if (Math.abs(scrollDelta) < SCROLL_DELTA_THRESHOLD) {
+							ticking = false;
+							return;
+						}
+
+						// Hide on scroll down, show on scroll up
+						if (scrollDelta > 0) {
+							// Scrolling down
+							header.classList.add('is-hidden');
+						} else {
+							// Scrolling up
+							header.classList.remove('is-hidden');
+						}
+
+						lastScrollY = currentScrollY;
+						ticking = false;
+					}
+
+					function onScroll() {
+						if (!ticking) {
+							window.requestAnimationFrame(updateHeader);
+							ticking = true;
+						}
+					}
+
+					window.addEventListener('scroll', onScroll, { passive: true });
+					// Initial state
+					updateHeader();
+				}
+
+				// Scroll reveal
+				function initReveal() {
+					// Support both .reveal class and [data-reveal] attribute
+					const revealElements = document.querySelectorAll('.reveal, [data-reveal]');
+					
+					if (prefersReducedMotion) {
+						// Show all elements immediately
+						revealElements.forEach((el) => {
+							if (el.classList.contains('reveal')) {
+								el.classList.add('is-visible');
+							} else {
+								el.classList.add('is-revealed');
+							}
+						});
+						return;
+					}
+
+					const observerOptions = {
+						rootMargin: '0px 0px -10% 0px',
+						threshold: 0.1,
+					};
+
+					const observer = new IntersectionObserver((entries) => {
+						entries.forEach((entry) => {
+							if (entry.isIntersecting) {
+								// Support both .reveal and [data-reveal]
+								if (entry.target.classList.contains('reveal')) {
+									entry.target.classList.add('is-visible');
+								} else {
+									entry.target.classList.add('is-revealed');
+								}
+								// Unobserve after revealing (once)
+								observer.unobserve(entry.target);
+							}
+						});
+					}, observerOptions);
+
+					// Observe all reveal elements
+					revealElements.forEach((el) => {
+						observer.observe(el);
+					});
+
+					// Handle stagger delays for grid items
+					document.querySelectorAll('.stagger > .reveal, .stagger > [data-reveal]').forEach((el, index) => {
+						const delay = Math.min(index * 40, 120); // Max 120ms delay
+						el.style.transitionDelay = delay + 'ms';
+					});
+				}
+
+				// Initialize
+				if (document.readyState === 'loading') {
+					document.addEventListener('DOMContentLoaded', () => {
+						initHeaderAutoHide();
+						initReveal();
+					});
+				} else {
+					initHeaderAutoHide();
+					initReveal();
+				}
+			})();
+		</script>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

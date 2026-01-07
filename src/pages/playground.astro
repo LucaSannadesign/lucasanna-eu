@@ -1,0 +1,206 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ButtonLink from '../components/ButtonLink.astro';
+import Section from '../components/Section.astro';
+import Card from '../components/Card.astro';
+import { getCollection } from 'astro:content';
+
+const caseStudies = await getCollection('case-studies');
+const sampleCaseStudy = caseStudies[0];
+---
+
+<Layout 
+	title="Playground - Design System"
+	description="Playground per testare tutte le varianti del design system."
+>
+	<Header />
+	<main>
+		<!-- Hero Example -->
+		<section class="relative pt-32 pb-24 md:pt-40 md:pb-32" style="background: linear-gradient(to bottom, var(--color-base), var(--color-base-alt));">
+			<div class="container-unified relative z-10">
+				<h1 
+					class="font-bold mb-6"
+					style="font-size: var(--text-6xl); color: var(--color-text); letter-spacing: var(--letter-spacing-tight); line-height: var(--line-height-tight);"
+				>
+					Design System Playground
+				</h1>
+				<div class="decorative-line mb-8"></div>
+				<p 
+					class="mb-10"
+					style="font-size: var(--text-xl); color: var(--color-text-secondary); line-height: var(--line-height-relaxed);"
+				>
+					Tutte le varianti e componenti del sistema gallery/editorial.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4">
+					<ButtonLink href="#" variant="primary" size="lg">Primary Button</ButtonLink>
+					<ButtonLink href="#" variant="secondary" size="lg">Secondary Button</ButtonLink>
+				</div>
+			</div>
+		</section>
+
+		<!-- Button Variants -->
+		<Section>
+			<h2 class="text-3xl font-semibold mb-8" style="color: var(--color-text);">Button Variants</h2>
+			<div class="flex flex-wrap gap-4">
+				<ButtonLink href="#" variant="primary" size="sm">Primary Small</ButtonLink>
+				<ButtonLink href="#" variant="primary" size="md">Primary Medium</ButtonLink>
+				<ButtonLink href="#" variant="primary" size="lg">Primary Large</ButtonLink>
+			</div>
+			<div class="flex flex-wrap gap-4 mt-4">
+				<ButtonLink href="#" variant="secondary" size="sm">Secondary Small</ButtonLink>
+				<ButtonLink href="#" variant="secondary" size="md">Secondary Medium</ButtonLink>
+				<ButtonLink href="#" variant="secondary" size="lg">Secondary Large</ButtonLink>
+			</div>
+			<div class="flex flex-wrap gap-4 mt-4">
+				<ButtonLink href="#" variant="ghost" size="sm">Ghost Small</ButtonLink>
+				<ButtonLink href="#" variant="ghost" size="md">Ghost Medium</ButtonLink>
+				<ButtonLink href="#" variant="ghost" size="lg">Ghost Large</ButtonLink>
+			</div>
+		</Section>
+
+		<!-- Editorial Cards -->
+		<Section variant="alt">
+			<h2 class="text-3xl font-semibold mb-8" style="color: var(--color-text);">Editorial Navigation Cards</h2>
+			<div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
+				<a href="#" class="card-editorial md:col-span-5 group" style="border-left: 3px solid var(--color-accent);">
+					<h2 
+						class="font-semibold mb-4 transition-colors"
+						style="font-size: var(--text-3xl); color: var(--color-text); letter-spacing: var(--letter-spacing-tight);"
+					>
+						Card Featured
+					</h2>
+					<p 
+						class="mb-4"
+						style="color: var(--color-text-secondary); line-height: var(--line-height-relaxed);"
+					>
+						Esempio di card editoriale con border-left accent.
+					</p>
+					<span class="link-editorial inline-block" style="font-size: var(--text-sm); color: var(--color-text);">Esplora →</span>
+				</a>
+				<a href="#" class="card-editorial md:col-span-4 group">
+					<h2 
+						class="font-semibold mb-4 transition-colors"
+						style="font-size: var(--text-3xl); color: var(--color-text); letter-spacing: var(--letter-spacing-tight);"
+					>
+						Card Standard
+					</h2>
+					<p 
+						class="mb-4"
+						style="color: var(--color-text-secondary); line-height: var(--line-height-relaxed);"
+					>
+						Card editoriale standard con hover effect.
+					</p>
+					<span class="link-editorial inline-block" style="font-size: var(--text-sm); color: var(--color-text);">Scopri →</span>
+				</a>
+				<a href="#" class="card-editorial md:col-span-3 group">
+					<h2 
+						class="font-semibold mb-4 transition-colors"
+						style="font-size: var(--text-3xl); color: var(--color-text); letter-spacing: var(--letter-spacing-tight);"
+					>
+						Card Compact
+					</h2>
+					<p 
+						class="mb-4"
+						style="color: var(--color-text-secondary); line-height: var(--line-height-relaxed);"
+					>
+						Card compatta.
+					</p>
+					<span class="link-editorial inline-block" style="font-size: var(--text-sm); color: var(--color-text);">Vai →</span>
+				</a>
+			</div>
+		</Section>
+
+		<!-- Case Study Cards -->
+		<Section>
+			<h2 class="text-3xl font-semibold mb-8" style="color: var(--color-text);">Case Study Cards</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+				{sampleCaseStudy && (
+					<Card
+						href={`/case-studies/${sampleCaseStudy.slug}`}
+						title={sampleCaseStudy.data.title}
+						sector={sampleCaseStudy.data.sector}
+						year={sampleCaseStudy.data.year}
+						tags={sampleCaseStudy.data.tags}
+						variant="featured"
+					/>
+				)}
+				<Card
+					href="#"
+					title="Sample Case Study Title"
+					sector="Settore"
+					year={2024}
+					tags={["Tag 1", "Tag 2", "Tag 3"]}
+					variant="default"
+				/>
+				<Card
+					href="#"
+					title="Another Case Study"
+					sector="Altro Settore"
+					year={2023}
+					tags={["Design", "Development"]}
+					variant="default"
+				/>
+			</div>
+		</Section>
+
+		<!-- Typography Scale -->
+		<Section narrow>
+			<h2 class="text-3xl font-semibold mb-8" style="color: var(--color-text);">Typography Scale</h2>
+			<div class="space-y-6">
+				<h1 style="font-size: var(--text-5xl);">Heading 1 - 5xl</h1>
+				<h2 style="font-size: var(--text-4xl);">Heading 2 - 4xl</h2>
+				<h3 style="font-size: var(--text-3xl);">Heading 3 - 3xl</h3>
+				<h4 style="font-size: var(--text-2xl);">Heading 4 - 2xl</h4>
+				<p style="font-size: var(--text-lg); color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
+					Body Large - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
+				</p>
+				<p style="font-size: var(--text-base); color: var(--color-text-secondary); line-height: var(--line-height-normal);">
+					Body Base - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
+				</p>
+				<p style="font-size: var(--text-sm); color: var(--color-text-tertiary);">Small Text - 14px</p>
+			</div>
+		</Section>
+
+		<!-- Form Elements -->
+		<Section narrow>
+			<h2 class="text-3xl font-semibold mb-8" style="color: var(--color-text);">Form Elements</h2>
+			<form class="space-y-6">
+				<div>
+					<label for="name" class="block text-sm font-medium mb-2" style="color: var(--color-text);">Nome</label>
+					<input 
+						type="text" 
+						id="name" 
+						class="w-full px-4 py-3 border transition-colors"
+						style="border-color: var(--color-border); background: var(--color-surface); color: var(--color-text);"
+					/>
+				</div>
+				<div>
+					<label for="email" class="block text-sm font-medium mb-2" style="color: var(--color-text);">Email</label>
+					<input 
+						type="email" 
+						id="email" 
+						class="w-full px-4 py-3 border transition-colors"
+						style="border-color: var(--color-border); background: var(--color-surface); color: var(--color-text);"
+					/>
+				</div>
+				<ButtonLink href="#" variant="primary">Invia</ButtonLink>
+			</form>
+		</Section>
+
+		<!-- Decorative Elements -->
+		<Section narrow>
+			<h2 class="text-3xl font-semibold mb-8" style="color: var(--color-text);">Decorative Elements</h2>
+			<div class="space-y-8">
+				<div class="decorative-line"></div>
+				<div class="flex items-center gap-2">
+					<span class="decorative-dot"></span>
+					<span class="decorative-dot"></span>
+					<span class="decorative-dot"></span>
+				</div>
+			</div>
+		</Section>
+	</main>
+	<Footer />
+</Layout>

@@ -1,0 +1,177 @@
+---
+import { getEntryBySlug, getCollection, type CollectionEntry } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Section from '../../components/Section.astro';
+
+export async function getStaticPaths() {
+	const caseStudies = await getCollection('case-studies');
+	return caseStudies.map((caseStudy) => ({
+		params: { slug: caseStudy.slug },
+	}));
+}
+
+export const prerender = true;
+
+const { slug } = Astro.params;
+
+if (!slug) {
+	return new Response(null, {
+		status: 404,
+		statusText: 'Not Found'
+	});
+}
+
+const caseStudy: CollectionEntry<'case-studies'> | undefined = await getEntryBySlug('case-studies', slug);
+
+if (!caseStudy) {
+	return new Response(null, {
+		status: 404,
+		statusText: 'Not Found'
+	});
+}
+
+const { Content } = await caseStudy.render();
+const canonical = caseStudy.data.externalUrl ? undefined : `https://www.lucasanna.eu/case-studies/${caseStudy.slug}/`;
+---
+
+<Layout 
+	title={`${caseStudy.data.title} - Case Study`}
+	description={caseStudy.data.excerpt}
+	canonical={canonical}
+>
+	<Header />
+	<main>
+		<Section narrow>
+			<!-- Breadcrumb -->
+			<nav class="mb-8 md:mb-12" aria-label="Breadcrumb">
+				<ol class="flex flex-wrap items-center gap-2" role="list" style="font-size: var(--text-sm); color: rgb(var(--muted));">
+					<li><a href="/" class="link-editorial transition-colors">Home</a></li>
+					<li style="color: rgb(var(--border) / 0.3);">/</li>
+					<li><a href="/case-studies" class="link-editorial transition-colors">Case Studies</a></li>
+					<li style="color: rgb(var(--border) / 0.3);">/</li>
+					<li style="color: rgb(var(--ink)); font-weight: var(--font-weight-medium);">{caseStudy.data.title}</li>
+				</ol>
+			</nav>
+			
+			<article>
+				{caseStudy.data.cover && (
+					<div class="case-study-hero mb-12 md:mb-16">
+						<img 
+							src={caseStudy.data.cover} 
+							alt={`Progetto ${caseStudy.data.title}`}
+							loading="eager"
+							decoding="async"
+						/>
+					</div>
+				)}
+				<header class="mb-12 md:mb-16 pb-8 md:pb-12" style="border-bottom: 1px solid rgb(var(--border) / 0.15);">
+					<h1 
+						class="font-bold mb-4"
+						style="font-size: var(--text-5xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight); line-height: var(--line-height-tight);"
+					>
+						{caseStudy.data.title}
+					</h1>
+					<p 
+						class="mb-6"
+						style="font-size: var(--text-xl); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
+					>
+						{caseStudy.data.excerpt}
+					</p>
+					<div class="flex flex-wrap items-center gap-3 md:gap-4 mb-6" style="font-size: var(--text-sm); color: rgb(var(--muted));">
+						<span><strong style="color: rgb(var(--ink)); font-weight: var(--font-weight-semibold);">Cliente:</strong> {caseStudy.data.client}</span>
+						<span style="color: rgb(var(--border) / 0.3);">•</span>
+						<span><strong style="color: rgb(var(--ink)); font-weight: var(--font-weight-semibold);">Settore:</strong> {caseStudy.data.sector}</span>
+						<span style="color: rgb(var(--border) / 0.3);">•</span>
+						<span><strong style="color: rgb(var(--ink)); font-weight: var(--font-weight-semibold);">Anno:</strong> {caseStudy.data.year}</span>
+					</div>
+					{caseStudy.data.tags.length > 0 && (
+						<div class="flex flex-wrap gap-2">
+							{caseStudy.data.tags.map(tag => (
+								<span 
+									style="font-size: var(--text-xs); padding: var(--space-1) var(--space-3); background: rgb(var(--border) / 0.1); color: rgb(var(--muted)); font-weight: var(--font-weight-medium); border-radius: var(--radius-sm);"
+								>
+									{tag}
+								</span>
+							))}
+						</div>
+					)}
+				</header>
+
+				{Content && (
+					<div class="space-y-16 md:space-y-20" style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);">
+						<Content />
+					</div>
+				)}
+
+				{caseStudy.data.stack && caseStudy.data.stack.length > 0 && (
+					<div class="mt-16 md:mt-20 pt-8 md:pt-12" style="border-top: 1px solid rgb(var(--border) / 0.15);">
+						<h2 
+							class="font-semibold mb-4"
+							style="font-size: var(--text-2xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
+						>
+							Stack tecnologico
+						</h2>
+						<ul class="flex flex-wrap gap-2" style="font-size: var(--text-base); color: rgb(var(--muted));">
+							{caseStudy.data.stack.map(tech => (
+								<li style="padding: var(--space-1) var(--space-3); background: rgb(var(--border) / 0.1); border-radius: var(--radius-sm);">
+									{tech}
+								</li>
+							))}
+						</ul>
+					</div>
+				)}
+
+				{caseStudy.data.externalUrl && (
+					<div class="mt-8 pt-8" style="border-top: 1px solid rgb(var(--border) / 0.15);">
+						<p style="font-size: var(--text-lg);">
+							<a 
+								href={caseStudy.data.externalUrl} 
+								target="_blank" 
+								rel="noopener noreferrer"
+								class="link-editorial transition-colors"
+								style="color: rgb(var(--ink)); font-weight: var(--font-weight-medium);"
+							>
+								Visita il sito →
+							</a>
+						</p>
+					</div>
+				)}
+			</article>
+
+			<style>
+				.case-study-hero {
+					aspect-ratio: 16 / 9;
+					overflow: hidden;
+					border-radius: var(--radius-md);
+					background: rgb(var(--border) / 0.1);
+				}
+				.case-study-hero img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			</style>
+
+			<!-- CTA Finale -->
+			<div 
+				class="mt-16 md:mt-20 pt-12 md:pt-16"
+				style="border-top: 1px solid rgb(var(--border) / 0.15); background: rgb(var(--accent) / 0.03); margin-left: calc(-1 * var(--space-6)); margin-right: calc(-1 * var(--space-6)); padding-left: var(--space-6); padding-right: var(--space-6); padding-bottom: var(--space-8);"
+			>
+				<div class="max-w-3xl mx-auto text-center">
+					<p 
+						class="mb-6"
+						style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
+					>
+						Per un preventivo e dettagli dei servizi: <a href="https://www.lswebagency.com" class="link-editorial" style="color: rgb(var(--ink)); font-weight: var(--font-weight-medium);">LS Web Agency</a>.
+					</p>
+					<p style="font-size: var(--text-base); color: rgb(var(--muted));">
+						<a href="/contatti" class="link-editorial">Contatti per collaborazioni</a>
+					</p>
+				</div>
+			</div>
+		</Section>
+	</main>
+	<Footer />
+</Layout>

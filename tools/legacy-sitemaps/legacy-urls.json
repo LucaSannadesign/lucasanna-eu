@@ -1,0 +1,370 @@
+{
+  "stats": {
+    "total": 51,
+    "COMMERCIALE": 8,
+    "PORTFOLIO": 37,
+    "PERSONA": 2,
+    "UTILITY": 1,
+    "ALTRO": 3
+  },
+  "urls": [
+    {
+      "url": "https://www.lucasanna.eu/",
+      "path": "/",
+      "category": "PERSONA",
+      "action": "KEEP",
+      "destination": "/"
+    },
+    {
+      "url": "https://www.lucasanna.eu/5-motivi-scegliere-agenzia-web/",
+      "path": "/5-motivi-scegliere-agenzia-web/",
+      "category": "ALTRO",
+      "action": "REVIEW",
+      "destination": null
+    },
+    {
+      "url": "https://www.lucasanna.eu/chi-sono-luca-sanna/",
+      "path": "/chi-sono-luca-sanna/",
+      "category": "PERSONA",
+      "action": "KEEP",
+      "destination": "/metodo/",
+      "note": "REVIEW - verificare se esiste pagina equivalente"
+    },
+    {
+      "url": "https://www.lucasanna.eu/creazione-siti-web-ecommerce/",
+      "path": "/creazione-siti-web-ecommerce/",
+      "category": "COMMERCIALE",
+      "action": "REDIRECT",
+      "destination": "https://www.lswebagency.com/"
+    },
+    {
+      "url": "https://www.lucasanna.eu/creazione-siti-web-sassari-sardegna/",
+      "path": "/creazione-siti-web-sassari-sardegna/",
+      "category": "COMMERCIALE",
+      "action": "REDIRECT",
+      "destination": "https://www.lswebagency.com/"
+    },
+    {
+      "url": "https://www.lucasanna.eu/grafica-sassari-design-unico-per-il-successo/",
+      "path": "/grafica-sassari-design-unico-per-il-successo/",
+      "category": "COMMERCIALE",
+      "action": "REDIRECT",
+      "destination": "https://www.lswebagency.com/"
+    },
+    {
+      "url": "https://www.lucasanna.eu/grafica-webdesign-sassari/",
+      "path": "/grafica-webdesign-sassari/",
+      "category": "COMMERCIALE",
+      "action": "REDIRECT",
+      "destination": "https://www.lswebagency.com/"
+    },
+    {
+      "url": "https://www.lucasanna.eu/grazie/",
+      "path": "/grazie/",
+      "category": "ALTRO",
+      "action": "REVIEW",
+      "destination": null
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio-category/e-commerce/",
+      "path": "/portfolio-category/e-commerce/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio-category/grafica/",
+      "path": "/portfolio-category/grafica/",
+      "category": "COMMERCIALE",
+      "action": "REDIRECT",
+      "destination": "https://www.lswebagency.com/"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio-category/logo-design/",
+      "path": "/portfolio-category/logo-design/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio-category/web-design/",
+      "path": "/portfolio-category/web-design/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio-tag/abbigliamento-donna/",
+      "path": "/portfolio-tag/abbigliamento-donna/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio-tag/arte/",
+      "path": "/portfolio-tag/arte/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio-tag/blog/",
+      "path": "/portfolio-tag/blog/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio-tag/chiaroveggenza/",
+      "path": "/portfolio-tag/chiaroveggenza/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio-tag/counselor/",
+      "path": "/portfolio-tag/counselor/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio-tag/dentista/",
+      "path": "/portfolio-tag/dentista/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio-tag/eventi/",
+      "path": "/portfolio-tag/eventi/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio-tag/hemp/",
+      "path": "/portfolio-tag/hemp/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio-tag/immobiliare/",
+      "path": "/portfolio-tag/immobiliare/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio-tag/musica/",
+      "path": "/portfolio-tag/musica/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio-tag/natura/",
+      "path": "/portfolio-tag/natura/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio-tag/psicologa/",
+      "path": "/portfolio-tag/psicologa/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio-tag/ristorante/",
+      "path": "/portfolio-tag/ristorante/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio-tag/sport/",
+      "path": "/portfolio-tag/sport/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio/abacos-womens-clothing-ecommerce/",
+      "path": "/portfolio/abacos-womens-clothing-ecommerce/",
+      "category": "COMMERCIALE",
+      "action": "REDIRECT",
+      "destination": "https://www.lswebagency.com/"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio/asd-sandalyon-sassari/",
+      "path": "/portfolio/asd-sandalyon-sassari/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio/canapalandia/",
+      "path": "/portfolio/canapalandia/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio/cd-cover-the-temponauts/",
+      "path": "/portfolio/cd-cover-the-temponauts/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio/dentista-digitale/",
+      "path": "/portfolio/dentista-digitale/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio/even-flow-band-web-site/",
+      "path": "/portfolio/even-flow-band-web-site/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio/le-case-immobiliare/",
+      "path": "/portfolio/le-case-immobiliare/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio/logo-canaplandia/",
+      "path": "/portfolio/logo-canaplandia/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio/logo-top-wild/",
+      "path": "/portfolio/logo-top-wild/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio/luca-sanna-artista-contemporaneo/",
+      "path": "/portfolio/luca-sanna-artista-contemporaneo/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio/marcella-masia-artista/",
+      "path": "/portfolio/marcella-masia-artista/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio/noi-e-biasi/",
+      "path": "/portfolio/noi-e-biasi/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio/noi-e-dessy/",
+      "path": "/portfolio/noi-e-dessy/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio/patrizia-sabbadin-counselor-sassari/",
+      "path": "/portfolio/patrizia-sabbadin-counselor-sassari/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio/premio-arte/",
+      "path": "/portfolio/premio-arte/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio/realizzazione-logo-premio-arte/",
+      "path": "/portfolio/realizzazione-logo-premio-arte/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio/sardegna-non-solo-eventi/",
+      "path": "/portfolio/sardegna-non-solo-eventi/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio/satollo-marlow/",
+      "path": "/portfolio/satollo-marlow/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio/soluzioni-digitali-intuitive-per-la-chiaroveggenza-estrella-yoruba-tarot/",
+      "path": "/portfolio/soluzioni-digitali-intuitive-per-la-chiaroveggenza-estrella-yoruba-tarot/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio/top-wild-viaggi-avventurosi-per-giovani-backpackers/",
+      "path": "/portfolio/top-wild-viaggi-avventurosi-per-giovani-backpackers/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/portfolio/valeriachelo-psicologa-sassari/",
+      "path": "/portfolio/valeriachelo-psicologa-sassari/",
+      "category": "PORTFOLIO",
+      "action": "REVIEW",
+      "destination": "TODO"
+    },
+    {
+      "url": "https://www.lucasanna.eu/privacy-policy/",
+      "path": "/privacy-policy/",
+      "category": "UTILITY",
+      "action": "KEEP",
+      "destination": "/privacy-policy/"
+    },
+    {
+      "url": "https://www.lucasanna.eu/realizzazione-siti-web-sardegna/",
+      "path": "/realizzazione-siti-web-sardegna/",
+      "category": "COMMERCIALE",
+      "action": "REDIRECT",
+      "destination": "https://www.lswebagency.com/"
+    },
+    {
+      "url": "https://www.lucasanna.eu/servizi/",
+      "path": "/servizi/",
+      "category": "COMMERCIALE",
+      "action": "REDIRECT",
+      "destination": "https://www.lswebagency.com/"
+    },
+    {
+      "url": "https://www.lucasanna.eu/web-design-reponsive/",
+      "path": "/web-design-reponsive/",
+      "category": "ALTRO",
+      "action": "REVIEW",
+      "destination": null
+    }
+  ]
+}

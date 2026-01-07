@@ -1,0 +1,30 @@
+---
+interface Props {
+	class?: string;
+	narrow?: boolean;
+	variant?: 'default' | 'alt' | 'dark';
+}
+
+const { class: className = '', narrow = false, variant = 'default' } = Astro.props;
+const maxWidth = narrow ? 'max-w-3xl' : 'max-w-[var(--container-2xl)]';
+
+const variantStyles = {
+	default: { bg: 'rgb(var(--paper))', text: 'rgb(var(--ink))' },
+	alt: { bg: 'rgb(var(--paper))', text: 'rgb(var(--ink))' },
+	dark: { bg: 'rgb(var(--accent))', text: 'white' }
+};
+
+const style = variantStyles[variant];
+---
+
+<section 
+	class={`section-spacing ${className}`}
+	style={`background: ${style.bg}; color: ${style.text};`}
+>
+	<div class={`container-unified ${narrow ? 'max-w-3xl' : ''}`}>
+		<slot />
+	</div>
+</section>
+
+
+

@@ -1,0 +1,98 @@
+{
+  "processed": [
+    {
+      "slug": "abacos-womens-clothing",
+      "file": "abacos-womens-clothing.md"
+    },
+    {
+      "slug": "asd-sandalyon-sassari",
+      "file": "asd-sandalyon-sassari.md"
+    },
+    {
+      "slug": "bandevenflow",
+      "file": "bandevenflow.md"
+    },
+    {
+      "slug": "ema-detailing-district",
+      "file": "ema-detailing-district.md"
+    },
+    {
+      "slug": "estrella-yoruba-tarot",
+      "file": "estrella-yoruba-tarot.md"
+    },
+    {
+      "slug": "marcella-masia",
+      "file": "marcella-masia.md"
+    },
+    {
+      "slug": "noi-e-biasi",
+      "file": "noi-e-biasi.md"
+    },
+    {
+      "slug": "noi-e-dessy",
+      "file": "noi-e-dessy.md"
+    },
+    {
+      "slug": "psicologa-sassari",
+      "file": "psicologa-sassari.md"
+    },
+    {
+      "slug": "valeria-chelo",
+      "file": "valeria-chelo.md"
+    }
+  ],
+  "skipped": [
+    {
+      "slug": "abacos-womens-clothing",
+      "file": "abacos-womens-clothing.md",
+      "reason": "cover already present"
+    },
+    {
+      "slug": "asd-sandalyon-sassari",
+      "file": "asd-sandalyon-sassari.md",
+      "reason": "cover already present"
+    },
+    {
+      "slug": "bandevenflow",
+      "file": "bandevenflow.md",
+      "reason": "cover already present"
+    },
+    {
+      "slug": "ema-detailing-district",
+      "file": "ema-detailing-district.md",
+      "reason": "cover already present"
+    },
+    {
+      "slug": "estrella-yoruba-tarot",
+      "file": "estrella-yoruba-tarot.md",
+      "reason": "cover already present"
+    },
+    {
+      "slug": "marcella-masia",
+      "file": "marcella-masia.md",
+      "reason": "cover already present"
+    },
+    {
+      "slug": "noi-e-biasi",
+      "file": "noi-e-biasi.md",
+      "reason": "cover already present"
+    },
+    {
+      "slug": "noi-e-dessy",
+      "file": "noi-e-dessy.md",
+      "reason": "cover already present"
+    },
+    {
+      "slug": "psicologa-sassari",
+      "file": "psicologa-sassari.md",
+      "reason": "cover already present"
+    },
+    {
+      "slug": "valeria-chelo",
+      "file": "valeria-chelo.md",
+      "reason": "cover already present"
+    }
+  ],
+  "added": [],
+  "notFound": []
+}

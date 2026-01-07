@@ -1,0 +1,56 @@
+# Test Redirect - Istruzioni
+
+## Setup
+
+1. Rendi lo script eseguibile:
+   ```bash
+   chmod +x tools/test-redirects.sh
+   ```
+
+2. Esegui lo script con BASE_URL:
+   ```bash
+   BASE_URL="https://lucasanna-eu.vercel.app" ./tools/test-redirects.sh
+   ```
+   
+   Oppure passa BASE_URL come argomento:
+   ```bash
+   ./tools/test-redirects.sh https://lucasanna-eu.vercel.app
+   ```
+
+## Risultati Attesi
+
+### Home (200 OK)
+- `/` → **200** | Server: Vercel | Location: -
+
+### Redirect Commerciali (301 → LS Web Agency)
+- `/servizi` → **301** | Server: Vercel | Location: `https://www.lswebagency.com/`
+- `/servizi/` → **301** | Server: Vercel | Location: `https://www.lswebagency.com/`
+- `/preventivi-siti-web` → **301** | Server: Vercel | Location: `https://www.lswebagency.com/contatti`
+- `/preventivi-siti-web/` → **301** | Server: Vercel | Location: `https://www.lswebagency.com/contatti`
+
+## Interpretazione
+
+- **200**: Pagina esistente, nessun redirect
+- **301**: Redirect permanente (verificare Location header)
+- **404**: Pagina non trovata (normale per portfolio/tag non mappati)
+- **ERROR**: Problema di connessione o URL non valido
+
+## Test Post-Deploy
+
+Dopo ogni deploy su Vercel, esegui questo script per verificare che i redirect funzionino correttamente.
+
+## Esempio Output
+
+```
+PATH                           | STATUS | SERVER               | LOCATION
+----------------------------------------
+/                              | 200    | Vercel               | -
+/servizi                       | 301    | Vercel               | https://www.lswebagency.com/
+/servizi/                      | 301    | Vercel               | https://www.lswebagency.com/
+/preventivi-siti-web           | 301    | Vercel               | https://www.lswebagency.com/contatti
+/preventivi-siti-web/          | 301    | Vercel               | https://www.lswebagency.com/contatti
+```
+
+
+
+

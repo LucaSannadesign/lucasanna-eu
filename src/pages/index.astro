@@ -1,11 +1,171 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ButtonLink from '../components/ButtonLink.astro';
+import Section from '../components/Section.astro';
+import Card from '../components/Card.astro';
+import Portrait from '../components/Portrait.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const caseStudies = await getCollection('case-studies');
+const sortedCaseStudies = caseStudies.sort((a, b) => b.data.year - a.data.year);
+const latestCaseStudies = sortedCaseStudies.slice(0, 6);
 ---
 
-<Layout>
-	<Welcome />
+<Layout 
+	title="Luca Sanna - Portfolio di web design e sviluppo"
+	description="Portfolio editoriale di progetti web: case studies, metodo di lavoro e riflessioni su design, sviluppo e accessibilità."
+	canonical="https://www.lucasanna.eu/"
+>
+	<Header />
+	<main>
+		<!-- Hero - Tech Agency Premium -->
+		<section class="reveal relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
+			<!-- Radial glow background -->
+			<div 
+				class="absolute inset-0 pointer-events-none"
+				style="background: radial-gradient(circle at 30% 50%, rgb(var(--accent) / 0.08) 0%, transparent 60%), rgb(var(--paper));"
+			></div>
+			<div class="container-unified relative z-10">
+				<div class="heroGrid">
+					<div class="flex-1 max-w-4xl">
+						<!-- Tech chips/badges -->
+						<div class="flex flex-wrap items-center gap-2 mb-6">
+							<span class="tech-chip">Web</span>
+							<span class="tech-chip">UI/UX</span>
+							<span class="tech-chip">Case studies</span>
+						</div>
+						<h1 
+							class="font-bold mb-6"
+							style="font-size: var(--text-6xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight); line-height: var(--line-height-tight);"
+						>
+							Progetti che raccontano storie, non solo codice.
+						</h1>
+						<p 
+							class="mb-10 text-xl"
+							style="font-size: var(--text-xl); color: rgb(var(--muted)); line-height: var(--line-height-relaxed); max-width: 42rem;"
+						>
+							Portfolio editoriale di progetti web: design, sviluppo e accessibilità. Ogni progetto nasce da un obiettivo chiaro e si evolve attraverso scelte consapevoli.
+						</p>
+						<div class="flex flex-col sm:flex-row gap-4">
+							<ButtonLink href="/case-studies" size="lg">Esplora i case studies</ButtonLink>
+							<ButtonLink href="https://www.lswebagency.com" variant="secondary" size="lg" external>
+								Servizi su LS Web Agency
+							</ButtonLink>
+						</div>
+					</div>
+					<div class="flex-shrink-0 md:mt-0 mt-4">
+						<Portrait size="sm" variant="featured" eager={true} linkTo="/chi-sono" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Navigation Cards - Editorial Style -->
+		<Section variant="alt">
+			<div class="stagger grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
+				<a href="/case-studies" class="card-editorial reveal md:col-span-5 group" style="border-left: 3px solid rgb(var(--accent));">
+					<h2 
+						class="font-semibold mb-4 transition-colors"
+						style="font-size: var(--text-3xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
+					>
+						Case Studies
+					</h2>
+					<p 
+						class="mb-4"
+						style="color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
+					>
+						Progetti completati, obiettivi raggiunti e scelte progettuali documentate. Ogni case study racconta un percorso di scoperta e realizzazione.
+					</p>
+					<span class="link-editorial inline-block" style="font-size: var(--text-sm); color: rgb(var(--ink));">Esplora →</span>
+				</a>
+				<a href="/metodo" class="card-editorial reveal md:col-span-4 group">
+					<h2 
+						class="font-semibold mb-4 transition-colors"
+						style="font-size: var(--text-3xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
+					>
+						Metodo
+					</h2>
+					<p 
+						class="mb-4"
+						style="color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
+					>
+						Come lavoro: ascolto, struttura, design, sviluppo e ottimizzazione. Un processo che mette al centro obiettivi e utenti.
+					</p>
+					<span class="link-editorial inline-block" style="font-size: var(--text-sm); color: rgb(var(--ink));">Scopri →</span>
+				</a>
+				<a href="/contatti" class="card-editorial reveal md:col-span-3 group">
+					<h2 
+						class="font-semibold mb-4 transition-colors"
+						style="font-size: var(--text-3xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
+					>
+						Contatti
+					</h2>
+					<p 
+						class="mb-4"
+						style="color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
+					>
+						Per progetti personali, collaborazioni o scambi di idee. Rispondo entro 48 ore.
+					</p>
+					<span class="link-editorial inline-block" style="font-size: var(--text-sm); color: rgb(var(--ink));">Contattami →</span>
+				</a>
+			</div>
+		</Section>
+
+		<!-- Ultimi Case Studies -->
+			{latestCaseStudies.length > 0 && (
+			<Section>
+				<div class="reveal mb-12 md:mb-16">
+					<div class="flex items-center justify-between mb-6">
+						<h2 
+							class="font-bold"
+							style="font-size: var(--text-5xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
+						>
+							Ultimi Case Studies
+						</h2>
+						<div class="flex gap-3">
+							<ButtonLink href="/case-studies" variant="secondary" size="sm">
+								Vedi tutti
+							</ButtonLink>
+							<ButtonLink href="/contatti" variant="secondary" size="sm">
+								Contatti
+							</ButtonLink>
+						</div>
+					</div>
+					<p 
+						style="font-size: var(--text-lg); color: rgb(var(--muted)); max-width: 3xl;"
+					>
+						Selezione di progetti recenti che mostrano approcci, sfide e risultati.
+					</p>
+				</div>
+				<div class="stagger grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+					{latestCaseStudies.map((caseStudy, index) => (
+						<Card
+							href={`/case-studies/${caseStudy.slug}`}
+							title={caseStudy.data.title}
+							sector={caseStudy.data.sector}
+							year={caseStudy.data.year}
+							tags={caseStudy.data.tags}
+							variant={index === 0 ? 'featured' : 'default'}
+							cover={caseStudy.data.cover}
+						/>
+					))}
+				</div>
+			</Section>
+		)}
+
+		<!-- CTA Finale -->
+		<Section>
+			<div class="reveal text-center max-w-3xl mx-auto">
+				<p 
+					class="mb-6"
+					style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
+				>
+					Per un preventivo e dettagli dei servizi: <a href="https://www.lswebagency.com" class="link-editorial" style="color: rgb(var(--ink)); font-weight: var(--font-weight-medium);">LS Web Agency</a>.
+				</p>
+			</div>
+		</Section>
+	</main>
+	<Footer />
 </Layout>

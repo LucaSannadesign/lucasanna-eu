@@ -1,0 +1,134 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Section from '../components/Section.astro';
+import ButtonLink from '../components/ButtonLink.astro';
+import Portrait from '../components/Portrait.astro';
+---
+
+<Layout 
+	title="Chi sono - Luca Sanna: Web Designer e Sviluppatore Front-end"
+	description="Luca Sanna: web designer e sviluppatore front-end. Portfolio editoriale, case studies e riflessioni su design, sviluppo e accessibilità web."
+	canonical="https://www.lucasanna.eu/chi-sono/"
+>
+	<Header />
+	<main>
+		<Section narrow>
+			<div class="reveal mb-12 md:mb-16">
+				<div class="max-w-3xl">
+					<h1 
+						class="font-bold mb-6"
+						style="font-size: var(--text-5xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight); line-height: var(--line-height-tight);"
+					>
+						Chi sono
+					</h1>
+					<p 
+						style="font-size: var(--text-xl); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
+					>
+						Web designer e sviluppatore front-end. Progetto e sviluppo siti web con un approccio che mette al centro obiettivi, utenti e qualità del codice.
+					</p>
+				</div>
+			</div>
+
+			<!-- Ritratto e bio -->
+			<div class="reveal mb-16 md:mb-20">
+				<div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
+					<div class="flex-shrink-0">
+						<Portrait size="lg" eager={false} />
+					</div>
+					<div class="flex-1" style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);">
+						<p class="mb-6">
+							Lavoro nel web design e nello sviluppo front-end da diversi anni, concentrandomi su progetti che uniscono estetica, funzionalità e accessibilità. Ogni progetto è un'opportunità per risolvere problemi concreti e creare soluzioni che funzionano davvero.
+						</p>
+						<p class="mb-6">
+							Il mio approccio parte sempre dall'ascolto: comprendere obiettivi, pubblico e contesto è il primo passo per costruire qualcosa di significativo. Poi arriva la struttura, il design e infine lo sviluppo, sempre con un occhio attento alla qualità del codice e all'esperienza utente.
+						</p>
+						<p>
+							Credo che un buon sito web debba essere accessibile, performante e facile da usare. Questi principi guidano ogni scelta progettuale, dal layout alla tipografia, dai colori alle interazioni.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="space-y-16 md:space-y-20">
+				<div style="border-left: 2px solid rgb(var(--border) / 0.15); padding-left: var(--space-8);">
+					<h2 
+						class="font-semibold mb-4"
+						style="font-size: var(--text-3xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
+					>
+						Il mio approccio
+					</h2>
+					<div style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed); max-width: 65ch;">
+						<p class="mb-6">
+							Non credo in soluzioni preconfezionate. Ogni progetto ha le sue specificità e richiede un percorso dedicato. Parto sempre da una fase di scoperta, dove analizzo obiettivi, pubblico e contesto competitivo. Poi definisco la strategia, progetto l'interfaccia e sviluppo con tecnologie moderne.
+						</p>
+						<p>
+							La trasparenza è importante: ogni fase è condivisa e discussa, garantendo che il risultato finale risponda davvero alle esigenze. Il codice è pulito e manutenibile, il design è coerente e funzionale, l'esperienza utente è al centro di ogni scelta.
+						</p>
+					</div>
+				</div>
+
+				<div style="border-left: 2px solid rgb(var(--border) / 0.15); padding-left: var(--space-8);">
+					<h2 
+						class="font-semibold mb-4"
+						style="font-size: var(--text-3xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
+					>
+						Valori e principi
+					</h2>
+					<div style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed); max-width: 65ch;">
+						<p class="mb-6">
+							<strong style="color: rgb(var(--ink)); font-weight: var(--font-weight-semibold);">Accessibilità:</strong> Un sito web deve essere utilizzabile da tutti, indipendentemente dalle capacità o dagli strumenti utilizzati. Questo principio guida ogni scelta di design e sviluppo.
+						</p>
+						<p class="mb-6">
+							<strong style="color: rgb(var(--ink)); font-weight: var(--font-weight-semibold);">Performance:</strong> La velocità e l'efficienza sono fondamentali per un'esperienza utente positiva. Ottimizzo ogni aspetto per garantire tempi di caricamento rapidi.
+						</p>
+						<p class="mb-6">
+							<strong style="color: rgb(var(--ink)); font-weight: var(--font-weight-semibold);">Qualità del codice:</strong> Scrivere codice pulito, ben strutturato e manutenibile è essenziale per progetti che durano nel tempo e possono evolversi.
+						</p>
+						<p>
+							<strong style="color: rgb(var(--ink)); font-weight: var(--font-weight-semibold);">Collaborazione:</strong> Il lavoro migliore nasce dalla collaborazione. Ascolto, condivido idee e costruisco insieme soluzioni che funzionano.
+						</p>
+					</div>
+				</div>
+
+				<div style="border-left: 2px solid rgb(var(--border) / 0.15); padding-left: var(--space-8);">
+					<h2 
+						class="font-semibold mb-4"
+						style="font-size: var(--text-3xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
+					>
+						Come lavoro
+					</h2>
+					<div style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed); max-width: 65ch;">
+						<p class="mb-6">
+							Il processo inizia sempre con una conversazione. Ascolto le tue esigenze, comprendo gli obiettivi e analizzo il contesto. Poi definiamo insieme la strategia, progetto l'interfaccia e sviluppo con tecnologie moderne come Astro e Tailwind CSS.
+						</p>
+						<p class="mb-6">
+							Ogni fase è trasparente e condivisa. Ricevi aggiornamenti regolari e hai la possibilità di vedere il lavoro in corso, fornire feedback e partecipare attivamente al processo creativo.
+						</p>
+						<p>
+							Per saperne di più sul mio metodo di lavoro, visita la pagina <a href="/metodo" class="link-editorial" style="color: rgb(var(--ink));">Metodo</a>. Per vedere alcuni progetti completati, esplora i <a href="/case-studies" class="link-editorial" style="color: rgb(var(--ink));">Case Studies</a>. Per collaborazioni e progetti personali, puoi <a href="/contatti" class="link-editorial" style="color: rgb(var(--ink));">contattarmi</a>.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- CTA Finale -->
+			<div 
+				class="mt-16 md:mt-20 pt-12 md:pt-16"
+				style="border-top: 1px solid rgb(var(--border) / 0.15);"
+			>
+				<div class="max-w-3xl mx-auto text-center">
+					<p 
+						class="mb-6"
+						style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
+					>
+						Per servizi web professionali e preventivi, visita il sito di <a href="https://www.lswebagency.com" target="_blank" rel="noopener noreferrer" class="link-editorial" style="color: rgb(var(--ink)); font-weight: var(--font-weight-medium);">LS Web Agency</a>.
+					</p>
+				</div>
+			</div>
+		</Section>
+	</main>
+	<Footer />
+</Layout>
+

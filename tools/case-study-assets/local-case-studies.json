@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "abacos-womens-clothing",
+    "title": "Abaco's Women's Clothing",
+    "cover": "/images/case-studies/abacos-womens-clothing.jpg",
+    "client": "Abaco's Women's Clothing",
+    "year": 2022
+  },
+  {
+    "slug": "asd-sandalyon-sassari",
+    "title": "ASD Sandalyon Sassari",
+    "cover": "/images/case-studies/asd-sandalyon-sassari.jpg",
+    "client": "ASD Sandalyon Sassari",
+    "year": 2023
+  },
+  {
+    "slug": "bandevenflow",
+    "title": "Bandevenflow",
+    "cover": "/images/case-studies/bandevenflow.webp",
+    "client": "Bandevenflow",
+    "year": 2023
+  },
+  {
+    "slug": "ema-detailing-district",
+    "title": "EMA Detailing District",
+    "cover": null,
+    "client": "EMA Detailing District",
+    "year": 2024
+  },
+  {
+    "slug": "estrella-yoruba-tarot",
+    "title": "Estrella Yoruba Tarot",
+    "cover": "/images/case-studies/estrella-yoruba-tarot.webp",
+    "client": "Estrella Yoruba Tarot",
+    "year": 2023
+  },
+  {
+    "slug": "marcella-masia",
+    "title": "Marcella Masia - Artista",
+    "cover": "/images/case-studies/marcella-masia.png",
+    "client": "Marcella Masia",
+    "year": 2022
+  },
+  {
+    "slug": "noi-e-biasi",
+    "title": "Noi e Biasi (collaborazione Accademia di Sassari)",
+    "cover": null,
+    "client": "Accademia di Sassari",
+    "year": 2024
+  },
+  {
+    "slug": "noi-e-dessy",
+    "title": "Noi e Dessy (collaborazione Accademia di Sassari)",
+    "cover": null,
+    "client": "Accademia di Sassari",
+    "year": 2024
+  },
+  {
+    "slug": "psicologa-sassari",
+    "title": "Studio di Psicologia - Sassari",
+    "cover": null,
+    "client": "Studio di Psicologia",
+    "year": 2024
+  },
+  {
+    "slug": "valeria-chelo",
+    "title": "Valeria Chelo - Psicologa",
+    "cover": "/images/case-studies/valeria-chelo.jpg",
+    "client": "Valeria Chelo",
+    "year": 2022
+  }
+]

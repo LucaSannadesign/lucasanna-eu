@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ButtonLink from '../components/ButtonLink.astro';
+import Section from '../components/Section.astro';
+---
+
+<Layout 
+	title="Pagina non trovata - Luca Sanna"
+	description="La pagina che stai cercando non esiste."
+>
+	<Header />
+	<main>
+		<Section class="text-center">
+			<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+				404
+			</h1>
+			<p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+				Pagina non trovata. La pagina che stai cercando potrebbe essere stata spostata o non esiste più.
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+				<ButtonLink href="/">Home</ButtonLink>
+				<ButtonLink href="/case-studies" variant="secondary">Case studies</ButtonLink>
+				<ButtonLink href="/contatti" variant="secondary">Contatti</ButtonLink>
+			</div>
+			<div class="pt-8 border-t border-gray-200">
+				<p class="text-gray-600 mb-4">
+					Stai cercando servizi o preventivi?
+				</p>
+				<ButtonLink href="https://www.lswebagency.com" external>
+					Visita LS Web Agency
+				</ButtonLink>
+			</div>
+		</Section>
+	</main>
+	<Footer />
+</Layout>
+
+
+
+
