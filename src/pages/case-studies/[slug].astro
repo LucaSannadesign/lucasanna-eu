@@ -33,7 +33,7 @@ if (!caseStudy) {
 }
 
 const { Content } = await caseStudy.render();
-const canonical = caseStudy.data.externalUrl ? undefined : `https://www.lucasanna.eu/case-studies/${caseStudy.slug}/`;
+const canonical = `https://www.lucasanna.eu/case-studies/${caseStudy.slug}/`;
 ---
 
 <Layout 
