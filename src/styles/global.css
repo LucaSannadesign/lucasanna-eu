@@ -177,14 +177,32 @@ body::before {
 /* Hero Grid Layout */
 .heroGrid {
 	display: grid;
+	grid-template-columns: 1fr;
 	gap: var(--space-8);
 	align-items: center;
+}
+
+.hero-text {
+	width: 100%;
+}
+
+.hero-portrait {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: var(--space-6);
 }
 
 @media (min-width: 768px) {
 	.heroGrid {
 		grid-template-columns: 1.25fr 1fr;
 		gap: var(--space-12);
+		align-items: center;
+	}
+	
+	.hero-portrait {
+		margin-top: 0;
+		justify-content: flex-end;
 	}
 }
 

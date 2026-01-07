@@ -21,7 +21,7 @@ const latestCaseStudies = sortedCaseStudies.slice(0, 6);
 	<Header />
 	<main>
 		<!-- Hero - Tech Agency Premium -->
-		<section class="reveal relative pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden">
+		<section class="reveal relative pt-20 pb-16 md:pt-28 md:pb-24 overflow-hidden">
 			<!-- Radial glow background -->
 			<div 
 				class="absolute inset-0 pointer-events-none"
@@ -29,40 +29,46 @@ const latestCaseStudies = sortedCaseStudies.slice(0, 6);
 			></div>
 			<div class="container-unified relative z-10">
 				<div class="heroGrid">
-					<div class="flex-1" style="max-width: 36rem;">
+					<div class="hero-text" style="max-width: 32rem;">
 						<!-- Tech chips/badges -->
-						<div class="flex flex-wrap items-center gap-2 mb-6">
+						<div class="flex flex-wrap items-center gap-2 mb-5">
 							<span class="tech-chip">UX/UI</span>
 							<span class="tech-chip">Accessibilità</span>
 							<span class="tech-chip">Performance</span>
 							<span class="tech-chip">Copywriting</span>
 						</div>
 						<h1 
-							class="font-bold mb-4"
+							class="font-bold mb-5"
 							style="font-size: var(--text-6xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight); line-height: var(--line-height-tight);"
 						>
-							Progetti web accessibili e performanti.
+							Siti e interfacce che funzionano.
 						</h1>
 						<p 
-							class="mb-6 text-xl"
+							class="mb-4 text-xl"
 							style="font-size: var(--text-xl); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
 						>
-							UX/UI e copywriting orientato alla conversione: design, microcopy e basi SEO per pagine chiare, credibili e misurabili.
+							Progetto UX/UI, scrivo copy orientato alla conversione, curo accessibilità e performance. Dal concept al rilascio: pagine chiare, veloci, misurabili.
 						</p>
 						<p 
-							class="mb-8 text-lg"
-							style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
+							class="mb-6 text-base"
+							style="font-size: var(--text-base); color: rgb(var(--muted)); line-height: var(--line-height-relaxed); font-weight: var(--font-weight-medium);"
 						>
-							Per progetti personali o collaborazioni: <a href="/contatti" class="link-editorial" style="color: rgb(var(--ink)); font-weight: var(--font-weight-medium);">contattami</a>. Per siti aziendali completi: <a href="https://www.lswebagency.com" class="link-editorial" style="color: rgb(var(--muted));">LS Web Agency</a>.
+							Case study reali + metodo replicabile (brief → struttura → copy → UI → QA).
 						</p>
-						<div class="flex flex-col sm:flex-row gap-4">
-							<ButtonLink href="/contatti" size="lg">Contatti</ButtonLink>
-							<ButtonLink href="/case-studies" variant="secondary" size="lg">
-								Case studies
+						<div class="flex flex-col sm:flex-row gap-4 mb-4">
+							<ButtonLink href="/case-studies" size="lg">Vedi i case studies</ButtonLink>
+							<ButtonLink href="/contatti" variant="secondary" size="lg">
+								Parliamo del tuo progetto
 							</ButtonLink>
 						</div>
+						<p 
+							class="text-sm"
+							style="font-size: var(--text-sm); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
+						>
+							Risposta in 24–48h. Se non posso aiutarti, te lo dico subito.
+						</p>
 					</div>
-					<div class="flex-shrink-0 md:mt-0 mt-6" style="display: flex; align-items: center;">
+					<div class="hero-portrait">
 						<Portrait size="sm" variant="featured" eager={true} linkTo="/chi-sono" />
 					</div>
 				</div>
