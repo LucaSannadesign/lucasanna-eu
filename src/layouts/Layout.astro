@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import ScrollToTop from '../components/ScrollToTop.astro';
 import CookieConsent from '../components/CookieConsent.astro';
+import Ga4Gtag from '../components/analytics/Ga4Gtag.astro';
 
 interface Props {
 	title?: string;
@@ -60,6 +61,7 @@ const robotsContent = isProduction ? 'index,follow' : 'noindex,nofollow';
 		<meta name="twitter:title" content={finalTitle} />
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content={ogImage} />
+		<Ga4Gtag />
 	</head>
 	<body class="antialiased" style="background: rgb(var(--paper)); color: rgb(var(--ink));">
 		<slot />

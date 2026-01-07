@@ -1,5 +1,4 @@
 ---
-const GTM_ID = import.meta.env.PUBLIC_GTM_ID || 'GTM-TL3R3CWW';
 const STORAGE_KEY = 'cookie_consent';
 ---
 
@@ -23,48 +22,42 @@ const STORAGE_KEY = 'cookie_consent';
 	</div>
 </div>
 
-<script define:vars={{ gtmId: GTM_ID }}>
+<script>
 	(function() {
-		const GTM_ID = gtmId || 'GTM-TL3R3CWW'; // Fallback se env var non disponibile
 		const STORAGE_KEY = 'cookie_consent';
-		let gtmLoaded = false;
-
-		function loadGTM() {
-			if (gtmLoaded) return;
-			
-			// Inizializza dataLayer
-			window.dataLayer = window.dataLayer || [];
-			
-			// Carica script GTM nel head
-			const script = document.createElement('script');
-			script.async = true;
-			script.src = `https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`;
-			script.onload = function() {
-				window.dataLayer.push({
-					'gtm.start': new Date().getTime(),
-					event: 'gtm.js'
-				});
-			};
-			document.head.appendChild(script);
-
-			// Aggiungi iframe noscript nel body
-			const iframe = document.createElement('iframe');
-			iframe.src = `https://www.googletagmanager.com/ns.html?id=${GTM_ID}`;
-			iframe.height = '0';
-			iframe.width = '0';
-			iframe.style.display = 'none';
-			iframe.style.visibility = 'hidden';
-			document.body.appendChild(iframe);
-
-			gtmLoaded = true;
-		}
 
 		function checkConsent() {
-			return localStorage.getItem(STORAGE_KEY);
+			try {
+				const stored = localStorage.getItem(STORAGE_KEY);
+				if (!stored) return null;
+				
+				// Supporta formato legacy (stringa)
+				if (stored === 'accepted' || stored === 'rejected') {
+					return stored;
+				}
+				
+				// Formato JSON
+				return JSON.parse(stored);
+			} catch {
+				return null;
+			}
 		}
 
-		function saveConsent(value) {
-			localStorage.setItem(STORAGE_KEY, value);
+		function saveConsent(consent) {
+			// Se è stringa legacy, converti a JSON
+			if (typeof consent === 'string') {
+				const analytics = consent === 'accepted';
+				consent = {
+					necessary: true,
+					analytics: analytics
+				};
+			}
+			localStorage.setItem(STORAGE_KEY, JSON.stringify(consent));
+			
+			// Emetti evento per GA4
+			window.dispatchEvent(new CustomEvent('cookie-consent-changed', {
+				detail: { analytics: consent.analytics === true }
+			}));
 		}
 
 		function hideBanner() {
@@ -91,9 +84,17 @@ const STORAGE_KEY = 'cookie_consent';
 
 		// Verifica consenso esistente
 		const existing = checkConsent();
-		if (existing === 'accepted') {
-			loadGTM();
-		} else if (!existing) {
+		if (existing) {
+			// Consenso già presente (legacy o JSON), non mostrare banner
+			// Se è formato legacy, convertilo a JSON
+			if (typeof existing === 'string') {
+				const analytics = existing === 'accepted';
+				saveConsent({
+					necessary: true,
+					analytics: analytics
+				});
+			}
+		} else {
 			// Nessun consenso: mostra banner
 			showBanner();
 		}
@@ -107,15 +108,19 @@ const STORAGE_KEY = 'cookie_consent';
 					const action = btn.dataset.action;
 					
 					if (action === 'accept') {
-						saveConsent('accepted');
-						loadGTM();
+						saveConsent({
+							necessary: true,
+							analytics: true
+						});
 						hideBanner();
 					} else if (action === 'reject') {
-						saveConsent('rejected');
+						saveConsent({
+							necessary: true,
+							analytics: false
+						});
 						hideBanner();
 					} else if (action === 'preferences') {
-						// Per ora, mostra banner con opzioni (può essere esteso)
-						// Per semplicità, reindirizza alla cookie policy
+						// Reindirizza alla cookie policy
 						window.location.href = '/cookie-policy/';
 					}
 				});

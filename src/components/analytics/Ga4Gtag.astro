@@ -1,0 +1,67 @@
+---
+const GA4_ID = import.meta.env.PUBLIC_GA4_ID || 'G-MPEL6FVCXD';
+---
+
+{GA4_ID && (
+	<script define:vars={{ ga4Id: GA4_ID }}>
+		(function() {
+			const GA4_ID = ga4Id || 'G-MPEL6FVCXD'; // Fallback se env var non disponibile
+			const STORAGE_KEY = 'cookie_consent';
+			
+			// Previeni doppio caricamento
+			if (window.__ga4_loaded) return;
+			
+			function checkAnalyticsConsent() {
+				try {
+					const stored = localStorage.getItem(STORAGE_KEY);
+					if (!stored) return false;
+					
+					// Supporta sia formato stringa legacy che JSON
+					if (stored === 'accepted') {
+						return true; // Legacy: accepted = analytics true
+					}
+					
+					const consent = JSON.parse(stored);
+					return consent.analytics === true;
+				} catch {
+					return false;
+				}
+			}
+			
+			function loadGA4() {
+				if (window.__ga4_loaded) return;
+				
+				// Inizializza dataLayer e gtag
+				window.dataLayer = window.dataLayer || [];
+				function gtag() {
+					window.dataLayer.push(arguments);
+				}
+				window.gtag = gtag;
+				
+				gtag('js', new Date());
+				gtag('config', GA4_ID);
+				
+				// Carica script gtag.js
+				const script = document.createElement('script');
+				script.async = true;
+				script.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`;
+				document.head.appendChild(script);
+				
+				window.__ga4_loaded = true;
+			}
+			
+			// Carica GA4 se consenso già presente
+			if (checkAnalyticsConsent()) {
+				loadGA4();
+			}
+			
+			// Ascolta evento consenso cambiato
+			window.addEventListener('cookie-consent-changed', ((e: CustomEvent) => {
+				if (e.detail && e.detail.analytics === true) {
+					loadGA4();
+				}
+			}) as EventListener);
+		})();
+	</script>
+)}
+
