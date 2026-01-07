@@ -1,0 +1,108 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Section from '../components/Section.astro';
+---
+
+<Layout 
+	title="Cookie Policy - Luca Sanna"
+	description="Informativa sui cookie utilizzati su questo sito web."
+	canonical="https://www.lucasanna.eu/cookie-policy/"
+>
+	<Header />
+	<main>
+		<Section narrow>
+			<article>
+				<header class="mb-12 md:mb-16 pb-8 md:pb-12" style="border-bottom: 1px solid rgb(var(--border) / 0.15);">
+					<h1 
+						class="font-bold mb-4"
+						style="font-size: var(--text-5xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight); line-height: var(--line-height-tight);"
+					>
+						Cookie Policy
+					</h1>
+					<p 
+						style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
+					>
+						Ultimo aggiornamento: {new Date().toLocaleDateString('it-IT', { year: 'numeric', month: 'long', day: 'numeric' })}
+					</p>
+				</header>
+
+				<div class="space-y-8 md:space-y-12" style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);">
+					<section>
+						<h2 
+							class="font-semibold mb-4"
+							style="font-size: var(--text-2xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
+						>
+							Cosa sono i cookie
+						</h2>
+						<p>
+							I cookie sono piccoli file di testo che i siti web memorizzano sul tuo dispositivo quando li visiti. 
+							Vengono utilizzati per migliorare l'esperienza di navigazione e per analizzare il traffico del sito.
+						</p>
+					</section>
+
+					<section>
+						<h2 
+							class="font-semibold mb-4"
+							style="font-size: var(--text-2xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
+						>
+							Tipi di cookie utilizzati
+						</h2>
+						<h3 
+							class="font-medium mb-3"
+							style="font-size: var(--text-xl); color: rgb(var(--ink));"
+						>
+							Cookie tecnici
+						</h3>
+						<p>
+							Questi cookie sono necessari per il funzionamento del sito e non richiedono il tuo consenso.
+						</p>
+						
+						<h3 
+							class="font-medium mb-3 mt-6"
+							style="font-size: var(--text-xl); color: rgb(var(--ink));"
+						>
+							Cookie di analytics
+						</h3>
+						<p>
+							Utilizziamo Google Tag Manager per analizzare il traffico del sito e migliorare l'esperienza utente. 
+							Questi cookie vengono caricati solo dopo il tuo consenso esplicito.
+						</p>
+					</section>
+
+					<section>
+						<h2 
+							class="font-semibold mb-4"
+							style="font-size: var(--text-2xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
+						>
+							Gestione dei cookie
+						</h2>
+						<p>
+							Puoi gestire le tue preferenze sui cookie in qualsiasi momento. La tua scelta viene salvata nel browser 
+							e rispettata nelle visite successive.
+						</p>
+						<p class="mt-4">
+							Per modificare le tue preferenze, puoi utilizzare il banner dei cookie che appare alla prima visita 
+							o cancellare i dati di navigazione dal tuo browser.
+						</p>
+					</section>
+
+					<section>
+						<h2 
+							class="font-semibold mb-4"
+							style="font-size: var(--text-2xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
+						>
+							Contatti
+						</h2>
+						<p>
+							Per domande sulla cookie policy, puoi contattarmi tramite la <a href="/contatti" class="link-editorial">pagina contatti</a>.
+						</p>
+					</section>
+				</div>
+			</article>
+		</Section>
+	</main>
+	<Footer />
+</Layout>
+
