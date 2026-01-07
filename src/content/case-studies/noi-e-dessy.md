@@ -1,12 +1,12 @@
 ---
-title: "Noi e Dessy (collaborazione Accademia di Sassari)"
+title: "Noi e Dessy - Grafica editoriale (collaborazione Accademia di Sassari)"
 year: 2024
 client: "Accademia di Sassari"
-sector: "Educazione"
-services: ["Web Design", "WordPress"]
-stack: ["WordPress", "PHP", "CSS"]
-tags: ["Design", "WordPress", "Educazione"]
-excerpt: "Collaborazione con Accademia di Sassari per il progetto Noi e Dessy. Sito web che comunica l'identità del progetto educativo e facilita la condivisione di contenuti e informazioni."
+sector: "Grafica editoriale"
+services: ["Grafica editoriale", "Impaginazione", "Progetto grafico"]
+stack: ["Adobe InDesign", "Adobe Illustrator", "Adobe Photoshop"]
+tags: ["Grafica editoriale", "Impaginazione", "Libro"]
+excerpt: "Progetto di grafica editoriale per Accademia di Sassari: libro realizzato recuperando e organizzando i lavori dei bambini. Progetto grafico, copertina e impaginazione curati per valorizzare i contenuti."
 featured: false
 cover: "/images/case-studies/noi-e-dessy.jpg"
 ---
