@@ -64,7 +64,7 @@ const schemaData = isBook ? {
 ---
 
 <Layout 
-	title={`${caseStudy.data.title} - Case Study`}
+	title={caseStudy.data.slug === 'psicologa-sassari' ? 'Patrizia Sabbadin - Counselor Sassari | Case Study' : `${caseStudy.data.title} - Case Study`}
 	description={caseStudy.data.excerpt}
 	canonical={canonical}
 >

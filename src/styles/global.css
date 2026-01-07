@@ -184,13 +184,15 @@ body::before {
 
 .hero-text {
 	width: 100%;
+	order: 1;
 }
 
 .hero-portrait {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-top: var(--space-6);
+	margin-top: var(--space-8);
+	order: 2;
 }
 
 @media (min-width: 768px) {
