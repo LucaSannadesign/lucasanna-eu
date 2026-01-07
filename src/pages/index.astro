@@ -14,8 +14,8 @@ const latestCaseStudies = sortedCaseStudies.slice(0, 6);
 ---
 
 <Layout 
-	title="Luca Sanna - Portfolio di web design e sviluppo"
-	description="Portfolio editoriale di progetti web: case studies, metodo di lavoro e riflessioni su design, sviluppo e accessibilità."
+	title="Luca Sanna - UX/UI, accessibilità, performance e copywriting per progetti web"
+	description="Portfolio editoriale: progetti web che combinano UX/UI, accessibilità, performance e copywriting orientato alla conversione. Case studies, metodo di lavoro e competenze in microcopy UI."
 	canonical="https://www.lucasanna.eu/"
 >
 	<Header />
@@ -32,26 +32,33 @@ const latestCaseStudies = sortedCaseStudies.slice(0, 6);
 					<div class="flex-1 max-w-4xl">
 						<!-- Tech chips/badges -->
 						<div class="flex flex-wrap items-center gap-2 mb-6">
-							<span class="tech-chip">Web</span>
-							<span class="tech-chip">UI/UX</span>
-							<span class="tech-chip">Case studies</span>
+							<span class="tech-chip">UX/UI</span>
+							<span class="tech-chip">Accessibilità</span>
+							<span class="tech-chip">Performance</span>
+							<span class="tech-chip">Copywriting</span>
 						</div>
 						<h1 
 							class="font-bold mb-6"
 							style="font-size: var(--text-6xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight); line-height: var(--line-height-tight);"
 						>
-							Progetti che raccontano storie, non solo codice.
+							Progetti web che combinano UX/UI, accessibilità, performance e copywriting.
 						</h1>
 						<p 
-							class="mb-10 text-xl"
+							class="mb-6 text-xl"
 							style="font-size: var(--text-xl); color: rgb(var(--muted)); line-height: var(--line-height-relaxed); max-width: 42rem;"
 						>
-							Portfolio editoriale di progetti web: design, sviluppo e accessibilità. Ogni progetto nasce da un obiettivo chiaro e si evolve attraverso scelte consapevoli.
+							Portfolio editoriale di progetti completati: ogni case study documenta obiettivi, scelte progettuali e risultati. Focus su interfacce chiare, accessibilità, performance e microcopy orientato alla conversione.
+						</p>
+						<p 
+							class="mb-10 text-lg"
+							style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed); max-width: 42rem;"
+						>
+							Per progetti personali o collaborazioni: <a href="/contatti" class="link-editorial" style="color: rgb(var(--ink)); font-weight: var(--font-weight-medium);">contattami</a>. Per siti aziendali completi: <a href="https://www.lswebagency.com" class="link-editorial" style="color: rgb(var(--muted));">LS Web Agency</a>.
 						</p>
 						<div class="flex flex-col sm:flex-row gap-4">
-							<ButtonLink href="/case-studies" size="lg">Esplora i case studies</ButtonLink>
-							<ButtonLink href="https://www.lswebagency.com" variant="secondary" size="lg" external>
-								Servizi su LS Web Agency
+							<ButtonLink href="/contatti" size="lg">Contatti</ButtonLink>
+							<ButtonLink href="/case-studies" variant="secondary" size="lg">
+								Case studies
 							</ButtonLink>
 						</div>
 					</div>
@@ -158,13 +165,40 @@ const latestCaseStudies = sortedCaseStudies.slice(0, 6);
 		<Section>
 			<div class="reveal text-center max-w-3xl mx-auto">
 				<p 
-					class="mb-6"
+					class="mb-4"
 					style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
 				>
-					Per un preventivo e dettagli dei servizi: <a href="https://www.lswebagency.com" class="link-editorial" style="color: rgb(var(--ink)); font-weight: var(--font-weight-medium);">LS Web Agency</a>.
+					Per progetti personali o collaborazioni: <a href="/contatti" class="link-editorial" style="color: rgb(var(--ink)); font-weight: var(--font-weight-medium);">contattami</a>.
+				</p>
+				<p 
+					style="font-size: var(--text-base); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
+				>
+					Per siti aziendali completi con supporto continuativo: <a href="https://www.lswebagency.com" class="link-editorial" style="color: rgb(var(--muted));">LS Web Agency</a>.
 				</p>
 			</div>
 		</Section>
 	</main>
 	<Footer />
+	<script type="application/ld+json" set:html={JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Luca Sanna",
+		"url": "https://www.lucasanna.eu",
+		"jobTitle": "Web Designer & Developer",
+		"description": "Portfolio editoriale: progetti web che combinano UX/UI, accessibilità, performance e copywriting orientato alla conversione.",
+		"sameAs": [
+			"https://www.lswebagency.com"
+		]
+	})} />
+	<script type="application/ld+json" set:html={JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "WebSite",
+		"name": "Luca Sanna - Portfolio",
+		"url": "https://www.lucasanna.eu",
+		"description": "Portfolio editoriale di progetti web: UX/UI, accessibilità, performance e copywriting",
+		"author": {
+			"@type": "Person",
+			"name": "Luca Sanna"
+		}
+	})} />
 </Layout>

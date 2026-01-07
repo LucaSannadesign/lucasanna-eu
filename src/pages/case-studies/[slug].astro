@@ -34,6 +34,33 @@ if (!caseStudy) {
 
 const { Content } = await caseStudy.render();
 const canonical = `https://www.lucasanna.eu/case-studies/${caseStudy.slug}/`;
+
+// Determina tipo schema in base al settore
+const isBook = caseStudy.data.sector === 'Grafica editoriale';
+const schemaData = isBook ? {
+	"@context": "https://schema.org",
+	"@type": "Book",
+	"name": caseStudy.data.title,
+	"author": {
+		"@type": "Person",
+		"name": "Luca Sanna"
+	},
+	"publisher": {
+		"@type": "Organization",
+		"name": caseStudy.data.client
+	},
+	"description": caseStudy.data.excerpt
+} : {
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	"name": caseStudy.data.title,
+	"url": canonical,
+	"description": caseStudy.data.excerpt,
+	"author": {
+		"@type": "Person",
+		"name": "Luca Sanna"
+	}
+};
 ---
 
 <Layout 
@@ -102,6 +129,14 @@ const canonical = `https://www.lucasanna.eu/case-studies/${caseStudy.slug}/`;
 						<Content />
 					</div>
 				)}
+
+				<!-- Internal links -->
+				<div class="mt-16 md:mt-20 pt-8 md:pt-12" style="border-top: 1px solid rgb(var(--border) / 0.15);">
+					<p style="font-size: var(--text-base); color: rgb(var(--muted));">
+						Per capire come lavoro: <a href="/metodo" class="link-editorial" style="color: rgb(var(--ink)); font-weight: var(--font-weight-medium);">metodo di lavoro</a>. 
+						Per collaborazioni: <a href="/contatti" class="link-editorial" style="color: rgb(var(--ink)); font-weight: var(--font-weight-medium);">contatti</a>.
+					</p>
+				</div>
 
 				{caseStudy.data.stack && caseStudy.data.stack.length > 0 && (
 					<div class="mt-16 md:mt-20 pt-8 md:pt-12" style="border-top: 1px solid rgb(var(--border) / 0.15);">
@@ -172,4 +207,5 @@ const canonical = `https://www.lucasanna.eu/case-studies/${caseStudy.slug}/`;
 		</Section>
 	</main>
 	<Footer />
+	<script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
 </Layout>
