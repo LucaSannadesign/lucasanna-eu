@@ -6,43 +6,40 @@ sector: "Grafica editoriale"
 services: ["Grafica editoriale", "Impaginazione", "Progetto grafico"]
 stack: ["Adobe InDesign", "Adobe Illustrator", "Adobe Photoshop"]
 tags: ["Grafica editoriale", "Impaginazione", "Libro"]
-excerpt: "Progetto di grafica editoriale per Accademia di Sassari: libro realizzato recuperando e organizzando i lavori dei bambini. Progetto grafico, copertina e impaginazione curati per valorizzare i contenuti."
+excerpt: "Progetto editoriale per Accademia di Sassari: libro che documenta un'esperienza didattica di pedagogia dell'arte. Progetto grafico, copertina e impaginazione per valorizzare le interpretazioni dei bambini sugli artisti sardi."
 featured: false
 cover: "/images/case-studies/noi-e-dessy.jpg"
 ---
 
+## Contesto e finalità
 
-## Contesto
+Noi e Dessy nasce da un'esperienza didattica ideata dalla Prof.ssa di Pedagogia dell'Arte dell'Accademia di Sassari. L'obiettivo educativo era avvicinare i bambini all'arte e agli artisti sardi importanti, chiamandoli a interpretare, di volta in volta, un artista sardo selezionato.
 
-Noi e Dessy è un progetto di grafica editoriale sviluppato in collaborazione con l'Accademia di Sassari. Il progetto consisteva nel recuperare e organizzare i lavori dei bambini, trasformandoli in un libro attraverso la cura del progetto grafico, della copertina e dell'impaginazione.
+Il progetto richiedeva una restituzione che trasformasse quell'esperienza in un libro consultabile: non solo documentazione, ma un oggetto che raccontasse il processo e rendesse fruibile il lavoro dei bambini. Il mio ruolo è stato quello di assemblare e valorizzare i materiali prodotti, dando loro una forma editoriale coerente.
 
-Il settore educativo richiede che i contenuti dei bambini siano valorizzati e presentati in modo professionale. Il libro doveva comunicare l'identità del progetto e facilitare la fruizione dei contenuti creativi.
+## Obiettivo editoriale
 
-## Obiettivo
+Trasformare l'esperienza didattica in un libro che funzionasse sia come documento del progetto che come strumento di consultazione. Il libro doveva restituire il processo creativo dei bambini, mantenendo la spontaneità dei loro lavori ma organizzandoli in una struttura chiara e leggibile.
 
-Creare un libro che valorizzasse i lavori dei bambini attraverso un progetto grafico coerente e curato. L'obiettivo principale era trasformare i contenuti in un prodotto editoriale di qualità, con particolare attenzione alla copertina e all'impaginazione.
+L'obiettivo era creare un prodotto editoriale che valorizzasse ogni interpretazione senza appesantire la lettura, bilanciando ordine e creatività, documentazione e fruibilità.
 
-Il libro doveva funzionare sia come documento del progetto educativo che come strumento di divulgazione, guidando il lettore attraverso i contenuti in modo chiaro e piacevole.
+## Il mio ruolo
 
-## Approccio
+Ho curato l'intero progetto grafico: dalla copertina all'impaginazione interna, dalla scelta tipografica alla gestione delle immagini. Ho organizzato i materiali prodotti dai bambini in una struttura coerente, definendo gerarchie visive che guidassero la lettura senza imporre un ritmo troppo rigido.
 
-Ho analizzato i lavori dei bambini e ho progettato un progetto grafico che valorizza i contenuti creativi. Ho scelto una struttura di impaginazione che bilancia ordine e creatività, con focus sulla leggibilità e sulla presentazione dei lavori.
+La copertina doveva comunicare immediatamente l'identità del progetto, mentre l'impaginazione interna doveva valorizzare ogni lavoro mantenendo una coerenza visiva complessiva. Ogni elemento è stato pensato per restituire l'energia creativa dei bambini senza perdere chiarezza.
 
-La copertina è stata progettata per comunicare immediatamente l'identità del progetto, mentre l'impaginazione interna organizza i contenuti in modo chiaro e accessibile. Ogni elemento è pensato per valorizzare i lavori dei bambini senza appesantire la lettura.
+## Scelte di design
 
-## Soluzione
+Ho progettato una griglia di impaginazione che bilancia spazi bianchi e contenuti, dando respiro ai lavori dei bambini. La tipografia è leggibile e appropriata al contesto educativo, con gerarchie chiare che distinguono testi introduttivi, didascalie e contenuti principali.
 
-Ho sviluppato un progetto grafico completo che include copertina, impaginazione e layout interno. Il design comunica l'identità educativa del progetto attraverso scelte visive coerenti e una presentazione curata dei contenuti.
+Le immagini e i disegni dei bambini sono stati valorizzati attraverso un layout bilanciato: ogni lavoro ha il suo spazio, senza competere con gli altri. La copertina usa un linguaggio visivo che comunica l'identità del progetto mantenendo un tono accessibile e accogliente.
 
-La copertina è stata progettata per essere accattivante e comunicativa, mentre l'impaginazione interna organizza i lavori dei bambini in modo chiaro e piacevole. La tipografia è leggibile e appropriata, le immagini sono valorizzate attraverso un layout bilanciato.
+Il ritmo delle pagine alterna sezioni più dense a spazi più aperti, creando una lettura piacevole che rispetta la varietà dei materiali senza frammentare eccessivamente l'esperienza.
 
-## Risultati
+## Output
 
-Il libro comunica efficacemente l'identità del progetto, valorizzando i lavori dei bambini attraverso un progetto grafico professionale. La struttura chiara e la presentazione curata hanno facilitato la fruizione dei contenuti. I lettori apprezzano la qualità del progetto grafico e la chiarezza dell'impaginazione.
+Il libro documenta l'esperienza didattica rendendola consultabile e fruibile. La struttura chiara e la presentazione curata facilitano la lettura e la comprensione del progetto, valorizzando sia il lavoro dei bambini che l'obiettivo educativo dell'iniziativa.
 
-Il libro funziona bene come documento del progetto educativo e come strumento di divulgazione, facilitando la condivisione e la valorizzazione dei contenuti creativi.
-
-## Cosa rifarei oggi
-
-Valuterei l'aggiunta di elementi interattivi o digitali per arricchire l'esperienza di lettura, mantenendo comunque il focus sulla qualità del progetto grafico. Potrei anche esplorare formati alternativi per la distribuzione digitale, sempre mantenendo l'attenzione alla cura dell'impaginazione e del progetto grafico.
+Il prodotto finale funziona come documento del progetto e come strumento di divulgazione, permettendo di condividere e valorizzare l'esperienza oltre il contesto didattico originale.
 
