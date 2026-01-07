@@ -68,15 +68,12 @@ const GA4_ID = 'G-MPEL6FVCXD';
 		}
 		
 		// Ascolta evento consenso cambiato
-		window.addEventListener('cookie-consent-changed', ((e: CustomEvent) => {
-			if (e.detail && e.detail.analytics === true) {
-				// Consenso accettato: carica GA4
+		window.addEventListener('cookie-consent-changed', (e) => {
+			const detail = (e instanceof CustomEvent ? e.detail : undefined);
+			if (detail?.analytics === true) {
 				loadGA4();
-			} else {
-				// Consenso rifiutato: disabilita tracking
-				disableGA4();
 			}
-		}) as EventListener);
+		});
 	})();
 </script>
 
