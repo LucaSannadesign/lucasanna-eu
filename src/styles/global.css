@@ -191,7 +191,7 @@ body::before {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-top: var(--space-8);
+	margin-top: var(--space-6);
 	order: 2;
 }
 

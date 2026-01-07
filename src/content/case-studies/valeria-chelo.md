@@ -14,15 +14,15 @@ cover: "/images/case-studies/valeriachelo-psicologa-sassari.jpg"
 
 ## Contesto
 
-Valeria Chelo è una psicologa che offre consulti in presenza e online. Il cliente aveva bisogno di un sito web che comunicasse professionalità e accoglienza, caratteristiche fondamentali nel settore della salute mentale.
+Valeria Chelo è una psicologa che offre consulti in presenza e online. Il progetto richiedeva un'interfaccia che comunicasse professionalità e accoglienza, caratteristiche fondamentali nel settore della salute mentale.
 
-Il settore richiede fiducia e riservatezza. Il sito doveva trasmettere entrambe, facilitando la prenotazione di consulti senza risultare invasivo o troppo commerciale.
+Il settore richiede fiducia e riservatezza. Il progetto doveva trasmettere entrambe, facilitando la prenotazione di consulti senza risultare invasivo o troppo commerciale.
 
 ## Obiettivo
 
-Creare un sito web che comunicasse professionalità e accoglienza, facilitando la prenotazione di consulti. L'obiettivo era costruire fiducia attraverso contenuti e design, presentando i servizi in modo chiaro e rassicurante.
+Progetto web che comunicasse professionalità e accoglienza, facilitando la prenotazione di consulti. L'obiettivo era costruire fiducia attraverso contenuti e design, presentando informazioni in modo chiaro e rassicurante.
 
-Il sito doveva funzionare sia come vetrina che come strumento di prenotazione, guidando i visitatori verso la richiesta di consulto senza pressioni.
+Il progetto doveva funzionare sia come vetrina che come strumento di prenotazione, guidando i visitatori verso la richiesta di consulto senza pressioni.
 
 ## Approccio
 
@@ -32,15 +32,15 @@ La struttura è chiara: home con presentazione, servizi, approccio terapeutico e
 
 ## Soluzione
 
-Ho progettato un sito WordPress con design sobrio e professionale. L'interfaccia è pulita e funzionale, con sezioni dedicate a presentazione, servizi e contatti.
+Ho progettato un'interfaccia WordPress con design sobrio e professionale. L'interfaccia è pulita e funzionale, con sezioni dedicate a presentazione, informazioni e contatti.
 
 Il design comunica accoglienza attraverso una palette di colori caldi e spaziature ampie. La tipografia è chiara e leggibile. Le immagini sono curate per comunicare professionalità senza risultare fredde. Il sistema di contatto è semplice e rassicurante.
 
 ## Risultati
 
-Il sito comunica efficacemente professionalità e accoglienza, migliorando la percezione del brand. La struttura chiara ha facilitato la prenotazione di consulti. I visitatori apprezzano l'approccio rassicurante e la chiarezza delle informazioni.
+Il progetto comunica efficacemente professionalità e accoglienza, migliorando la percezione del brand. La struttura chiara ha facilitato la prenotazione di consulti. I visitatori apprezzano l'approccio rassicurante e la chiarezza delle informazioni.
 
-Il sito funziona bene come strumento di prenotazione e come vetrina del servizio, aumentando la fiducia dei potenziali clienti.
+Il progetto funziona bene come strumento di prenotazione e come vetrina, aumentando la fiducia dei potenziali clienti.
 
 ## Cosa rifarei oggi
 
