@@ -9,7 +9,7 @@ import Card from '../components/Card.astro';
 import Portrait from '../components/Portrait.astro';
 
 const caseStudies = await getCollection('case-studies');
-const sortedCaseStudies = caseStudies.sort((a, b) => b.data.year - a.data.year);
+const sortedCaseStudies = caseStudies;
 const latestCaseStudies = sortedCaseStudies.slice(0, 6);
 ---
 
@@ -145,7 +145,6 @@ const latestCaseStudies = sortedCaseStudies.slice(0, 6);
 							href={`/case-studies/${caseStudy.slug}`}
 							title={caseStudy.data.title}
 							sector={caseStudy.data.sector}
-							year={caseStudy.data.year}
 							tags={caseStudy.data.tags}
 							variant={index === 0 ? 'featured' : 'default'}
 							cover={caseStudy.data.cover}

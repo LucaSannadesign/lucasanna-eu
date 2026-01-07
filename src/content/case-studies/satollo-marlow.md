@@ -1,6 +1,5 @@
 ---
 title: "Satollo Marlow"
-year: 2024
 client: "Satollo Marlow"
 sector: "Brand & Design"
 services: ["Web Design", "WordPress", "Art Direction"]

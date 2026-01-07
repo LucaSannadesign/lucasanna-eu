@@ -1,6 +1,5 @@
 ---
 title: "Estrella Yoruba Tarot"
-year: 2023
 client: "Estrella Yoruba Tarot"
 sector: "Spiritualità"
 services: ["Web Design", "WordPress"]

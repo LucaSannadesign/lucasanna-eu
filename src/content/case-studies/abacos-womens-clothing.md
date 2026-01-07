@@ -1,6 +1,5 @@
 ---
 title: "Abaco's Women's Clothing"
-year: 2022
 client: "Abaco's Women's Clothing"
 sector: "Fashion & E-commerce"
 services: ["E-commerce", "Web Design", "WordPress"]

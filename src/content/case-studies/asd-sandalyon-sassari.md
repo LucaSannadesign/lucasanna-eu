@@ -1,6 +1,5 @@
 ---
 title: "ASD Sandalyon Sassari"
-year: 2023
 client: "ASD Sandalyon Sassari"
 sector: "Sport"
 services: ["Web Design", "WordPress"]

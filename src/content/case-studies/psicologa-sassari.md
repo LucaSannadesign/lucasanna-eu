@@ -1,6 +1,5 @@
 ---
 title: "Studio di Psicologia - Sassari"
-year: 2024
 client: "Studio di Psicologia"
 sector: "Salute e Benessere"
 services: ["Web Design", "WordPress"]

@@ -1,6 +1,5 @@
 ---
 title: "Le Case Immobiliare"
-year: 2024
 client: "Le Case Immobiliare"
 sector: "Real Estate"
 services: ["Web Design", "WordPress", "UX/UI"]

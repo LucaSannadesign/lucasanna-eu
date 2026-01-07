@@ -1,6 +1,5 @@
 ---
 title: "Noi e Dessy - Grafica editoriale (collaborazione Accademia di Sassari)"
-year: 2024
 client: "Accademia di Sassari"
 sector: "Grafica editoriale"
 services: ["Grafica editoriale", "Impaginazione", "Progetto grafico"]

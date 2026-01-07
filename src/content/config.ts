@@ -4,7 +4,7 @@ const caseStudies = defineCollection({
 	type: 'content',
 	schema: z.object({
 		title: z.string(),
-		year: z.number(),
+		year: z.number().optional(),
 		client: z.string(),
 		sector: z.string(),
 		services: z.array(z.string()),

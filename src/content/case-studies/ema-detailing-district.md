@@ -1,6 +1,5 @@
 ---
 title: "EMA Detailing District"
-year: 2024
 client: "EMA Detailing District"
 sector: "Automotive"
 services: ["Web Design", "WordPress", "E-commerce"]

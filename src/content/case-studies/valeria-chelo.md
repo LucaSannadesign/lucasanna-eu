@@ -1,6 +1,5 @@
 ---
 title: "Valeria Chelo - Psicologa"
-year: 2022
 client: "Valeria Chelo"
 sector: "Salute e Benessere"
 services: ["Web Design", "WordPress"]

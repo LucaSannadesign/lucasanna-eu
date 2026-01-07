@@ -1,6 +1,5 @@
 ---
 title: "Top Wild"
-year: 2024
 client: "Top Wild"
 sector: "Travel & Turismo"
 services: ["Web Design", "WordPress", "Brand Design"]

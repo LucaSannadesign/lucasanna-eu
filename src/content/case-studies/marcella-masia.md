@@ -1,6 +1,5 @@
 ---
 title: "Marcella Masia - Artista"
-year: 2022
 client: "Marcella Masia"
 sector: "Arte"
 services: ["Web Design", "WordPress"]

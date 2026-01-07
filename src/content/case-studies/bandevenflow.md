@@ -1,6 +1,5 @@
 ---
 title: "Bandevenflow"
-year: 2023
 client: "Bandevenflow"
 sector: "Musica"
 services: ["Web Design", "WordPress"]
