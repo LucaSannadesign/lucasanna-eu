@@ -70,9 +70,7 @@ button:focus-visible {
 .link-editorial:hover {
 	border-bottom-color: rgb(var(--accent));
 	color: rgb(var(--ink));
-}
-
-/* Unified Container Utility - Gallery/Editorial Layout */
+}/* Unified Container Utility - Gallery/Editorial Layout */
 .container-unified {
 	max-width: 72rem; /* max-w-6xl */
 	margin-left: auto;
