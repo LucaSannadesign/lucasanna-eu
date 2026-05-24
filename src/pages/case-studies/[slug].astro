@@ -61,10 +61,17 @@ const schemaData = isBook ? {
 		"name": "Luca Sanna"
 	}
 };
+
+const seoTitles: Record<string, string> = {
+	'psicologa-sassari': 'Patrizia Sabbadin | Sito web counselor Sassari',
+	'noi-e-dessy': 'Noi e Dessy | Case study grafico-editoriale',
+	'noi-e-biasi': 'Noi e Biasi | Case study grafico-editoriale',
+};
+const pageTitle = seoTitles[caseStudy.slug] ?? `${caseStudy.data.title} - Case Study`;
 ---
 
 <Layout 
-	title={caseStudy.data.slug === 'psicologa-sassari' ? 'Patrizia Sabbadin - Counselor Sassari | Case Study' : `${caseStudy.data.title} - Case Study`}
+	title={pageTitle}
 	description={caseStudy.data.excerpt}
 	canonical={canonical}
 >
