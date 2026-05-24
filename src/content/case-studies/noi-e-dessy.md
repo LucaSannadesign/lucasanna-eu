@@ -5,7 +5,7 @@ sector: "Grafica editoriale"
 services: ["Grafica editoriale", "Impaginazione", "Progetto grafico"]
 stack: ["Adobe InDesign", "Adobe Illustrator", "Adobe Photoshop"]
 tags: ["Grafica editoriale", "Impaginazione", "Libro"]
-excerpt: "Progetto editoriale per Accademia di Sassari: libro che documenta un'esperienza didattica di pedagogia dell'arte. Progetto grafico, copertina e impaginazione per valorizzare le interpretazioni dei bambini sugli artisti sardi."
+excerpt: "Case study del progetto Noi e Dessy: grafica editoriale, composizione visiva e collaborazione accademica a Sassari."
 featured: false
 cover: "/images/case-studies/noi-e-dessy.jpg"
 ---
