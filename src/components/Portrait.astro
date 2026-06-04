@@ -12,7 +12,7 @@ interface Props {
 const { size = 'lg', eager = false, variant = 'default', linkTo } = Astro.props;
 
 // Verifica se il file WebP esiste
-const webpPath = join(process.cwd(), 'public', 'images', 'ritratto-luca-sanna.webp');
+const webpPath = join(process.cwd(), 'public', 'images', 'luca-sanna-foto-2026.webp');
 const hasWebP = existsSync(webpPath);
 
 // Dimensioni basate sulla prop size
@@ -37,13 +37,13 @@ const isClickable = !!linkTo;
 		<picture>
 			{hasWebP && (
 				<source 
-					srcset="/images/ritratto-luca-sanna.webp" 
+					srcset="/images/luca-sanna-foto-2026.webp" 
 					type="image/webp"
 				/>
 			)}
 			<img
-				src="/images/ritratto-luca-sanna.webp"
-				alt="Ritratto di Luca Sanna"
+				src="/images/luca-sanna-foto-2026.webp"
+				alt="Luca Sanna, web designer a Sassari"
 				width="800"
 				height="800"
 				class="portrait__image"
@@ -59,13 +59,13 @@ const isClickable = !!linkTo;
 		<picture>
 			{hasWebP && (
 				<source 
-					srcset="/images/ritratto-luca-sanna.webp" 
+					srcset="/images/luca-sanna-foto-2026.webp" 
 					type="image/webp"
 				/>
 			)}
 			<img
-				src="/images/ritratto-luca-sanna.webp"
-				alt="Ritratto di Luca Sanna"
+				src="/images/luca-sanna-foto-2026.webp"
+				alt="Luca Sanna, web designer a Sassari"
 				width="800"
 				height="800"
 				class="portrait__image"
