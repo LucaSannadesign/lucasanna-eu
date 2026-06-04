@@ -21,7 +21,7 @@ const latestCaseStudies = sortedCaseStudies.slice(0, 6);
 	<Header />
 	<main>
 		<!-- Hero - Tech Agency Premium -->
-		<section class="reveal relative pt-16 pb-12 md:pt-24 md:pb-20 overflow-hidden">
+		<section class="reveal relative hero-home pt-10 pb-10 md:pt-14 md:pb-14 overflow-hidden">
 			<!-- Radial glow background -->
 			<div 
 				class="absolute inset-0 pointer-events-none"
@@ -39,7 +39,7 @@ const latestCaseStudies = sortedCaseStudies.slice(0, 6);
 						</div>
 						<h1 
 							class="font-bold mb-4"
-							style="font-size: clamp(1.875rem, 4.5vw, var(--text-6xl)); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight); line-height: 1.1;"
+							style="font-size: clamp(2rem, 3.8vw, 4.5rem); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight); line-height: 1.1;"
 						>
 							Web designer a Sassari per siti web chiari, moderni e orientati ai risultati
 						</h1>
@@ -279,3 +279,17 @@ const latestCaseStudies = sortedCaseStudies.slice(0, 6);
 		}
 	})} />
 </Layout>
+
+<style>
+	@media (min-width: 768px) {
+		.hero-home .heroGrid {
+			gap: var(--space-8);
+			align-items: center;
+		}
+
+		.hero-home .hero-portrait {
+			margin-top: 0;
+			align-self: center;
+		}
+	}
+</style>
