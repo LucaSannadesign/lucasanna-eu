@@ -1,0 +1,281 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ButtonLink from '../components/ButtonLink.astro';
+import Section from '../components/Section.astro';
+import Card from '../components/Card.astro';
+
+const caseStudies = await getCollection('case-studies');
+const featuredCaseStudies = caseStudies.slice(0, 3);
+---
+
+<Layout
+	title="Realizzazione Siti Web Sassari | Web Designer Freelance Luca Sanna"
+	description="Realizzazione siti web a Sassari per professionisti, attività locali e piccole imprese. Progetto siti chiari, veloci e coerenti con identità visiva, UX/UI e SEO locale."
+	canonical="https://www.lucasanna.eu/realizzazione-siti-web-sassari/"
+>
+	<Header />
+	<main>
+		<!-- Hero -->
+		<section class="reveal relative pt-16 pb-12 md:pt-24 md:pb-20 overflow-hidden">
+			<div
+				class="absolute inset-0 pointer-events-none"
+				style="background: radial-gradient(circle at 30% 50%, rgb(var(--accent) / 0.08) 0%, transparent 60%), rgb(var(--paper));"
+			></div>
+			<div class="container-unified relative z-10">
+				<div class="max-w-3xl">
+					<div class="flex flex-wrap items-center gap-2 mb-4">
+						<span class="tech-chip">Creazione siti web</span>
+						<span class="tech-chip">UX/UI design</span>
+						<span class="tech-chip">SEO locale</span>
+						<span class="tech-chip">Identità visiva</span>
+					</div>
+					<h1
+						class="font-bold mb-4"
+						style="font-size: clamp(1.875rem, 4.5vw, var(--text-6xl)); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight); line-height: 1.1;"
+					>
+						Realizzazione siti web a Sassari con un approccio personalizzato
+					</h1>
+					<p
+						class="mb-6 text-lg md:text-xl"
+						style="font-size: clamp(1rem, 2.5vw, var(--text-xl)); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
+					>
+						Creo siti web professionali per freelance, attività locali e piccole imprese, curando struttura, design, contenuti, identità visiva e ottimizzazione SEO di base.
+					</p>
+					<div class="flex flex-col sm:flex-row gap-4">
+						<ButtonLink href="/contatti" size="lg">Richiedi informazioni</ButtonLink>
+						<ButtonLink href="/case-studies" variant="secondary" size="lg">Vedi i case study</ButtonLink>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Per chi è il servizio -->
+		<Section variant="alt">
+			<div class="reveal mb-10 md:mb-12 max-w-3xl">
+				<h2
+					class="font-bold mb-4"
+					style="font-size: var(--text-4xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
+				>
+					Per chi è il servizio
+				</h2>
+				<p style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);">
+					La realizzazione siti web a Sassari è pensata per chi vuole un referente diretto, non un percorso da agenzia impersonale: un web designer freelance che segue il progetto dall’analisi alla pubblicazione.
+				</p>
+			</div>
+			<div class="stagger grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+				<div class="card-editorial reveal">
+					<h3 class="font-semibold mb-3" style="font-size: var(--text-xl); color: rgb(var(--ink));">
+						Freelance e professionisti
+					</h3>
+					<p style="color: rgb(var(--muted)); line-height: var(--line-height-relaxed); font-size: var(--text-sm);">
+						Siti vetrina e portfolio per presentare servizi, competenze e contatti in modo chiaro, con un tono coerente alla tua immagine professionale.
+					</p>
+				</div>
+				<div class="card-editorial reveal">
+					<h3 class="font-semibold mb-3" style="font-size: var(--text-xl); color: rgb(var(--ink));">
+						Attività locali
+					</h3>
+					<p style="color: rgb(var(--muted)); line-height: var(--line-height-relaxed); font-size: var(--text-sm);">
+						Presenza online per negozi, studi e servizi sul territorio: orari, offerte e percorsi di contatto pensati per chi cerca in zona.
+					</p>
+				</div>
+				<div class="card-editorial reveal">
+					<h3 class="font-semibold mb-3" style="font-size: var(--text-xl); color: rgb(var(--ink));">
+						Artisti e creativi
+					</h3>
+					<p style="color: rgb(var(--muted)); line-height: var(--line-height-relaxed); font-size: var(--text-sm);">
+						Siti che mettono al centro opere, progetti e identità visiva, con layout curati e leggibilità su mobile e desktop.
+					</p>
+				</div>
+				<div class="card-editorial reveal">
+					<h3 class="font-semibold mb-3" style="font-size: var(--text-xl); color: rgb(var(--ink));">
+						Piccole imprese
+					</h3>
+					<p style="color: rgb(var(--muted)); line-height: var(--line-height-relaxed); font-size: var(--text-sm);">
+						Siti web professionali per presentare l’azienda, i servizi e le richieste di preventivo senza complessità inutili.
+					</p>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Cosa posso realizzare -->
+		<Section>
+			<div class="reveal mb-10 md:mb-12 max-w-3xl">
+				<h2
+					class="font-bold mb-4"
+					style="font-size: var(--text-4xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
+				>
+					Cosa posso realizzare
+				</h2>
+				<p style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);">
+					Dalla creazione siti web Sassari al restyling di progetti già online: soluzioni adatte a obiettivi, budget e tempi reali.
+				</p>
+			</div>
+			<ul class="stagger grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-4xl" style="list-style: none; padding: 0; margin: 0;">
+				<li class="card-editorial reveal" style="font-size: var(--text-base); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);">
+					<strong style="color: rgb(var(--ink)); display: block; margin-bottom: 0.25rem;">Siti vetrina</strong>
+					Presentazione essenziale di attività, servizi e contatti, con struttura chiara e messaggi immediati.
+				</li>
+				<li class="card-editorial reveal" style="font-size: var(--text-base); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);">
+					<strong style="color: rgb(var(--ink)); display: block; margin-bottom: 0.25rem;">Landing page</strong>
+					Pagine focalizzate su una campagna, un servizio o una richiesta di contatto specifica.
+				</li>
+				<li class="card-editorial reveal" style="font-size: var(--text-base); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);">
+					<strong style="color: rgb(var(--ink)); display: block; margin-bottom: 0.25rem;">Portfolio professionali</strong>
+					Raccolte di progetti e case study per freelance, creativi e professionisti del territorio.
+				</li>
+				<li class="card-editorial reveal" style="font-size: var(--text-base); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);">
+					<strong style="color: rgb(var(--ink)); display: block; margin-bottom: 0.25rem;">Siti per servizi locali</strong>
+					Percorsi pensati per chi offre consulenze, servizi in sede o attività legate a Sassari e dintorni.
+				</li>
+				<li class="card-editorial reveal md:col-span-2" style="font-size: var(--text-base); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);">
+					<strong style="color: rgb(var(--ink)); display: block; margin-bottom: 0.25rem;">Restyling di siti esistenti</strong>
+					Aggiornamento di layout, contenuti, UX/UI e aspetti tecnici di siti già pubblicati, mantenendo ciò che funziona.
+				</li>
+			</ul>
+		</Section>
+
+		<!-- Metodo di lavoro -->
+		<Section variant="alt" narrow>
+			<div class="reveal mb-10 md:mb-12 max-w-3xl">
+				<h2
+					class="font-bold mb-4"
+					style="font-size: var(--text-4xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
+				>
+					Metodo di lavoro
+				</h2>
+				<p style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);">
+					Cinque fasi per accompagnare la realizzazione del sito con chiarezza, senza saltare passaggi utili al risultato finale.
+				</p>
+			</div>
+			<div class="space-y-10 md:space-y-12">
+				<div class="reveal" style="border-left: 2px solid rgb(var(--border) / 0.15); padding-left: var(--space-8);">
+					<h3 class="font-semibold mb-3" style="font-size: var(--text-2xl); color: rgb(var(--ink));">1. Analisi iniziale</h3>
+					<p style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed); max-width: 65ch;">
+						Definizione di obiettivi, pubblico, competitor e vincoli: la base per scegliere struttura, tono e priorità del progetto.
+					</p>
+				</div>
+				<div class="reveal" style="border-left: 2px solid rgb(var(--border) / 0.15); padding-left: var(--space-8);">
+					<h3 class="font-semibold mb-3" style="font-size: var(--text-2xl); color: rgb(var(--ink));">2. Struttura e contenuti</h3>
+					<p style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed); max-width: 65ch;">
+						Architettura delle pagine, gerarchia dei messaggi e testi orientati alla chiarezza e alla conversione, adatti al contesto locale.
+					</p>
+				</div>
+				<div class="reveal" style="border-left: 2px solid rgb(var(--border) / 0.15); padding-left: var(--space-8);">
+					<h3 class="font-semibold mb-3" style="font-size: var(--text-2xl); color: rgb(var(--ink));">3. UX/UI design</h3>
+					<p style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed); max-width: 65ch;">
+						Interfacce coerenti con l’identità visiva: layout responsive, componenti leggibili e attenzione all’esperienza su mobile.
+					</p>
+				</div>
+				<div class="reveal" style="border-left: 2px solid rgb(var(--border) / 0.15); padding-left: var(--space-8);">
+					<h3 class="font-semibold mb-3" style="font-size: var(--text-2xl); color: rgb(var(--ink));">4. Sviluppo e ottimizzazione</h3>
+					<p style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed); max-width: 65ch;">
+						Implementazione del sito, performance di base, accessibilità e impostazioni SEO locale per una presenza efficace su Google.
+					</p>
+				</div>
+				<div class="reveal" style="border-left: 2px solid rgb(var(--border) / 0.15); padding-left: var(--space-8);">
+					<h3 class="font-semibold mb-3" style="font-size: var(--text-2xl); color: rgb(var(--ink));">5. Test, pubblicazione e monitoraggio</h3>
+					<p style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed); max-width: 65ch;">
+						Verifiche pre-lancio, messa online e indicazioni per tenere sotto controllo traffico e comportamento degli utenti nel tempo.
+					</p>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Cosa include -->
+		<Section>
+			<div class="reveal mb-10 md:mb-12 max-w-3xl">
+				<h2
+					class="font-bold mb-4"
+					style="font-size: var(--text-4xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
+				>
+					Cosa include
+				</h2>
+				<p style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);">
+					Elementi ricorrenti nei siti web professionali che realizzo per clienti a Sassari e in Sardegna.
+				</p>
+			</div>
+			<div class="stagger grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+				<div class="card-editorial reveal">
+					<p style="color: rgb(var(--muted)); line-height: var(--line-height-relaxed); font-size: var(--text-sm);">Design responsive per smartphone, tablet e desktop</p>
+				</div>
+				<div class="card-editorial reveal">
+					<p style="color: rgb(var(--muted)); line-height: var(--line-height-relaxed); font-size: var(--text-sm);">Struttura SEO di base: titoli, meta description, gerarchia contenuti</p>
+				</div>
+				<div class="card-editorial reveal">
+					<p style="color: rgb(var(--muted)); line-height: var(--line-height-relaxed); font-size: var(--text-sm);">Attenzione a performance e accessibilità</p>
+				</div>
+				<div class="card-editorial reveal">
+					<p style="color: rgb(var(--muted)); line-height: var(--line-height-relaxed); font-size: var(--text-sm);">Form contatti o percorsi chiari per richieste e preventivi</p>
+				</div>
+				<div class="card-editorial reveal">
+					<p style="color: rgb(var(--muted)); line-height: var(--line-height-relaxed); font-size: var(--text-sm);">Organizzazione chiara di sezioni, servizi e call to action</p>
+				</div>
+				<div class="card-editorial reveal">
+					<p style="color: rgb(var(--muted)); line-height: var(--line-height-relaxed); font-size: var(--text-sm);">Eventuale collegamento a strumenti di analisi (es. Google Analytics)</p>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Case studies -->
+		{featuredCaseStudies.length > 0 && (
+			<Section variant="alt">
+				<div class="reveal mb-10 md:mb-12">
+					<h2
+						class="font-bold mb-4"
+						style="font-size: var(--text-4xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
+					>
+						Progetti e case study
+					</h2>
+					<p
+						class="mb-6"
+						style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed); max-width: 3xl;"
+					>
+						Alcuni esempi di realizzazione siti web e progetti digitali. Per l’elenco completo visita la sezione case study del portfolio.
+					</p>
+					<ButtonLink href="/case-studies" variant="secondary" size="sm">Tutti i case study</ButtonLink>
+				</div>
+				<div class="stagger grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+					{featuredCaseStudies.map((caseStudy) => (
+						<Card
+							href={`/case-studies/${caseStudy.slug}`}
+							title={caseStudy.data.title}
+							sector={caseStudy.data.sector}
+							tags={caseStudy.data.tags}
+							cover={caseStudy.data.cover}
+						/>
+					))}
+				</div>
+			</Section>
+		)}
+
+		<!-- CTA finale -->
+		<Section>
+			<div class="reveal text-center max-w-3xl mx-auto">
+				<h2
+					class="font-bold mb-4"
+					style="font-size: var(--text-3xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
+				>
+					Raccontami il tuo progetto
+				</h2>
+				<p
+					class="mb-6"
+					style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
+				>
+					Se cerchi un web designer freelance a Sassari per la realizzazione del tuo sito, scrivimi obiettivi, tempi e riferimenti utili: valuterò insieme a te la soluzione più adatta.
+				</p>
+				<p
+					class="mb-6"
+					style="font-size: var(--text-base); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
+				>
+					Per progetti strutturati da agenzia, team dedicato e supporto continuativo è disponibile <a href="https://www.lswebagency.com/" class="link-editorial" style="color: rgb(var(--ink)); font-weight: var(--font-weight-medium);">LS Web Agency</a>.
+				</p>
+				<ButtonLink href="/contatti" size="lg">Richiedi una consulenza</ButtonLink>
+			</div>
+		</Section>
+	</main>
+	<Footer />
+</Layout>
