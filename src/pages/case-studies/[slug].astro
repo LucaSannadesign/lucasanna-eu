@@ -35,31 +35,41 @@ if (!caseStudy) {
 const { Content } = await caseStudy.render();
 const canonical = `https://www.lucasanna.eu/case-studies/${caseStudy.slug}/`;
 
-// Determina tipo schema in base al settore
+const allKeywords = [...new Set([...caseStudy.data.tags, ...caseStudy.data.services, ...(caseStudy.data.stack || [])])];
+const coverUrl = caseStudy.data.cover ? `https://www.lucasanna.eu${caseStudy.data.cover}` : undefined;
+
 const isBook = caseStudy.data.sector === 'Grafica editoriale';
 const schemaData = isBook ? {
 	"@context": "https://schema.org",
 	"@type": "Book",
 	"name": caseStudy.data.title,
+	"description": caseStudy.data.excerpt,
+	"url": canonical,
+	...(coverUrl && { "image": coverUrl }),
+	"inLanguage": "it-IT",
 	"author": {
 		"@type": "Person",
-		"name": "Luca Sanna"
+		"name": "Luca Sanna",
+		"url": "https://www.lucasanna.eu"
 	},
 	"publisher": {
 		"@type": "Organization",
 		"name": caseStudy.data.client
-	},
-	"description": caseStudy.data.excerpt
+	}
 } : {
 	"@context": "https://schema.org",
-	"@type": "WebSite",
+	"@type": "CreativeWork",
 	"name": caseStudy.data.title,
-	"url": canonical,
 	"description": caseStudy.data.excerpt,
-	"author": {
+	"url": canonical,
+	...(coverUrl && { "image": coverUrl }),
+	"inLanguage": "it-IT",
+	"creator": {
 		"@type": "Person",
-		"name": "Luca Sanna"
-	}
+		"name": "Luca Sanna",
+		"url": "https://www.lucasanna.eu"
+	},
+	...(allKeywords.length > 0 && { "keywords": allKeywords })
 };
 
 const seoTitles: Record<string, string> = {
