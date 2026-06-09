@@ -68,6 +68,31 @@ const seoTitles: Record<string, string> = {
 	'noi-e-biasi': 'Noi e Biasi | Case study grafico-editoriale',
 };
 const pageTitle = seoTitles[caseStudy.slug] ?? `${caseStudy.data.title} - Case Study`;
+
+const breadcrumbSchema = {
+	"@context": "https://schema.org",
+	"@type": "BreadcrumbList",
+	"itemListElement": [
+		{
+			"@type": "ListItem",
+			"position": 1,
+			"name": "Home",
+			"item": "https://www.lucasanna.eu/"
+		},
+		{
+			"@type": "ListItem",
+			"position": 2,
+			"name": "Case Studies",
+			"item": "https://www.lucasanna.eu/case-studies/"
+		},
+		{
+			"@type": "ListItem",
+			"position": 3,
+			"name": caseStudy.data.title,
+			"item": canonical
+		}
+	]
+};
 ---
 
 <Layout 
@@ -215,4 +240,5 @@ const pageTitle = seoTitles[caseStudy.slug] ?? `${caseStudy.data.title} - Case S
 	</main>
 	<Footer />
 	<script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+	<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 </Layout>

@@ -6,12 +6,7 @@
 			"permanent": true
 		  },
 		{
-			"source": "/realizzazione-siti-web-sassari-:slug*",
-			"destination": "https://www.lswebagency.com/siti-web",
-			"permanent": true
-		},
-		{
-			"source": "/realizzazione-siti-web-:slug*",
+			"source": "/realizzazione-siti-web-sassari-:slug+",
 			"destination": "https://www.lswebagency.com/siti-web",
 			"permanent": true
 		},
