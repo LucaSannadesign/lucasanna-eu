@@ -65,7 +65,7 @@ const robotsContent = isProduction ? 'index,follow' : 'noindex,nofollow';
 		<meta name="twitter:image" content={ogImage} />
 		<Ga4Gtag />
 
-		<!-- JSON-LD: WebSite + Person + ProfessionalService -->
+		<!-- JSON-LD: WebSite + Person -->
 		<script type="application/ld+json" set:html={JSON.stringify([
 			{
 				"@context": "https://schema.org",
@@ -81,33 +81,20 @@ const robotsContent = isProduction ? 'index,follow' : 'noindex,nofollow';
 				"jobTitle": "Web Designer e Sviluppatore Front-end",
 				"url": "https://www.lucasanna.eu",
 				"image": "https://www.lucasanna.eu/images/ritratto-luca-sanna-20260116.webp",
+				"knowsAbout": [
+					"Web design",
+					"UX/UI design",
+					"Sviluppo front-end",
+					"Identità visiva",
+					"SEO locale",
+					"Astro",
+					"WordPress"
+				],
 				"sameAs": [
 					"https://www.linkedin.com/in/lucasanna-art/",
 					"https://www.facebook.com/lucasannadesign/",
 					"https://www.instagram.com/lucasanna_art/",
 					"https://it.pinterest.com/lucasanna_art/"
-				]
-			},
-			{
-				"@context": "https://schema.org",
-				"@type": "ProfessionalService",
-				"name": "Luca Sanna Web Designer",
-				"url": "https://www.lucasanna.eu",
-				"email": "info@lucasanna.eu",
-				"address": {
-					"@type": "PostalAddress",
-					"addressLocality": "Sassari",
-					"addressRegion": "Sardegna",
-					"addressCountry": "IT"
-				},
-				"areaServed": ["Sassari", "Sardegna", "Italia"],
-				"serviceType": [
-					"Realizzazione siti web",
-					"Web design",
-					"UX/UI design",
-					"Sviluppo front-end",
-					"SEO locale",
-					"Identità visiva"
 				]
 			}
 		])} />
