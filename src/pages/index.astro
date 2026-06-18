@@ -50,7 +50,7 @@ const latestCaseStudies = sortedCaseStudies.slice(0, 6);
 							Realizzazione siti web, UX/UI design, identità visiva e SEO locale per freelance, attività locali e piccole imprese: progetti digitali su misura, con interfacce curate e una presenza online efficace nel territorio di Sassari.
 						</p>
 						<div class="flex flex-col sm:flex-row gap-4 mb-4">
-							<ButtonLink href="/case-studies" size="lg">Vedi i case study</ButtonLink>
+							<ButtonLink href="/case-studies/" size="lg">Vedi i case study</ButtonLink>
 							<ButtonLink href="https://www.lswebagency.com/" variant="secondary" size="lg">
 								Visita LS Web Agency
 							</ButtonLink>
@@ -63,7 +63,7 @@ const latestCaseStudies = sortedCaseStudies.slice(0, 6);
 						</p>
 					</div>
 					<div class="hero-portrait">
-						<Portrait size="sm" variant="featured" eager={true} linkTo="/chi-sono" />
+						<Portrait size="sm" variant="featured" eager={true} linkTo="/chi-sono/" />
 					</div>
 				</div>
 			</div>
@@ -134,7 +134,7 @@ const latestCaseStudies = sortedCaseStudies.slice(0, 6);
 		<!-- Navigation Cards - Editorial Style -->
 		<Section>
 			<div class="stagger grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
-				<a href="/case-studies" class="card-editorial reveal md:col-span-5 group" style="border-left: 3px solid rgb(var(--accent));">
+				<a href="/case-studies/" class="card-editorial reveal md:col-span-5 group" style="border-left: 3px solid rgb(var(--accent));">
 					<h2 
 						class="font-semibold mb-4 transition-colors"
 						style="font-size: var(--text-3xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
@@ -149,7 +149,7 @@ const latestCaseStudies = sortedCaseStudies.slice(0, 6);
 					</p>
 					<span class="link-editorial inline-block" style="font-size: var(--text-sm); color: rgb(var(--ink));">Esplora →</span>
 				</a>
-				<a href="/metodo" class="card-editorial reveal md:col-span-4 group">
+				<a href="/metodo/" class="card-editorial reveal md:col-span-4 group">
 					<h2 
 						class="font-semibold mb-4 transition-colors"
 						style="font-size: var(--text-3xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
@@ -164,7 +164,7 @@ const latestCaseStudies = sortedCaseStudies.slice(0, 6);
 					</p>
 					<span class="link-editorial inline-block" style="font-size: var(--text-sm); color: rgb(var(--ink));">Scopri →</span>
 				</a>
-				<a href="/contatti" class="card-editorial reveal md:col-span-3 group">
+				<a href="/contatti/" class="card-editorial reveal md:col-span-3 group">
 					<h2 
 						class="font-semibold mb-4 transition-colors"
 						style="font-size: var(--text-3xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
@@ -194,10 +194,10 @@ const latestCaseStudies = sortedCaseStudies.slice(0, 6);
 							Ultimi Case Studies
 						</h2>
 						<div class="flex gap-3">
-							<ButtonLink href="/case-studies" variant="secondary" size="sm">
+							<ButtonLink href="/case-studies/" variant="secondary" size="sm">
 								Vedi tutti
 							</ButtonLink>
-							<ButtonLink href="/contatti" variant="secondary" size="sm">
+							<ButtonLink href="/contatti/" variant="secondary" size="sm">
 								Contatti
 							</ButtonLink>
 						</div>
@@ -211,7 +211,7 @@ const latestCaseStudies = sortedCaseStudies.slice(0, 6);
 				<div class="stagger grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 					{latestCaseStudies.map((caseStudy, index) => (
 						<Card
-							href={`/case-studies/${caseStudy.slug}`}
+							href={`/case-studies/${caseStudy.slug}/`}
 							title={caseStudy.data.title}
 							sector={caseStudy.data.sector}
 							tags={caseStudy.data.tags}
@@ -235,7 +235,7 @@ const latestCaseStudies = sortedCaseStudies.slice(0, 6);
 				<p 
 					style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
 				>
-					Per progetti personali o collaborazioni: <a href="/contatti" class="link-editorial" style="color: rgb(var(--ink)); font-weight: var(--font-weight-medium);">contattami</a>.
+					Per progetti personali o collaborazioni: <a href="/contatti/" class="link-editorial" style="color: rgb(var(--ink)); font-weight: var(--font-weight-medium);">contattami</a>.
 				</p>
 			</div>
 		</Section>

@@ -45,8 +45,8 @@ const featuredCaseStudies = caseStudies.slice(0, 3);
 						Creo siti web professionali per freelance, attività locali e piccole imprese, curando struttura, design, contenuti, identità visiva e ottimizzazione SEO di base.
 					</p>
 					<div class="flex flex-col sm:flex-row gap-4">
-						<ButtonLink href="/contatti" size="lg">Richiedi informazioni</ButtonLink>
-						<ButtonLink href="/case-studies" variant="secondary" size="lg">Vedi i case study</ButtonLink>
+						<ButtonLink href="/contatti/" size="lg">Richiedi informazioni</ButtonLink>
+						<ButtonLink href="/case-studies/" variant="secondary" size="lg">Vedi i case study</ButtonLink>
 					</div>
 				</div>
 			</div>
@@ -236,12 +236,12 @@ const featuredCaseStudies = caseStudies.slice(0, 3);
 					>
 						Alcuni esempi di realizzazione siti web e progetti digitali. Per l’elenco completo visita la sezione case study del portfolio.
 					</p>
-					<ButtonLink href="/case-studies" variant="secondary" size="sm">Tutti i case study</ButtonLink>
+					<ButtonLink href="/case-studies/" variant="secondary" size="sm">Tutti i case study</ButtonLink>
 				</div>
 				<div class="stagger grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
 					{featuredCaseStudies.map((caseStudy) => (
 						<Card
-							href={`/case-studies/${caseStudy.slug}`}
+							href={`/case-studies/${caseStudy.slug}/`}
 							title={caseStudy.data.title}
 							sector={caseStudy.data.sector}
 							tags={caseStudy.data.tags}
@@ -273,7 +273,7 @@ const featuredCaseStudies = caseStudies.slice(0, 3);
 				>
 					Per progetti strutturati da agenzia, team dedicato e supporto continuativo è disponibile <a href="https://www.lswebagency.com/" class="link-editorial" style="color: rgb(var(--ink)); font-weight: var(--font-weight-medium);">LS Web Agency</a>.
 				</p>
-				<ButtonLink href="/contatti" size="lg">Richiedi una consulenza</ButtonLink>
+				<ButtonLink href="/contatti/" size="lg">Richiedi una consulenza</ButtonLink>
 			</div>
 		</Section>
 	</main>
