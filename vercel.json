@@ -36,6 +36,66 @@
 			"permanent": true
 		},
 		{
+			"source": "/project/patrizia-sabbadin-counselor-sassari",
+			"destination": "/case-studies/psicologa-sassari/",
+			"permanent": true
+		},
+		{
+			"source": "/project/patrizia-sabbadin-counselor-sassari/",
+			"destination": "/case-studies/psicologa-sassari/",
+			"permanent": true
+		},
+		{
+			"source": "/portfolio/top-wild-viaggi-avventurosi-per-giovani-backpackers",
+			"destination": "/case-studies/top-wild/",
+			"permanent": true
+		},
+		{
+			"source": "/portfolio/top-wild-viaggi-avventurosi-per-giovani-backpackers/",
+			"destination": "/case-studies/top-wild/",
+			"permanent": true
+		},
+		{
+			"source": "/portfolio-siti-web-sassari/marcella-masia-artista",
+			"destination": "/case-studies/marcella-masia/",
+			"permanent": true
+		},
+		{
+			"source": "/portfolio-siti-web-sassari/marcella-masia-artista/",
+			"destination": "/case-studies/marcella-masia/",
+			"permanent": true
+		},
+		{
+			"source": "/project/marcella-masia-artista",
+			"destination": "/case-studies/marcella-masia/",
+			"permanent": true
+		},
+		{
+			"source": "/project/marcella-masia-artista/",
+			"destination": "/case-studies/marcella-masia/",
+			"permanent": true
+		},
+		{
+			"source": "/project/cd-cover-the-temponauts",
+			"destination": "/case-studies/",
+			"permanent": true
+		},
+		{
+			"source": "/project/cd-cover-the-temponauts/",
+			"destination": "/case-studies/",
+			"permanent": true
+		},
+		{
+			"source": "/project/noi-e-biasi",
+			"destination": "/case-studies/noi-e-biasi/",
+			"permanent": true
+		},
+		{
+			"source": "/project/noi-e-biasi/",
+			"destination": "/case-studies/noi-e-biasi/",
+			"permanent": true
+		},
+		{
 			"source": "/creazione-siti-web-ecommerce",
 			"destination": "https://www.lswebagency.com/siti-web",
 			"permanent": true

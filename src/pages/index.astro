@@ -9,8 +9,11 @@ import Card from '../components/Card.astro';
 import Portrait from '../components/Portrait.astro';
 
 const caseStudies = await getCollection('case-studies');
-const sortedCaseStudies = caseStudies;
-const latestCaseStudies = sortedCaseStudies.slice(0, 6);
+const sortedCaseStudies = caseStudies.sort((a, b) => {
+	const featuredOrder = Number(b.data.featured) - Number(a.data.featured);
+	return featuredOrder || a.data.title.localeCompare(b.data.title, 'it');
+});
+const featuredCaseStudies = sortedCaseStudies.slice(0, 6);
 ---
 
 <Layout 
@@ -120,8 +123,8 @@ const latestCaseStudies = sortedCaseStudies.slice(0, 6);
 			</div>
 		</Section>
 
-		<!-- Ultimi Case Studies -->
-			{latestCaseStudies.length > 0 && (
+		<!-- Case study in evidenza -->
+			{featuredCaseStudies.length > 0 && (
 			<Section>
 				<div class="reveal mb-12 md:mb-16">
 					<div class="flex items-center justify-between mb-6">
@@ -129,7 +132,7 @@ const latestCaseStudies = sortedCaseStudies.slice(0, 6);
 							class="font-bold"
 							style="font-size: var(--text-5xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
 						>
-							Ultimi Case Studies
+							Case study in evidenza
 						</h2>
 						<div class="flex gap-3">
 							<ButtonLink href="/case-studies/" variant="secondary" size="sm">
@@ -147,7 +150,7 @@ const latestCaseStudies = sortedCaseStudies.slice(0, 6);
 					</p>
 				</div>
 				<div class="stagger grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-					{latestCaseStudies.map((caseStudy, index) => (
+					{featuredCaseStudies.map((caseStudy, index) => (
 						<Card
 							href={`/case-studies/${caseStudy.slug}/`}
 							title={caseStudy.data.title}
