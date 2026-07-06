@@ -9,9 +9,10 @@ interface Props {
 	class?: string;
 	dataCategory?: string;
 	cover?: string;
+	coverAlt?: string;
 }
 
-const { href, title, sector, year, tags = [], variant = 'default', class: className = '', dataCategory, cover } = Astro.props;
+const { href, title, sector, year, tags = [], variant = 'default', class: className = '', dataCategory, cover, coverAlt } = Astro.props;
 const cardId = `card-${Math.random().toString(36).substr(2, 9)}`;
 const isFeatured = variant === 'featured';
 ---
@@ -25,7 +26,7 @@ const isFeatured = variant === 'featured';
 >
 	{cover && (
 		<div class="card-cover">
-			<img src={cover} alt={title} loading="lazy" decoding="async" />
+			<img src={cover} alt={coverAlt ?? title} loading="lazy" decoding="async" />
 		</div>
 	)}
 	<h3 class="card-title">
@@ -144,6 +145,5 @@ const isFeatured = variant === 'featured';
 		border-radius: var(--radius-sm);
 	}
 </style>
-
 
 

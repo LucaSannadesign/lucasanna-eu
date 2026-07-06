@@ -8,7 +8,8 @@ tags: ["Astro", "UX/UI", "CRM"]
 excerpt: "Piattaforma pilota per raccogliere richieste preliminari di trattamenti odontoiatrici e organizzarle in un flusso operativo chiaro."
 featured: true
 externalUrl: "https://preventivodentale.it"
-cover: "/images/case-studies/dentista-digitale.png"
+cover: "/images/case-studies/preventivo-dentale.webp"
+coverAlt: "Homepage della piattaforma PreventivoDentale.it"
 ---
 
 ## Contesto

@@ -14,6 +14,7 @@ const caseStudies = defineCollection({
 		featured: z.boolean().default(false),
 		externalUrl: z.string().url().optional(),
 		cover: z.string().optional(),
+		coverAlt: z.string().optional(),
 	}),
 });
 

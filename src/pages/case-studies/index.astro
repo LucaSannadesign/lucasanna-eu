@@ -90,6 +90,7 @@ const categories = Array.from(categoryMap.entries())
 						variant={index === 0 ? 'featured' : 'default'}
 						dataCategory={normalizeCategory(caseStudy.data.sector)}
 						cover={caseStudy.data.cover}
+						coverAlt={caseStudy.data.coverAlt}
 						data-hidden={index >= 6 ? 'true' : 'false'}
 					/>
 				))}

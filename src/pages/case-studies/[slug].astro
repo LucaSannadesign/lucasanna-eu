@@ -87,7 +87,7 @@ const schemaData = isBook ? {
 					<div class="case-study-hero mb-12 md:mb-16">
 						<img 
 							src={caseStudy.data.cover} 
-							alt={`Progetto ${caseStudy.data.title}`}
+							alt={caseStudy.data.coverAlt ?? `Progetto ${caseStudy.data.title}`}
 							loading="eager"
 							decoding="async"
 						/>
