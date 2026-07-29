@@ -7,12 +7,12 @@
 		  },
 		{
 			"source": "/realizzazione-siti-web-sassari-:slug*",
-			"destination": "https://www.lswebagency.com/siti-web",
+			"destination": "https://www.lswebagency.com/servizi/siti-web",
 			"permanent": true
 		},
 		{
 			"source": "/realizzazione-siti-web-:slug*",
-			"destination": "https://www.lswebagency.com/siti-web",
+			"destination": "https://www.lswebagency.com/servizi/siti-web",
 			"permanent": true
 		},
 		{
@@ -97,102 +97,102 @@
 		},
 		{
 			"source": "/creazione-siti-web-ecommerce",
-			"destination": "https://www.lswebagency.com/siti-web",
+			"destination": "https://www.lswebagency.com/servizi/siti-web",
 			"permanent": true
 		},
 		{
 			"source": "/creazione-siti-web-ecommerce/",
-			"destination": "https://www.lswebagency.com/siti-web",
+			"destination": "https://www.lswebagency.com/servizi/siti-web",
 			"permanent": true
 		},
 		{
 			"source": "/creazione-siti-web-sassari-sardegna",
-			"destination": "https://www.lswebagency.com/siti-web",
+			"destination": "https://www.lswebagency.com/servizi/siti-web",
 			"permanent": true
 		},
 		{
 			"source": "/creazione-siti-web-sassari-sardegna/",
-			"destination": "https://www.lswebagency.com/siti-web",
+			"destination": "https://www.lswebagency.com/servizi/siti-web",
 			"permanent": true
 		},
 		{
 			"source": "/grafica-sassari-design-unico-per-il-successo",
-			"destination": "https://www.lswebagency.com/web-design",
+			"destination": "https://www.lswebagency.com/servizi/branding-e-grafica-siti-web",
 			"permanent": true
 		},
 		{
 			"source": "/grafica-sassari-design-unico-per-il-successo/",
-			"destination": "https://www.lswebagency.com/web-design",
+			"destination": "https://www.lswebagency.com/servizi/branding-e-grafica-siti-web",
 			"permanent": true
 		},
 		{
 			"source": "/grafica-webdesign-sassari",
-			"destination": "https://www.lswebagency.com/web-design",
+			"destination": "https://www.lswebagency.com/servizi/branding-e-grafica-siti-web",
 			"permanent": true
 		},
 		{
 			"source": "/grafica-webdesign-sassari/",
-			"destination": "https://www.lswebagency.com/web-design",
+			"destination": "https://www.lswebagency.com/servizi/branding-e-grafica-siti-web",
 			"permanent": true
 		},
 		{
 			"source": "/portfolio-category/grafica",
-			"destination": "https://www.lswebagency.com/web-design",
+			"destination": "https://www.lswebagency.com/servizi/branding-e-grafica-siti-web",
 			"permanent": true
 		},
 		{
 			"source": "/portfolio-category/grafica/",
-			"destination": "https://www.lswebagency.com/web-design",
+			"destination": "https://www.lswebagency.com/servizi/branding-e-grafica-siti-web",
 			"permanent": true
 		},
 		{
 			"source": "/portfolio/abacos-womens-clothing-ecommerce",
-			"destination": "https://www.lswebagency.com/siti-web",
+			"destination": "https://www.lswebagency.com/servizi/siti-web",
 			"permanent": true
 		},
 		{
 			"source": "/portfolio/abacos-womens-clothing-ecommerce/",
-			"destination": "https://www.lswebagency.com/siti-web",
+			"destination": "https://www.lswebagency.com/servizi/siti-web",
 			"permanent": true
 		},
 		{
 			"source": "/realizzazione-siti-web-sardegna",
-			"destination": "https://www.lswebagency.com/siti-web",
+			"destination": "https://www.lswebagency.com/servizi/siti-web",
 			"permanent": true
 		},
 		{
 			"source": "/realizzazione-siti-web-sardegna/",
-			"destination": "https://www.lswebagency.com/siti-web",
+			"destination": "https://www.lswebagency.com/servizi/siti-web",
 			"permanent": true
 		},
 		{
 			"source": "/servizi",
-			"destination": "https://www.lswebagency.com/siti-web",
+			"destination": "https://www.lswebagency.com/servizi/siti-web",
 			"permanent": true
 		},
 		{
 			"source": "/servizi/",
-			"destination": "https://www.lswebagency.com/siti-web",
+			"destination": "https://www.lswebagency.com/servizi/siti-web",
 			"permanent": true
 		},
 		{
 			"source": "/preventivi-siti-web",
-			"destination": "https://www.lswebagency.com/preventivo-sito-web",
+			"destination": "https://www.lswebagency.com/contatti",
 			"permanent": true
 		},
 		{
 			"source": "/preventivi-siti-web/",
-			"destination": "https://www.lswebagency.com/preventivo-sito-web",
+			"destination": "https://www.lswebagency.com/contatti",
 			"permanent": true
 		},
 		{
 			"source": "/preventivi-sito-web",
-			"destination": "https://www.lswebagency.com/preventivo-sito-web",
+			"destination": "https://www.lswebagency.com/contatti",
 			"permanent": true
 		},
 		{
 			"source": "/preventivi-sito-web/",
-			"destination": "https://www.lswebagency.com/preventivo-sito-web",
+			"destination": "https://www.lswebagency.com/contatti",
 			"permanent": true
 		},
 		{
@@ -207,37 +207,37 @@
 		},
 		{
 			"source": "/creazione-siti-web-sassari",
-			"destination": "https://www.lswebagency.com/siti-web",
+			"destination": "https://www.lswebagency.com/servizi/siti-web",
 			"permanent": true
 		},
 		{
 			"source": "/creazione-siti-web-sassari/",
-			"destination": "https://www.lswebagency.com/siti-web",
+			"destination": "https://www.lswebagency.com/servizi/siti-web",
 			"permanent": true
 		},
 		{
 			"source": "/web-design-agency-sassari",
-			"destination": "https://www.lswebagency.com/siti-web",
+			"destination": "https://www.lswebagency.com/servizi/siti-web",
 			"permanent": true
 		},
 		{
 			"source": "/web-design-agency-sassari/",
-			"destination": "https://www.lswebagency.com/siti-web",
+			"destination": "https://www.lswebagency.com/servizi/siti-web",
 			"permanent": true
 		},
 		{
 			"source": "/seo-e-posizionamento-sui-motori-di-ricerca",
-			"destination": "https://www.lswebagency.com/seo-locale",
+			"destination": "https://www.lswebagency.com/servizi/seo-locale",
 			"permanent": true
 		},
 		{
 			"source": "/seo-e-posizionamento-sui-motori-di-ricerca/",
-			"destination": "https://www.lswebagency.com/seo-locale",
+			"destination": "https://www.lswebagency.com/servizi/seo-locale",
 			"permanent": true
 		},
 		{
 			"source": "/Listino-Servizi-Web-LS-Web-Design-Agency.pdf",
-			"destination": "https://www.lswebagency.com/preventivo-sito-web",
+			"destination": "https://www.lswebagency.com/contatti",
 			"permanent": true
 		}
 	],

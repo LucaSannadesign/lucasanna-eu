@@ -9,23 +9,25 @@ interface Props {
 	description?: string;
 	canonical?: string;
 	ogImage?: string;
+	noindex?: boolean;
 }
 
-const { 
-	title = 'Luca Sanna - Portfolio', 
+const {
+	title = 'Luca Sanna - Portfolio',
 	description = 'Portfolio personale di Luca Sanna. Case studies, metodo di lavoro e contatti.',
 	canonical,
-	ogImage = 'https://www.lucasanna.eu/og-image.jpg'
+	ogImage = 'https://www.lucasanna.eu/og-image.jpg',
+	noindex = false
 } = Astro.props;
 
 const siteUrl = 'https://www.lucasanna.eu';
 const finalCanonical = canonical || `${siteUrl}${Astro.url.pathname}`;
 const finalTitle = title.includes('Luca Sanna') ? title : `${title} | Luca Sanna`;
 
-// Robots meta: noindex on preview/dev, index on production
+// Robots meta: noindex on preview/dev or when explicitly requested, index on production
 const vercelEnv = import.meta.env.VERCEL_ENV || import.meta.env.MODE;
 const isProduction = vercelEnv === 'production';
-const robotsContent = isProduction ? 'index,follow' : 'noindex,nofollow';
+const robotsContent = isProduction && !noindex ? 'index,follow' : 'noindex,nofollow';
 ---
 
 <!doctype html>
