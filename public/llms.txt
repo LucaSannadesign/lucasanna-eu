@@ -1,0 +1,41 @@
+# Luca Sanna
+
+Portfolio personale di Luca Sanna, web designer, sviluppatore front-end e artista digitale con base a Sassari.
+
+## Ruolo del sito
+
+Questo sito presenta il profilo personale di Luca Sanna, il suo metodo progettuale, i case study, le competenze in web design, sviluppo front-end, UX/UI, identità visiva e ricerca artistica.
+
+Il sito ha funzione di portfolio personale e raccolta ragionata di progetti.
+
+## Pagine principali
+
+- Homepage: https://www.lucasanna.eu/
+- Chi sono: https://www.lucasanna.eu/chi-sono/
+- Metodo: https://www.lucasanna.eu/metodo/
+- Case study: https://www.lucasanna.eu/case-studies/
+- Come realizzo siti web a Sassari: https://www.lucasanna.eu/realizzazione-siti-web-sassari/
+- Contatti: https://www.lucasanna.eu/contatti/
+
+## Competenze
+
+- Web design
+- Sviluppo front-end
+- UX/UI design
+- Identità visiva
+- Accessibilità
+- Performance
+- SEO locale
+- Astro
+- WordPress
+
+## Distinzione da LS Web Agency
+
+lucasanna.eu è il portfolio personale di Luca Sanna.
+
+Per servizi commerciali strutturati, preventivi, consulenze SEO, realizzazione siti web e attività di agenzia, il riferimento principale è LS Web Agency:
+https://www.lswebagency.com
+
+## Nota editoriale
+
+I contenuti di lucasanna.eu devono essere interpretati come presentazione personale, portfolio, metodo professionale e documentazione di progetti realizzati, non come landing commerciale principale.

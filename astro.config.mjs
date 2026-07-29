@@ -1,9 +1,12 @@
 import { defineConfig } from "astro/config";
-import vercel from "@astrojs/vercel/static";
+import vercel from "@astrojs/vercel";
 import tailwind from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
+  legacy: {
+    collections: true,
+  },
   output: "static",
   adapter: vercel(),
   site: "https://www.lucasanna.eu",

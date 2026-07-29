@@ -7,7 +7,7 @@ stack: ["WordPress", "PHP", "CSS"]
 tags: ["Design", "WordPress", "Arte"]
 excerpt: "Sito web per artista. Design che mette al centro le opere, comunicando creatività e identità artistica attraverso immagini e contenuti."
 featured: false
-cover: "/images/case-studies/marcella-masia-artista.png"
+cover: "/images/case-studies/marcella-masia-artista.webp"
 ---
 
 

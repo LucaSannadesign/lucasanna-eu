@@ -17,14 +17,14 @@ const featuredCaseStudies = sortedCaseStudies.slice(0, 6);
 ---
 
 <Layout 
-	title="Luca Sanna - Web Designer e Sviluppo Front-end | Sassari, Sardegna"
-	description="Web designer e sviluppo front-end a Sassari. Progetti web con focus su UX/UI, accessibilità, performance e copywriting. Portfolio con case studies reali e metodo di lavoro."
+	title="Web Designer Sassari | Portfolio e Case Study | Luca Sanna"
+	description="Portfolio di Luca Sanna, web designer e sviluppatore front-end a Sassari. Case study di progetti web, metodo di lavoro e competenze in UX/UI e identità visiva."
 	canonical="https://www.lucasanna.eu/"
 >
 	<Header />
 	<main>
 		<!-- Hero - Tech Agency Premium -->
-		<section class="reveal relative pt-16 pb-12 md:pt-24 md:pb-20 overflow-hidden">
+		<section class="reveal relative hero-home pt-8 pb-10 md:pt-8 md:pb-12 overflow-hidden">
 			<!-- Radial glow background -->
 			<div 
 				class="absolute inset-0 pointer-events-none"
@@ -35,27 +35,27 @@ const featuredCaseStudies = sortedCaseStudies.slice(0, 6);
 					<div class="hero-text" style="max-width: 30rem;">
 						<!-- Tech chips/badges -->
 						<div class="flex flex-wrap items-center gap-2 mb-4">
-							<span class="tech-chip">UX/UI</span>
-							<span class="tech-chip">Accessibilità</span>
-							<span class="tech-chip">Performance</span>
-							<span class="tech-chip">Copywriting</span>
+							<span class="tech-chip">Realizzazione siti web</span>
+							<span class="tech-chip">UX/UI Design</span>
+							<span class="tech-chip">SEO locale</span>
+							<span class="tech-chip">Identità visiva</span>
 						</div>
 						<h1 
 							class="font-bold mb-4"
-							style="font-size: clamp(1.875rem, 4.5vw, var(--text-6xl)); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight); line-height: 1.1;"
+							style="font-size: clamp(2rem, 3.8vw, 4.5rem); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight); line-height: 1.1;"
 						>
-							Portfolio di web design e grafica editoriale
+							Web designer a Sassari per siti web chiari, moderni e orientati ai risultati
 						</h1>
 						<p 
 							class="mb-6 text-lg md:text-xl"
 							style="font-size: clamp(1rem, 2.5vw, var(--text-xl)); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
 						>
-							Case study selezionati, metodo di lavoro e progetti dove design, contenuti e accessibilità portano chiarezza e risultati.
+							Realizzazione siti web, UX/UI design, identità visiva e SEO locale per freelance, attività locali e piccole imprese: progetti digitali su misura, con interfacce curate e una presenza online efficace nel territorio di Sassari.
 						</p>
 						<div class="flex flex-col sm:flex-row gap-4 mb-4">
-							<ButtonLink href="/case-studies/" size="lg">Vedi case studies</ButtonLink>
-							<ButtonLink href="/contatti/" variant="secondary" size="lg">
-								Contattami
+							<ButtonLink href="/case-studies/" size="lg">Vedi i case study</ButtonLink>
+							<ButtonLink href="https://www.lswebagency.com/" variant="secondary" size="lg">
+								Visita LS Web Agency
 							</ButtonLink>
 						</div>
 						<p 
@@ -72,8 +72,70 @@ const featuredCaseStudies = sortedCaseStudies.slice(0, 6);
 			</div>
 		</section>
 
-		<!-- Navigation Cards - Editorial Style -->
+		<!-- Servizi -->
 		<Section variant="alt">
+			<div class="reveal mb-10 md:mb-12 max-w-3xl">
+				<h2
+					class="font-bold mb-4"
+					style="font-size: var(--text-4xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
+				>
+					Servizi
+				</h2>
+				<p style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);">
+					Web design e sviluppo per attività a Sassari e in Sardegna: dalla creazione del sito alla visibilità locale su Google.
+				</p>
+			</div>
+			<div class="stagger grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+				<div class="card-editorial reveal">
+					<h3
+						class="font-semibold mb-3"
+						style="font-size: var(--text-xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
+					>
+						Realizzazione siti web
+					</h3>
+					<p style="color: rgb(var(--muted)); line-height: var(--line-height-relaxed); font-size: var(--text-sm);">
+						Creazione e realizzazione siti web professionali, veloci e orientati alla conversione per imprese e professionisti a Sassari.
+					</p>
+					<a href="/realizzazione-siti-web-sassari/" class="link-editorial inline-block mt-3" style="font-size: var(--text-sm); color: rgb(var(--ink));">Scopri il servizio</a>
+				</div>
+				<div class="card-editorial reveal">
+					<h3
+						class="font-semibold mb-3"
+						style="font-size: var(--text-xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
+					>
+						UX/UI Design
+					</h3>
+					<p style="color: rgb(var(--muted)); line-height: var(--line-height-relaxed); font-size: var(--text-sm);">
+						Web design e interfacce UX/UI che rendono la navigazione intuitiva e valorizzano contenuti, servizi e obiettivi del cliente.
+					</p>
+				</div>
+				<div class="card-editorial reveal">
+					<h3
+						class="font-semibold mb-3"
+						style="font-size: var(--text-xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
+					>
+						SEO locale
+					</h3>
+					<p style="color: rgb(var(--muted)); line-height: var(--line-height-relaxed); font-size: var(--text-sm);">
+						Strategie SEO locali per migliorare la visibilità su Google nelle ricerche legate al territorio, ai servizi professionali e alle attività di Sassari.
+					</p>
+				</div>
+				<div class="card-editorial reveal">
+					<h3
+						class="font-semibold mb-3"
+						style="font-size: var(--text-xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
+					>
+						Identità visiva
+					</h3>
+					<p style="color: rgb(var(--muted)); line-height: var(--line-height-relaxed); font-size: var(--text-sm);">
+						Coerenza grafica tra sito, comunicazione e touchpoint digitali per un brand riconoscibile e professionale.
+					</p>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Navigation Cards - Editorial Style -->
+		<Section>
 			<div class="stagger grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
 				<a href="/case-studies/" class="card-editorial reveal md:col-span-5 group" style="border-left: 3px solid rgb(var(--accent));">
 					<h2 
@@ -172,52 +234,29 @@ const featuredCaseStudies = sortedCaseStudies.slice(0, 6);
 					class="mb-4"
 					style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
 				>
-					Per progetti personali o collaborazioni: <a href="/contatti/" class="link-editorial" style="color: rgb(var(--ink)); font-weight: var(--font-weight-medium);">contattami</a>.
+					Questo sito raccoglie il portfolio personale e i case study di Luca Sanna. Per progetti commerciali, siti aziendali, SEO e consulenze continuative visita <a href="https://www.lswebagency.com/" class="link-editorial" style="color: rgb(var(--ink)); font-weight: var(--font-weight-medium);">LS Web Agency</a>.
 				</p>
 				<p 
-					style="font-size: var(--text-base); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
+					style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
 				>
-					Per siti aziendali completi con supporto continuativo: <a href="https://www.lswebagency.com" class="link-editorial" style="color: rgb(var(--muted));">LS Web Agency</a>.
+					Per progetti personali o collaborazioni: <a href="/contatti/" class="link-editorial" style="color: rgb(var(--ink)); font-weight: var(--font-weight-medium);">contattami</a>.
 				</p>
 			</div>
 		</Section>
 	</main>
 	<Footer />
-	<script type="application/ld+json" set:html={JSON.stringify({
-		"@context": "https://schema.org",
-		"@type": "Person",
-		"name": "Luca Sanna",
-		"url": "https://www.lucasanna.eu",
-		"jobTitle": ["Web Designer", "Front-end Developer"],
-		"email": "info@lucasanna.eu",
-		"description": "Web designer e sviluppo front-end a Sassari. Progetti web con focus su UX/UI, accessibilità, performance e copywriting.",
-		"areaServed": [
-			{
-				"@type": "City",
-				"name": "Sassari"
-			},
-			{
-				"@type": "State",
-				"name": "Sardegna"
-			},
-			{
-				"@type": "Country",
-				"name": "Italia"
-			}
-		],
-		"sameAs": [
-			"https://www.lswebagency.com"
-		]
-	})} />
-	<script type="application/ld+json" set:html={JSON.stringify({
-		"@context": "https://schema.org",
-		"@type": "WebSite",
-		"name": "Luca Sanna - Portfolio",
-		"url": "https://www.lucasanna.eu",
-		"description": "Portfolio di web designer e sviluppo front-end: progetti web con UX/UI, accessibilità, performance e copywriting",
-		"author": {
-			"@type": "Person",
-			"name": "Luca Sanna"
-		}
-	})} />
 </Layout>
+
+<style>
+	@media (min-width: 768px) {
+		.hero-home .heroGrid {
+			gap: var(--space-8);
+			align-items: center;
+		}
+
+		.hero-home .hero-portrait {
+			margin-top: -2rem;
+			align-self: center;
+		}
+	}
+</style>
