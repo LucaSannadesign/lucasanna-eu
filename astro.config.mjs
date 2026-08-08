@@ -16,11 +16,10 @@ export default defineConfig({
       priority: 0.7,
       lastmod: new Date(),
       filter: (page) => {
-        // Escludi /playground, /api/* e la landing Sassari (noindex)
+        // Escludi /playground e /api/*
         if (
           page.includes('/playground') ||
-          page.includes('/api/') ||
-          page.includes('/realizzazione-siti-web-sassari')
+          page.includes('/api/')
         ) {
           return false;
         }
