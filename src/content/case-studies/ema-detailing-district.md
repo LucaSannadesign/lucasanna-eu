@@ -7,6 +7,7 @@ stack: ["WordPress", "WooCommerce", "PHP", "CSS", "JavaScript"]
 tags: ["Design", "WordPress", "Automotive"]
 excerpt: "Sito web per centro specializzato in servizi di detailing automobilistico. Design minimalista che comunica professionalità e qualità."
 featured: true
+externalUrl: "https://ema-detailing-district.netlify.app"
 cover: "/images/case-studies/ema-detailing-district.webp"
 ---
 
