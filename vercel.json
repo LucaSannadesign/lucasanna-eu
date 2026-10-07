@@ -4,7 +4,7 @@
 			"source": "/sitemap.xml",
 			"destination": "/sitemap-index.xml",
 			"permanent": true
-		  },
+		},
 		{
 			"source": "/realizzazione-siti-web-sassari-:slug+",
 			"destination": "https://www.lswebagency.com/siti-web",
@@ -175,5 +175,6 @@
 			"destination": "https://www.lswebagency.com/preventivo-sito-web",
 			"permanent": true
 		}
-	]
+	],
+	"trailingSlash": true
 }
