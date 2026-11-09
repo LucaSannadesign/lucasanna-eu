@@ -26,7 +26,7 @@ Ho progettato l'interfaccia WordPress e la presentazione dei contenuti, con atte
 
 ## Output
 
-Un sito di presentazione con contenuti organizzati. In assenza di misurazioni, non attribuisco al lavoro incrementi di prenotazioni o fiducia.
+Un sito professionale con presentazione, informazioni e contatti distribuiti in una struttura sobria e adatta alla lettura da dispositivi diversi.
 
 ## Se riprendessi il progetto
 

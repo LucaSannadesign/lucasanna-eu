@@ -26,7 +26,7 @@ Ho curato web design e sviluppo WordPress, definendo composizione, ritmo editori
 
 ## Output
 
-Una struttura di portfolio basata su contenuti e identità visiva. Non sono disponibili test di percezione del marchio o feedback verificati.
+Un portfolio basato su una composizione editoriale essenziale, con elementi tipografici e componenti visivi coerenti fra le sezioni.
 
 ## Se riprendessi il progetto
 

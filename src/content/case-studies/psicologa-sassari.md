@@ -26,7 +26,7 @@ Ho curato struttura, design, sviluppo WordPress e testi, con attenzione al tono 
 
 ## Output
 
-Un sito di presentazione con contenuti e contatti. Non sono documentati test utente o dati sufficienti per dichiarare miglioramenti quantitativi della fiducia o delle richieste.
+Un sito di presentazione con informazioni sul counseling e sul percorso professionale, testi dedicati e modalità di contatto organizzate senza messaggi insistenti.
 
 ## Se riprendessi il progetto
 

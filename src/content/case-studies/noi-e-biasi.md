@@ -38,4 +38,4 @@ Il ritmo delle pagine alterna sezioni più dense a spazi più aperti, creando un
 
 ## Output
 
-L'output del mio lavoro comprende copertina, impaginazione interna, gerarchie tipografiche e organizzazione delle immagini. Il libro documenta l'esperienza didattica e i materiali prodotti dai bambini. La scheda descrive il contributo editoriale, senza attribuirgli risultati educativi misurati.
+Il mio contributo editoriale comprende copertina, impaginazione interna, gerarchie tipografiche e organizzazione delle immagini. Il libro raccoglie gli elaborati dei bambini e documenta visivamente il percorso didattico.

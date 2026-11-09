@@ -26,7 +26,7 @@ Ho progettato e sviluppato il sito WordPress, lavorando sull'impaginazione della
 
 ## Output
 
-Un portfolio con galleria, informazioni sull'artista e contatti. Non sono riportati aumenti di vendite o richieste non supportati da dati.
+Un portfolio con galleria delle opere, profilo dell'artista e contatti. La struttura dà priorità alle immagini, lasciando alle informazioni testuali un ruolo di orientamento.
 
 ## Se riprendessi il progetto
 

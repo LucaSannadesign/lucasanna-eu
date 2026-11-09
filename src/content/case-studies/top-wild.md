@@ -26,7 +26,7 @@ Ho progettato e sviluppato il sito WordPress, definendo le sezioni editoriali e 
 
 ## Output
 
-Una struttura editoriale per esplorare destinazioni e contenuti di viaggio. Non sono presentati dati non documentati su traffico o coinvolgimento.
+Una struttura editoriale per esplorare destinazioni, esperienze e informazioni di viaggio, con immagini di forte presenza e percorsi responsive.
 
 ## Se riprendessi il progetto
 

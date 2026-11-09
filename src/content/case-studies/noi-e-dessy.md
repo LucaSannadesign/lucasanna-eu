@@ -38,4 +38,4 @@ Il ritmo delle pagine alterna sezioni più dense a spazi più aperti, creando un
 
 ## Output
 
-Il lavoro editoriale comprende copertina, impaginazione, organizzazione delle immagini e una progressione visiva riconoscibile. Il libro raccoglie gli elaborati dei bambini e documenta l'esperienza didattica. Il case study non intende misurare gli esiti educativi del percorso.
+Il progetto editoriale comprende copertina, impaginazione, organizzazione delle immagini e progressione visiva delle pagine. Il libro riunisce gli elaborati e rende consultabile la documentazione dell'esperienza didattica.
