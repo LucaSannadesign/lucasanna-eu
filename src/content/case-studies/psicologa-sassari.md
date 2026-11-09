@@ -5,31 +5,29 @@ sector: "Salute e Benessere"
 services: ["Web Design", "WordPress"]
 stack: ["WordPress", "PHP", "CSS"]
 tags: ["Design", "WordPress", "Professionista"]
-excerpt: "Progetto web per counselor a Sassari. Design sobrio e rassicurante che comunica professionalità e approccio umano, facilitando il primo contatto."
+excerpt: "Sito per una counselor: architettura dei contenuti, copy e interfaccia per un primo contatto senza pressioni."
 featured: false
 cover: "/images/case-studies/patrizia-sabbadin-counselor-sassari.jpg"
 ---
 
-## Obiettivo
+## Contesto e obiettivo
 
-Progetto web per counselor a Sassari: creare un'interfaccia che comunicasse professionalità e approccio umano, facilitando il primo contatto e la richiesta di consulenza. L'obiettivo era costruire fiducia attraverso contenuti e design, presentando l'approccio del counseling in modo chiaro e rassicurante.
+Era necessario spiegare l'approccio al counseling e le modalità di contatto con un linguaggio comprensibile, senza messaggi promozionali invasivi.
 
-Il progetto doveva funzionare sia come vetrina che come strumento di contatto, guidando i visitatori verso la richiesta di appuntamento senza pressioni.
+## Il mio contributo
 
-## Il mio ruolo
-
-Ho curato l'intero progetto: dalla struttura dei contenuti al design, dallo sviluppo alla scrittura dei testi. Ho organizzato le informazioni in modo che fossero accessibili e rassicuranti, rispettando la delicatezza del settore.
-
-Il copywriting è orientato alla conversione: testi che chiariscono l'approccio del counseling, rassicurano sul processo e facilitano il primo contatto. Microcopy UI che guida senza pressioni.
+Ho curato struttura, design, sviluppo WordPress e testi, con attenzione al tono e alla gerarchia delle informazioni.
 
 ## Scelte progettuali
 
-Ho scelto un design sobrio e rassicurante che comunica professionalità attraverso colori calmi e spaziature ampie. La struttura è chiara: home con presentazione, informazioni sull'approccio e contatti.
-
-La tipografia è chiara e leggibile. Le immagini sono curate per comunicare accoglienza senza risultare eccessive. Il sistema di contatto è discreto ma visibile, con microcopy che rassicura sulla riservatezza.
+- Presentazione del percorso professionale prima dei contatti.
+- Microcopy diretto e rispettoso del contesto personale.
+- Struttura responsive per raggiungere le informazioni essenziali.
 
 ## Output
 
-Il progetto comunica efficacemente professionalità e approccio umano, elementi fondamentali nel settore del counseling. La struttura chiara ha migliorato la comprensione dell'approccio. L'esperienza utente è stata ottimizzata per facilitare il primo contatto.
+Un sito di presentazione con contenuti e contatti. Non sono documentati test utente o dati sufficienti per dichiarare miglioramenti quantitativi della fiducia o delle richieste.
 
-I feedback sono stati positivi: il progetto trasmette fiducia e ha semplificato il processo di richiesta consulenza.
+## Se riprendessi il progetto
+
+Approfondirei accessibilità, privacy e chiarezza dei passaggi per chiedere informazioni.
