@@ -26,7 +26,7 @@ Ho lavorato a design e sviluppo WordPress, organizzando contenuti musicali, biog
 
 ## Output
 
-Un sito che raccoglie musica, appuntamenti e informazioni sulla band. Non sono disponibili statistiche verificate sull'aumento delle richieste di booking.
+Una presenza web che raccoglie materiali musicali, date live e contatti, mantenendo distinti ascolto, informazione e richieste di booking.
 
 ## Se riprendessi il progetto
 

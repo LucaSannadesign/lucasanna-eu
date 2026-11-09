@@ -26,7 +26,7 @@ Ho curato web design e sviluppo con WordPress e WooCommerce, dall'organizzazione
 
 ## Output
 
-Un'interfaccia e-commerce con catalogo, pagine prodotto e percorso d'acquisto responsive. Non sono disponibili metriche documentate sulle conversioni.
+Un'interfaccia e-commerce responsive con catalogo per collezioni, schede prodotto e percorso di checkout. Le scelte sono illustrate attraverso organizzazione, gerarchie e consultazione dei capi.
 
 ## Se riprendessi il progetto
 

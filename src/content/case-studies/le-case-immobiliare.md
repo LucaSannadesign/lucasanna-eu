@@ -26,7 +26,7 @@ Ho curato design e sviluppo WordPress, organizzando informazioni immobiliari, ge
 
 ## Output
 
-Un'interfaccia orientata al catalogo immobiliare e alla leggibilità degli annunci. Non sono documentati incrementi quantitativi nelle richieste.
+Un'interfaccia orientata alla consultazione degli annunci, con schede leggibili, gerarchie informative e percorsi di contatto accessibili anche da mobile.
 
 ## Se riprendessi il progetto
 

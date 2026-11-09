@@ -27,7 +27,7 @@ Ho progettato interfaccia e direzione visiva, privilegiando composizione essenzi
 
 ## Output
 
-Una proposta web centrata sulle lavorazioni, consultabile attraverso la demo collegata alla scheda. Non sono documentati risultati commerciali misurati.
+Una proposta web centrata sulla presentazione fotografica delle lavorazioni, sulla descrizione dei servizi e su punti di contatto chiaramente identificabili. La demo è collegata alla scheda.
 
 ## Se riprendessi il progetto
 

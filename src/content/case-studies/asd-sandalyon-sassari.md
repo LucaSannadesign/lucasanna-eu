@@ -26,7 +26,7 @@ Ho progettato e sviluppato il sito WordPress, definendo gerarchie visive e sezio
 
 ## Output
 
-Un sito informativo con sezioni riconoscibili. Non attribuisco al progetto aumenti di partecipazione o visibilità senza dati di confronto.
+Un sito informativo con sezioni riconoscibili per attività ed eventi e una struttura di contenuti gestibile tramite WordPress.
 
 ## Se riprendessi il progetto
 

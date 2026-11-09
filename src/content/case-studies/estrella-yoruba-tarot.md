@@ -26,7 +26,7 @@ Ho progettato struttura e interfaccia WordPress, lavorando sull'equilibrio fra a
 
 ## Output
 
-Una presenza digitale dedicata alla presentazione e al contatto. Il case study descrive scelte progettuali, non giudizi attribuiti ai visitatori.
+Un sito con presentazione personale, descrizione dei servizi e modalità di contatto organizzate in un'interfaccia coerente con il linguaggio visivo del progetto.
 
 ## Se riprendessi il progetto
 
