@@ -49,11 +49,15 @@ const nextProject = portfolioProjects[(currentIndex+1) % portfolioProjects.lengt
           <div><p>{project.problem}</p></div>
         </div>
         <div class="project-row">
-          <h2>02 / Scelte di prodotto e UX</h2>
+          <h2>02 / Il mio ruolo</h2>
+          <div><p>{project.role}</p></div>
+        </div>
+        <div class="project-row">
+          <h2>03 / Scelte di prodotto e UX</h2>
           <div><ul>{project.approach.map(item => <li>{item}</li>)}</ul></div>
         </div>
         <div class="project-row">
-          <h2>03 / Implementazione</h2>
+          <h2>04 / Implementazione</h2>
           <div>
             <ul>{project.implementation.map(item => <li>{item}</li>)}</ul>
             <h3>Tecnologie e competenze</h3>
@@ -61,10 +65,13 @@ const nextProject = portfolioProjects[(currentIndex+1) % portfolioProjects.lengt
           </div>
         </div>
         <div class="project-row">
-          <h2>04 / Cosa mostra questo lavoro</h2>
+          <h2>05 / Verifiche e limiti</h2>
+          <div><p>{project.verification}</p></div>
+        </div>
+        <div class="project-row">
+          <h2>06 / Cosa ho imparato</h2>
           <div>
             <p>{project.learning}</p>
-            <p class="project-disclosure">Questo è un case study professionale sul processo di progettazione e sviluppo. Non è una pagina di vendita e non presenta stime o risultati commerciali non verificati.</p>
             {project.demoUrl && <a class="project-live" href={project.demoUrl} target="_blank" rel="noopener noreferrer">{project.demoLabel ?? 'Visita il progetto'} <span aria-hidden="true">↗</span></a>}
           </div>
         </div>

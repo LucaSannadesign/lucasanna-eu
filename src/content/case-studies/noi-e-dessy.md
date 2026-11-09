@@ -38,7 +38,4 @@ Il ritmo delle pagine alterna sezioni più dense a spazi più aperti, creando un
 
 ## Output
 
-Il libro documenta l'esperienza didattica rendendola consultabile e fruibile. La struttura chiara e la presentazione curata facilitano la lettura e la comprensione del progetto, valorizzando sia il lavoro dei bambini che l'obiettivo educativo dell'iniziativa.
-
-Il prodotto finale funziona come documento del progetto e come strumento di divulgazione, permettendo di condividere e valorizzare l'esperienza oltre il contesto didattico originale.
-
+Il lavoro editoriale comprende copertina, impaginazione, organizzazione delle immagini e una progressione visiva riconoscibile. Il libro raccoglie gli elaborati dei bambini e documenta l'esperienza didattica. Il case study non intende misurare gli esiti educativi del percorso.
