@@ -5,18 +5,18 @@ const STORAGE_KEY = 'cookie_consent';
 <div id="cookie-consent-banner" class="cookie-consent-banner" hidden>
 	<div class="cookie-consent-content">
 		<p class="cookie-consent-text">
-			Questo sito utilizza cookie per migliorare l'esperienza di navigazione e analizzare il traffico. 
+			Utilizziamo strumenti di analisi del traffico soltanto se esprimi il tuo consenso. Puoi accettare o rifiutare senza rinunciare alla navigazione. 
 			<a href="/cookie-policy/" class="cookie-consent-link">Maggiori informazioni</a>
 		</p>
 		<div class="cookie-consent-actions">
 			<button type="button" class="cookie-consent-btn cookie-consent-btn-accept" data-action="accept">
-				Accetta
+				Accetta analytics
 			</button>
 			<button type="button" class="cookie-consent-btn cookie-consent-btn-reject" data-action="reject">
-				Rifiuta
+				Rifiuta analytics
 			</button>
 			<button type="button" class="cookie-consent-btn cookie-consent-btn-preferences" data-action="preferences">
-				Preferenze
+				Informativa
 			</button>
 		</div>
 	</div>
@@ -120,7 +120,7 @@ const STORAGE_KEY = 'cookie_consent';
 						});
 						hideBanner();
 					} else if (action === 'preferences') {
-						// Reindirizza alla cookie policy
+						// Apri l’informativa, dove è disponibile anche la modifica del consenso
 						window.location.href = '/cookie-policy/';
 					}
 				});

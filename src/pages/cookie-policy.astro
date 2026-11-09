@@ -24,7 +24,7 @@ import Section from '../components/Section.astro';
 					<p 
 						style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
 					>
-						Ultimo aggiornamento: {new Date().toLocaleDateString('it-IT', { year: 'numeric', month: 'long', day: 'numeric' })}
+						Ultima revisione del testo: 9 novembre 2026
 					</p>
 				</header>
 
@@ -37,8 +37,7 @@ import Section from '../components/Section.astro';
 							Cosa sono i cookie
 						</h2>
 						<p>
-							I cookie sono piccoli file di testo che i siti web memorizzano sul tuo dispositivo quando li visiti. 
-							Vengono utilizzati per migliorare l'esperienza di navigazione e per analizzare il traffico del sito.
+							I cookie sono piccoli file memorizzati nel browser. Possono servire al funzionamento del sito o, quando lo autorizzi, alla raccolta di statistiche di utilizzo.
 						</p>
 					</section>
 
@@ -56,7 +55,7 @@ import Section from '../components/Section.astro';
 							Cookie tecnici
 						</h3>
 						<p>
-							Questi cookie sono necessari per il funzionamento del sito e non richiedono il tuo consenso.
+							I cookie strettamente necessari servono al funzionamento tecnico del sito. Le preferenze relative agli strumenti di analisi vengono memorizzate nel browser.
 						</p>
 						
 						<h3 
@@ -66,8 +65,7 @@ import Section from '../components/Section.astro';
 							Cookie di analytics
 						</h3>
 						<p>
-							Utilizziamo Google Tag Manager per analizzare il traffico del sito e migliorare l'esperienza utente. 
-							Questi cookie vengono caricati solo dopo il tuo consenso esplicito.
+							Il sito integra Google Analytics 4 (GA4), caricato tramite gtag.js soltanto dopo il consenso agli strumenti di analisi. Le statistiche servono a comprendere l'utilizzo delle pagine e non sono necessarie per consultare il portfolio.
 						</p>
 					</section>
 
@@ -79,13 +77,12 @@ import Section from '../components/Section.astro';
 							Gestione dei cookie
 						</h2>
 						<p>
-							Puoi gestire le tue preferenze sui cookie in qualsiasi momento. La tua scelta viene salvata nel browser 
-							e rispettata nelle visite successive.
+							Puoi scegliere se autorizzare gli strumenti di analisi. Il sito conserva questa scelta nel browser e non carica Google Analytics 4 in assenza di consenso.
 						</p>
 						<p class="mt-4">
-							Per modificare le tue preferenze, puoi utilizzare il banner dei cookie che appare alla prima visita 
-							o cancellare i dati di navigazione dal tuo browser.
+							Puoi modificare la tua scelta con il pulsante qui sotto: riapre il banner e permette di accettare o rifiutare nuovamente. Quando revochi il consenso, il sito tenta anche di eliminare i cookie analitici accessibili da questo dominio.
 						</p>
+						<button type="button" id="reset-cookie-preferences" class="button-link button-secondary button-md mt-5">Modifica le preferenze sui cookie</button>
 					</section>
 
 					<section>
@@ -104,6 +101,20 @@ import Section from '../components/Section.astro';
 		</Section>
 	</main>
 	<Footer />
+	<script>
+		const preferencesButton = document.getElementById('reset-cookie-preferences');
+		preferencesButton?.addEventListener('click', () => {
+			try { localStorage.removeItem('cookie_consent'); } catch { /* storage non disponibile */ }
+			const cookies = document.cookie.split(';').map(item => item.trim().split('=')[0]);
+			for (const cookieName of cookies) {
+				if (!/^_ga(?:_|$)/.test(cookieName)) continue;
+				for (const domain of ['', '; domain=.lucasanna.eu', '; domain=www.lucasanna.eu']) {
+					document.cookie = cookieName + '=; Max-Age=0; path=/' + domain + '; SameSite=Lax';
+				}
+			}
+			window.location.reload();
+		});
+	</script>
 </Layout>
 
 
