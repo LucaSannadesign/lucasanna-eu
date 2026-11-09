@@ -1,0 +1,72 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { portfolioProjects } from '../../data/portfolioProjects';
+---
+<Layout
+  title="Progetti front-end: applicazioni, UX e sviluppo"
+  description="Tre progetti di Luca Sanna fra product design, sviluppo front-end e UI engineering: PreventivoDentale, LUGHE e YoArtly."
+  canonical="https://www.lucasanna.eu/progetti/"
+>
+  <Header />
+  <main id="contenuto">
+    <section class="projects-intro">
+      <div class="container-unified">
+        <p class="projects-eyebrow">Portfolio / Progetti digitali</p>
+        <h1>Progetti che mettono insieme prodotto, interfaccia e codice.</h1>
+        <p class="projects-lead">Tre progetti con obiettivi diversi: un flusso applicativo con validazioni, un pilota immobiliare e un’esperienza editoriale. Per ciascuno racconto il mio contributo, le scelte di UX/UI, le tecnologie e lo stato effettivo delle funzionalità.</p>
+      </div>
+    </section>
+    <section class="projects-list" aria-label="Case study">
+      <div class="container-unified">
+        {portfolioProjects.map((project,index) => (
+          <article class="projects-item">
+            <div class="projects-index"><span>0{index+1} / {project.year}</span><span>{project.status}</span></div>
+            <div class="projects-content">
+              <div>
+                <p class="projects-category">{project.category}</p>
+                <h2>{project.title}</h2>
+                <p class="projects-sub">{project.descriptor}</p>
+                <p class="projects-excerpt">{project.intro}</p>
+                <ul class="projects-tech" aria-label="Tecnologie e competenze">{project.stack.map(tag => <li>{tag}</li>)}</ul>
+              </div>
+              <div class="projects-action"><a href={'/progetti/' + project.slug + '/'} aria-label={'Approfondisci ' + project.title}>Leggi il case study <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+    <section class="projects-history">
+      <div class="container-unified">
+        <h2>Anche web design, grafica e comunicazione visiva.</h2>
+        <p>Prima di questi prodotti ho progettato siti WordPress, interfacce e lavori editoriali. Li tengo in un archivio distinto per raccontare il percorso visivo senza confonderlo con i case study applicativi.</p>
+        <a href="/case-studies/">Consulta l'archivio degli altri case study ↗</a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+<style>
+.projects-intro{padding:clamp(4rem,9vw,8rem) 0 4rem;background:radial-gradient(circle at 80% 10%,rgb(var(--accent)/.08),transparent 40%)}
+.projects-eyebrow,.projects-category{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;color:rgb(var(--accent))}
+.projects-intro h1{font-size:clamp(2.8rem,6vw,5.7rem);font-weight:700;letter-spacing:-.055em;line-height:1.06;max-width:16ch;margin:1.2rem 0 1.5rem;color:rgb(var(--ink))}
+.projects-lead{font-size:clamp(1.05rem,2vw,1.25rem);line-height:1.68;color:rgb(var(--muted));max-width:68ch}
+.projects-list{padding:2rem 0 6rem}
+.projects-item{padding:2.8rem 0 3.3rem;border-top:1px solid rgb(var(--border)/.35)}
+.projects-index{display:flex;justify-content:space-between;gap:1rem;font-size:.76rem;color:rgb(var(--muted));margin-bottom:1.4rem}
+.projects-index>span:first-child{font-weight:700;color:rgb(var(--accent))}
+.projects-content{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2rem;align-items:end}
+.projects-item h2{font-size:clamp(2rem,4vw,3.5rem);font-weight:700;letter-spacing:-.04em;line-height:1.12;color:rgb(var(--ink));margin:.6rem 0}
+.projects-sub{font-size:1.14rem;font-weight:600;color:rgb(var(--ink));margin:.7rem 0}
+.projects-excerpt{max-width:75ch;line-height:1.65;color:rgb(var(--muted))}
+.projects-tech{list-style:none;display:flex;flex-wrap:wrap;gap:.55rem;margin:1.5rem 0 0;padding:0}
+.projects-tech li{border:1px solid rgb(var(--border)/.35);padding:.4rem .7rem;border-radius:99px;font-size:.8rem;color:rgb(var(--muted))}
+.projects-action a,.projects-history a{display:inline-block;color:rgb(var(--ink));font-size:.93rem;font-weight:700;text-decoration:none;padding-bottom:.35rem;border-bottom:2px solid rgb(var(--accent));white-space:nowrap}
+.projects-action a:hover,.projects-history a:hover{color:rgb(var(--accent))}
+.projects-action a:focus-visible,.projects-history a:focus-visible{outline:2px solid rgb(var(--accent));outline-offset:4px}
+.projects-history{padding:4rem 0 6rem;background:rgb(var(--surface))}
+.projects-history h2{max-width:28ch;font-size:clamp(1.7rem,3vw,2.6rem);letter-spacing:-.035em;font-weight:700;color:rgb(var(--ink));line-height:1.2}
+.projects-history p{max-width:65ch;margin:1rem 0 1.7rem;color:rgb(var(--muted));line-height:1.7}
+@media(max-width:650px){.projects-content{grid-template-columns:1fr}.projects-item{padding:2rem 0 2.5rem}.projects-list{padding-bottom:3rem}.projects-index{flex-wrap:wrap}.projects-action a{white-space:normal}}
+</style>

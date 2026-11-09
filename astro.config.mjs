@@ -18,7 +18,7 @@ export default defineConfig({
       lastmod: new Date(),
       filter: (page) => {
         // Escludi /playground e /api/*
-        if (page.includes('/playground') || page.includes('/api/')) {
+        if (page.includes('/playground') || page.includes('/api/') || page.includes('/realizzazione-siti-web-sassari')) {
           return false;
         }
         return true;

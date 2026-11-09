@@ -38,7 +38,4 @@ Il ritmo delle pagine alterna sezioni più dense a spazi più aperti, creando un
 
 ## Output
 
-Il libro documenta l'esperienza didattica rendendola consultabile e fruibile. La struttura chiara e la presentazione curata facilitano la lettura e la comprensione del progetto, valorizzando sia il lavoro dei bambini che l'obiettivo educativo dell'iniziativa.
-
-Il prodotto finale funziona come documento del progetto e come strumento di divulgazione, permettendo di condividere e valorizzare l'esperienza oltre il contesto didattico originale.
-
+Il mio contributo editoriale comprende copertina, impaginazione interna, gerarchie tipografiche e organizzazione delle immagini. Il libro raccoglie gli elaborati dei bambini e documenta visivamente il percorso didattico.

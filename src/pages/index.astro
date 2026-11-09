@@ -1,258 +1,159 @@
 ---
-import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import ButtonLink from '../components/ButtonLink.astro';
-import Section from '../components/Section.astro';
-import Card from '../components/Card.astro';
 import Portrait from '../components/Portrait.astro';
-
-const caseStudies = await getCollection('case-studies');
-const sortedCaseStudies = caseStudies;
-const latestCaseStudies = sortedCaseStudies.slice(0, 6);
+import ButtonLink from '../components/ButtonLink.astro';
+import { portfolioProjects } from '../data/portfolioProjects';
 ---
 
-<Layout 
-	title="Web Designer Sassari | Portfolio e Case Study | Luca Sanna"
-	description="Portfolio di Luca Sanna, web designer e sviluppatore front-end a Sassari. Case study di progetti web, metodo di lavoro e competenze in UX/UI e identità visiva."
-	canonical="https://www.lucasanna.eu/"
+<Layout
+  title="Luca Sanna | Front-end Developer e UI/UX Designer"
+  description="Portfolio di Luca Sanna: sviluppo front-end con React, Astro e TypeScript, UI/UX design e case study di applicazioni e prodotti web."
+  canonical="https://www.lucasanna.eu/"
 >
-	<Header />
-	<main>
-		<!-- Hero - Tech Agency Premium -->
-		<section class="reveal relative hero-home pt-8 pb-10 md:pt-8 md:pb-12 overflow-hidden">
-			<!-- Radial glow background -->
-			<div 
-				class="absolute inset-0 pointer-events-none"
-				style="background: radial-gradient(circle at 30% 50%, rgb(var(--accent) / 0.08) 0%, transparent 60%), rgb(var(--paper));"
-			></div>
-			<div class="container-unified relative z-10">
-				<div class="heroGrid">
-					<div class="hero-text" style="max-width: 30rem;">
-						<!-- Tech chips/badges -->
-						<div class="flex flex-wrap items-center gap-2 mb-4">
-							<span class="tech-chip">Realizzazione siti web</span>
-							<span class="tech-chip">UX/UI Design</span>
-							<span class="tech-chip">SEO locale</span>
-							<span class="tech-chip">Identità visiva</span>
-						</div>
-						<h1 
-							class="font-bold mb-4"
-							style="font-size: clamp(2rem, 3.8vw, 4.5rem); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight); line-height: 1.1;"
-						>
-							Web designer a Sassari per siti web chiari, moderni e orientati ai risultati
-						</h1>
-						<p 
-							class="mb-6 text-lg md:text-xl"
-							style="font-size: clamp(1rem, 2.5vw, var(--text-xl)); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
-						>
-							Realizzazione siti web, UX/UI design, identità visiva e SEO locale per freelance, attività locali e piccole imprese: progetti digitali su misura, con interfacce curate e una presenza online efficace nel territorio di Sassari.
-						</p>
-						<div class="flex flex-col sm:flex-row gap-4 mb-4">
-							<ButtonLink href="/case-studies/" size="lg">Vedi i case study</ButtonLink>
-							<ButtonLink href="https://www.lswebagency.com/" variant="secondary" size="lg">
-								Visita LS Web Agency
-							</ButtonLink>
-						</div>
-						<p 
-							class="text-sm"
-							style="font-size: var(--text-sm); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
-						>
-							Risposta in 24–48h. Se non posso aiutarti, te lo dico subito.
-						</p>
-					</div>
-					<div class="hero-portrait">
-						<Portrait size="sm" variant="featured" eager={true} linkTo="/chi-sono/" />
-					</div>
-				</div>
-			</div>
-		</section>
+  <Header />
+  <main id="contenuto">
+    <section class="dev-hero">
+      <div class="container-unified dev-hero-grid">
+        <div class="dev-hero-copy">
+          <p class="dev-eyebrow">Luca Sanna <span aria-hidden="true">/</span> Front-end Developer &amp; UI Engineer</p>
+          <h1>Realizzo interfacce e applicazioni web, dal progetto al codice.</h1>
+          <p class="dev-intro">Sono un Front-end Developer e UI/UX Designer. Lavoro con JavaScript, React e Astro per progettare interfacce, dashboard e percorsi digitali, con attenzione ad accessibilità, prestazioni e integrazione con API e dati.</p>
+          <div class="dev-cta">
+            <ButtonLink href="/progetti/" size="lg">Esplora i progetti</ButtonLink>
+            <ButtonLink href="/contatti/" size="lg" variant="secondary">Proponi una collaborazione</ButtonLink>
+          </div>
+          <p class="dev-location">Sassari, Italia <span aria-hidden="true">·</span> Collaborazioni anche da remoto</p>
+          <nav class="dev-links" aria-label="Profili professionali">
+            <a href="https://github.com/LucaSannadesign" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/lucasanna-art/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <a href="mailto:info@lucasanna.eu">Email ↗</a>
+          </nav>
+        </div>
+        <aside class="dev-hero-card" aria-label="Identità professionale">
+          <div class="dev-card-head"><span class="dev-status-dot" aria-hidden="true"></span> Design e sviluppo <span>Portfolio</span></div>
+          <div class="dev-portrait"><Portrait size="sm" variant="featured" eager={true} linkTo="/chi-sono/" /></div>
+          <p class="dev-card-label">Il mio punto di incontro</p>
+          <div class="dev-skill-line"><span>01</span><strong>Esperienza utente</strong><small>UX / UI</small></div>
+          <div class="dev-skill-line"><span>02</span><strong>Implementazione</strong><small>FRONT-END</small></div>
+          <div class="dev-skill-line"><span>03</span><strong>Evoluzione del prodotto</strong><small>PRODUCT</small></div>
+        </aside>
+      </div>
+      <div class="container-unified dev-stack"><span>Focus tecnico</span><ul><li>JavaScript / TypeScript</li><li>React</li><li>Astro</li><li>HTML / CSS</li><li>API e dati</li><li>Accessibilità</li></ul></div>
+    </section>
 
-		<!-- Servizi -->
-		<Section variant="alt">
-			<div class="reveal mb-10 md:mb-12 max-w-3xl">
-				<h2
-					class="font-bold mb-4"
-					style="font-size: var(--text-4xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
-				>
-					Servizi
-				</h2>
-				<p style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);">
-					Web design e sviluppo per attività a Sassari e in Sardegna: dalla creazione del sito alla visibilità locale su Google.
-				</p>
-			</div>
-			<div class="stagger grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-				<div class="card-editorial reveal">
-					<h3
-						class="font-semibold mb-3"
-						style="font-size: var(--text-xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
-					>
-						Realizzazione siti web
-					</h3>
-					<p style="color: rgb(var(--muted)); line-height: var(--line-height-relaxed); font-size: var(--text-sm);">
-						Creazione e realizzazione siti web professionali, veloci e orientati alla conversione per imprese e professionisti a Sassari.
-					</p>
-					<a href="/realizzazione-siti-web-sassari/" class="link-editorial inline-block mt-3" style="font-size: var(--text-sm); color: rgb(var(--ink));">Scopri il servizio</a>
-				</div>
-				<div class="card-editorial reveal">
-					<h3
-						class="font-semibold mb-3"
-						style="font-size: var(--text-xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
-					>
-						UX/UI Design
-					</h3>
-					<p style="color: rgb(var(--muted)); line-height: var(--line-height-relaxed); font-size: var(--text-sm);">
-						Web design e interfacce UX/UI che rendono la navigazione intuitiva e valorizzano contenuti, servizi e obiettivi del cliente.
-					</p>
-				</div>
-				<div class="card-editorial reveal">
-					<h3
-						class="font-semibold mb-3"
-						style="font-size: var(--text-xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
-					>
-						SEO locale
-					</h3>
-					<p style="color: rgb(var(--muted)); line-height: var(--line-height-relaxed); font-size: var(--text-sm);">
-						Strategie SEO locali per migliorare la visibilità su Google nelle ricerche legate al territorio, ai servizi professionali e alle attività di Sassari.
-					</p>
-				</div>
-				<div class="card-editorial reveal">
-					<h3
-						class="font-semibold mb-3"
-						style="font-size: var(--text-xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
-					>
-						Identità visiva
-					</h3>
-					<p style="color: rgb(var(--muted)); line-height: var(--line-height-relaxed); font-size: var(--text-sm);">
-						Coerenza grafica tra sito, comunicazione e touchpoint digitali per un brand riconoscibile e professionale.
-					</p>
-				</div>
-			</div>
-		</Section>
+    <section class="dev-section dev-work" aria-labelledby="work-title">
+      <div class="container-unified">
+        <div class="dev-section-top">
+          <div><p class="dev-kicker">01 / Progetti in evidenza</p><h2 id="work-title">Applicazioni, percorsi utente e interfacce da esplorare.</h2></div>
+          <a class="dev-quiet-link" href="/progetti/">Tutti i progetti ↗</a>
+        </div>
+        <div class="dev-projects">
+          {portfolioProjects.map((project,index) => (
+            <article class="dev-project">
+              <div class="dev-project-meta"><span>0{index + 1}</span><span>{project.category}</span></div>
+              <h3>{project.title}</h3>
+              <p class="dev-project-sub">{project.descriptor}</p>
+              <p class="dev-project-intro">{project.intro}</p>
+              <ul class="dev-tags" aria-label="Tecnologie e competenze">{project.stack.slice(0,3).map(tag => <li>{tag}</li>)}</ul>
+              <a class="dev-project-link" href={'/progetti/' + project.slug + '/'} aria-label={'Leggi il case study ' + project.title}>Leggi il case study ↗</a>
+            </article>
+          ))}
+        </div>
+        <p class="dev-note">Progetti indipendenti, con diversi livelli di maturità. Nelle schede distinguo funzionalità realizzate, sviluppi in corso e verifiche ancora necessarie.</p>
+      </div>
+    </section>
 
-		<!-- Navigation Cards - Editorial Style -->
-		<Section>
-			<div class="stagger grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
-				<a href="/case-studies/" class="card-editorial reveal md:col-span-5 group" style="border-left: 3px solid rgb(var(--accent));">
-					<h2 
-						class="font-semibold mb-4 transition-colors"
-						style="font-size: var(--text-3xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
-					>
-						Case Studies
-					</h2>
-					<p 
-						class="mb-4"
-						style="color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
-					>
-						Progetti completati, obiettivi raggiunti e scelte progettuali documentate. Ogni case study racconta un percorso di scoperta e realizzazione.
-					</p>
-					<span class="link-editorial inline-block" style="font-size: var(--text-sm); color: rgb(var(--ink));">Esplora →</span>
-				</a>
-				<a href="/metodo/" class="card-editorial reveal md:col-span-4 group">
-					<h2 
-						class="font-semibold mb-4 transition-colors"
-						style="font-size: var(--text-3xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
-					>
-						Metodo
-					</h2>
-					<p 
-						class="mb-4"
-						style="color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
-					>
-						Come lavoro: ascolto, struttura, design, sviluppo e ottimizzazione. Un processo che mette al centro obiettivi e utenti.
-					</p>
-					<span class="link-editorial inline-block" style="font-size: var(--text-sm); color: rgb(var(--ink));">Scopri →</span>
-				</a>
-				<a href="/contatti/" class="card-editorial reveal md:col-span-3 group">
-					<h2 
-						class="font-semibold mb-4 transition-colors"
-						style="font-size: var(--text-3xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
-					>
-						Contatti
-					</h2>
-					<p 
-						class="mb-4"
-						style="color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
-					>
-						Per progetti personali, collaborazioni o scambi di idee. Rispondo entro 48 ore.
-					</p>
-					<span class="link-editorial inline-block" style="font-size: var(--text-sm); color: rgb(var(--ink));">Contattami →</span>
-				</a>
-			</div>
-		</Section>
+    <section class="dev-section dev-strengths" aria-labelledby="strengths-title">
+      <div class="container-unified">
+        <p class="dev-kicker">02 / Cosa porto in un team</p>
+        <h2 id="strengths-title">Dalla struttura dei dati agli stati dell’interfaccia.</h2>
+        <div class="dev-strength-grid">
+          <article><span>01 / BUILD</span><h3>Front-end development</h3><p>Componenti React e Astro, interazioni JavaScript, interfacce responsive e integrazione con API e servizi.</p></article>
+          <article><span>02 / DESIGN</span><h3>UI engineering</h3><p>Architettura informativa, design di componenti, stati di errore, microcopy e percorsi accessibili.</p></article>
+          <article><span>03 / QUALITY</span><h3>Qualità e manutenzione</h3><p>Semantica HTML, performance, test dei flussi critici e scelte che facilitano la manutenzione.</p></article>
+        </div>
+      </div>
+    </section>
 
-		<!-- Ultimi Case Studies -->
-			{latestCaseStudies.length > 0 && (
-			<Section>
-				<div class="reveal mb-12 md:mb-16">
-					<div class="flex items-center justify-between mb-6">
-						<h2 
-							class="font-bold"
-							style="font-size: var(--text-5xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
-						>
-							Ultimi Case Studies
-						</h2>
-						<div class="flex gap-3">
-							<ButtonLink href="/case-studies/" variant="secondary" size="sm">
-								Vedi tutti
-							</ButtonLink>
-							<ButtonLink href="/contatti/" variant="secondary" size="sm">
-								Contatti
-							</ButtonLink>
-						</div>
-					</div>
-					<p 
-						style="font-size: var(--text-lg); color: rgb(var(--muted)); max-width: 3xl;"
-					>
-						Selezione di progetti recenti che mostrano approcci, sfide e risultati.
-					</p>
-				</div>
-				<div class="stagger grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-					{latestCaseStudies.map((caseStudy, index) => (
-						<Card
-							href={`/case-studies/${caseStudy.slug}/`}
-							title={caseStudy.data.title}
-							sector={caseStudy.data.sector}
-							tags={caseStudy.data.tags}
-							variant={index === 0 ? 'featured' : 'default'}
-							cover={caseStudy.data.cover}
-						/>
-					))}
-				</div>
-			</Section>
-		)}
+    <section class="dev-section" aria-labelledby="about-title">
+      <div class="container-unified dev-about">
+        <div><p class="dev-kicker">03 / Profilo</p><h2 id="about-title">Un background visivo. Una pratica di sviluppo concreta.</h2></div>
+        <div class="dev-about-text">
+          <p>Il mio percorso nasce dalla comunicazione visiva e si sviluppa attraverso il web design e la programmazione front-end. Questa combinazione mi permette di ragionare sia sulle interfacce sia sulla loro implementazione.</p>
+          <p>Lavoro su progetti personali e professionali, dalla definizione del problema fino al rilascio e all'evoluzione. Mi interessa collaborare con team che cercano autonomia, rigore e attenzione alle persone che useranno il prodotto.</p>
+          <div class="dev-links"><a href="/chi-sono/">Il mio profilo ↗</a><a href="/case-studies/">Archivio dei lavori web e visual ↗</a></div>
+        </div>
+      </div>
+    </section>
 
-		<!-- CTA Finale -->
-		<Section>
-			<div class="reveal text-center max-w-3xl mx-auto">
-				<p 
-					class="mb-4"
-					style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
-				>
-					Questo sito raccoglie il portfolio personale e i case study di Luca Sanna. Per progetti commerciali, siti aziendali, SEO e consulenze continuative visita <a href="https://www.lswebagency.com/" class="link-editorial" style="color: rgb(var(--ink)); font-weight: var(--font-weight-medium);">LS Web Agency</a>.
-				</p>
-				<p 
-					style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
-				>
-					Per progetti personali o collaborazioni: <a href="/contatti/" class="link-editorial" style="color: rgb(var(--ink)); font-weight: var(--font-weight-medium);">contattami</a>.
-				</p>
-			</div>
-		</Section>
-	</main>
-	<Footer />
+    <section class="dev-section dev-end" aria-labelledby="end-title">
+      <div class="container-unified dev-end-inner">
+        <div><p class="dev-kicker">04 / Collaborazioni</p><h2 id="end-title">Un confronto sul prossimo prodotto.</h2><p>Sono interessato a ruoli e collaborazioni front-end con software house, team di prodotto e realtà digitali, anche da remoto.</p></div>
+        <ButtonLink href="/contatti/" variant="secondary" size="lg">Entriamo in contatto</ButtonLink>
+      </div>
+    </section>
+  </main>
+  <Footer />
 </Layout>
 
 <style>
-	@media (min-width: 768px) {
-		.hero-home .heroGrid {
-			gap: var(--space-8);
-			align-items: center;
-		}
-
-		.hero-home .hero-portrait {
-			margin-top: -2rem;
-			align-self: center;
-		}
-	}
+.dev-hero{padding:clamp(3.5rem,7vw,7rem) 0 0;background:radial-gradient(circle at 80% 18%,rgb(var(--accent)/.08),transparent 43%),rgb(var(--paper))}
+.dev-hero-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);gap:clamp(2.5rem,6vw,6rem);align-items:center}
+.dev-eyebrow,.dev-kicker{font-size:.76rem;letter-spacing:.13em;text-transform:uppercase;color:rgb(var(--accent));font-weight:700}
+.dev-eyebrow span{margin:0 .5rem;color:rgb(var(--muted))}
+.dev-hero h1{font-weight:700;letter-spacing:-.055em;line-height:1.035;max-width:13ch;font-size:clamp(2.9rem,6.3vw,6.2rem);color:rgb(var(--ink));margin:1.4rem 0}
+.dev-intro{font-size:clamp(1.04rem,1.65vw,1.25rem);line-height:1.67;max-width:58ch;color:rgb(var(--muted))}
+.dev-cta{display:flex;gap:.9rem;flex-wrap:wrap;margin:2.2rem 0 1.3rem}
+.dev-location{color:rgb(var(--muted));font-size:.89rem}
+.dev-location span{margin:0 .5rem}
+.dev-links{display:flex;flex-wrap:wrap;gap:1.5rem;margin-top:1.4rem}
+.dev-links a,.dev-quiet-link{font-size:.9rem;color:rgb(var(--ink));font-weight:600;text-decoration:none;border-bottom:1px solid rgb(var(--accent));padding-bottom:.28rem}
+.dev-links a:hover,.dev-quiet-link:hover,.dev-project-link:hover{color:rgb(var(--accent))}
+.dev-links a:focus-visible,.dev-quiet-link:focus-visible,.dev-project-link:focus-visible{outline:2px solid rgb(var(--accent));outline-offset:4px}
+.dev-hero-card{background:rgb(var(--surface));border:1px solid rgb(var(--border)/.28);border-radius:1.2rem;padding:1.15rem;box-shadow:0 30px 60px rgb(var(--ink)/.045)}
+.dev-card-head{display:flex;align-items:center;gap:.5rem;border-bottom:1px solid rgb(var(--border)/.25);padding:.5rem .25rem 1.1rem;font-size:.8rem;color:rgb(var(--ink));font-weight:600}
+.dev-card-head span:last-child{margin-left:auto;color:rgb(var(--muted));font-size:.72rem}
+.dev-status-dot{width:8px;height:8px;background:rgb(var(--accent));border-radius:50%;display:inline-block;flex:none}
+.dev-portrait{display:flex;align-items:center;justify-content:center;min-height:250px;padding:1rem 0}
+.dev-card-label{font-size:.72rem;color:rgb(var(--muted));letter-spacing:.12em;text-transform:uppercase;font-weight:700;padding-bottom:.7rem}
+.dev-skill-line{display:grid;grid-template-columns:1.5rem 1fr auto;align-items:center;gap:.5rem;padding:.85rem .15rem;border-top:1px solid rgb(var(--border)/.23)}
+.dev-skill-line span,.dev-skill-line small{font-size:.7rem;color:rgb(var(--muted))}
+.dev-skill-line strong{font-size:.95rem;font-weight:600;color:rgb(var(--ink))}
+.dev-stack{margin-top:4.5rem;padding:1.4rem 0;border-top:1px solid rgb(var(--border)/.22);display:flex;gap:2rem;align-items:center}
+.dev-stack>span{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgb(var(--muted));white-space:nowrap}
+.dev-stack ul{display:flex;gap:.7rem 1.6rem;flex-wrap:wrap;list-style:none;padding:0;margin:0;font-size:.84rem;font-weight:600;color:rgb(var(--ink))}
+.dev-section{padding:clamp(4.5rem,8vw,8rem) 0}
+.dev-section h2{font-size:clamp(2rem,4.4vw,3.8rem);font-weight:700;letter-spacing:-.045em;line-height:1.12;max-width:18ch;color:rgb(var(--ink));margin:1.15rem 0 0}
+.dev-section-top{display:flex;align-items:end;justify-content:space-between;gap:2rem;margin-bottom:2.75rem}
+.dev-projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.dev-project{border:1px solid rgb(var(--border)/.25);background:rgb(var(--surface));border-radius:1rem;padding:1.55rem;display:flex;flex-direction:column;min-height:390px;transition:transform .2s,border-color .2s}
+.dev-project:hover{transform:translateY(-3px);border-color:rgb(var(--accent)/.4)}
+.dev-project-meta{display:flex;justify-content:space-between;gap:.6rem;color:rgb(var(--muted));font-size:.73rem;line-height:1.4}
+.dev-project-meta span:first-child{font-size:.84rem;color:rgb(var(--accent));font-weight:700}
+.dev-project h3{font-weight:700;font-size:clamp(1.6rem,2.5vw,2.1rem);color:rgb(var(--ink));letter-spacing:-.04em;margin:2.5rem 0 .3rem}
+.dev-project-sub{font-size:.96rem;color:rgb(var(--ink));font-weight:600;line-height:1.5;margin-bottom:.65rem}
+.dev-project-intro{font-size:.88rem;color:rgb(var(--muted));line-height:1.65}
+.dev-tags{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:1.5rem 0}
+.dev-tags li{font-size:.72rem;color:rgb(var(--muted));border:1px solid rgb(var(--border)/.3);border-radius:99px;padding:.38rem .55rem}
+.dev-project-link{margin-top:auto;align-self:start;font-size:.88rem;font-weight:700;text-decoration:none;color:rgb(var(--ink));border-bottom:1px solid rgb(var(--accent));padding-bottom:.25rem}
+.dev-note{font-size:.8rem;line-height:1.6;color:rgb(var(--muted));margin-top:1.2rem}
+.dev-strengths{background:rgb(var(--surface))}
+.dev-strength-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem;margin-top:3.5rem}
+.dev-strength-grid article{padding-top:1.4rem;border-top:2px solid rgb(var(--accent))}
+.dev-strength-grid article>span{font-size:.72rem;font-weight:700;letter-spacing:.1em;color:rgb(var(--accent))}
+.dev-strength-grid h3{font-size:1.4rem;letter-spacing:-.025em;font-weight:700;color:rgb(var(--ink));margin:.9rem 0}
+.dev-strength-grid p{color:rgb(var(--muted));line-height:1.65}
+.dev-about{display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,7vw,8rem)}
+.dev-about-text>p{font-size:1.07rem;color:rgb(var(--muted));line-height:1.75;margin-bottom:1rem}
+.dev-end{background:rgb(var(--ink))}
+.dev-end-inner{display:flex;gap:3rem;align-items:center;justify-content:space-between}
+.dev-end .dev-kicker{color:rgb(var(--paper)/.7)}
+.dev-end h2{color:rgb(var(--paper))}
+.dev-end p:not(.dev-kicker){color:rgb(var(--paper)/.75);margin-top:1rem}
+.dev-end :global(.button-link){flex-shrink:0;background:rgb(var(--paper));color:rgb(var(--ink));border-color:rgb(var(--paper))}
+@media(max-width:980px){.dev-hero-grid{grid-template-columns:1fr}.dev-hero-card{max-width:550px}.dev-projects{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.dev-hero{padding-top:3rem}.dev-hero h1{font-size:clamp(2.6rem,11vw,4rem)}.dev-stack{flex-direction:column;align-items:start;gap:.7rem;margin-top:3rem}.dev-projects,.dev-strength-grid,.dev-about{grid-template-columns:1fr}.dev-section-top,.dev-end-inner{align-items:start;flex-direction:column}.dev-project{min-height:330px}.dev-portrait{min-height:220px}}
+@media(prefers-reduced-motion:reduce){.dev-project{transition:none}.dev-project:hover{transform:none}}
 </style>
