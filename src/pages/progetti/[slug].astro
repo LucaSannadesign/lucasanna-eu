@@ -1,0 +1,116 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { portfolioProjects } from '../../data/portfolioProjects';
+import type { PortfolioProject } from '../../data/portfolioProjects';
+
+export function getStaticPaths() {
+  return portfolioProjects.map(project => ({
+    params: { slug: project.slug },
+    props: { project }
+  }));
+}
+const { project } = Astro.props as { project: PortfolioProject };
+const currentIndex = portfolioProjects.findIndex(p => p.slug === project.slug);
+const nextProject = portfolioProjects[(currentIndex+1) % portfolioProjects.length];
+---
+
+<Layout
+  title={project.title + ' | Case study di sviluppo e UI engineering'}
+  description={project.title + ': ' + project.descriptor + ' Case study tecnico di Luca Sanna fra esperienza utente, front-end e progettazione di prodotto.'}
+  canonical={'https://www.lucasanna.eu/progetti/' + project.slug + '/'}
+>
+  <Header />
+  <main id="contenuto">
+    <section class="project-hero">
+      <div class="container-unified">
+        <a class="project-back" href="/progetti/">← Tutti i progetti</a>
+        <div class="project-hero-content">
+          <div>
+            <p class="project-eyebrow">{project.category} <span aria-hidden="true">/</span> {project.year}</p>
+            <h1>{project.title}</h1>
+            <p class="project-subtitle">{project.descriptor}</p>
+          </div>
+          <aside class="project-facts" aria-label="Dettagli del progetto">
+            <div><span>Ambito</span><strong>{project.category}</strong></div>
+            <div><span>Stato</span><strong>{project.status}</strong></div>
+            <div><span>Anno</span><strong>{project.year}</strong></div>
+          </aside>
+        </div>
+        <p class="project-intro">{project.intro}</p>
+      </div>
+    </section>
+
+    <section class="project-story">
+      <div class="container-unified">
+        <div class="project-row">
+          <h2>01 / Il problema</h2>
+          <div><p>{project.problem}</p></div>
+        </div>
+        <div class="project-row">
+          <h2>02 / Scelte di prodotto e UX</h2>
+          <div><ul>{project.approach.map(item => <li>{item}</li>)}</ul></div>
+        </div>
+        <div class="project-row">
+          <h2>03 / Implementazione</h2>
+          <div>
+            <ul>{project.implementation.map(item => <li>{item}</li>)}</ul>
+            <h3>Tecnologie e competenze</h3>
+            <ul class="project-tech" aria-label="Stack e competenze">{project.stack.map(item => <li>{item}</li>)}</ul>
+          </div>
+        </div>
+        <div class="project-row">
+          <h2>04 / Cosa mostra questo lavoro</h2>
+          <div>
+            <p>{project.learning}</p>
+            <p class="project-disclosure">Questo è un case study professionale sul processo di progettazione e sviluppo. Non è una pagina di vendita e non presenta stime o risultati commerciali non verificati.</p>
+            {project.demoUrl && <a class="project-live" href={project.demoUrl} target="_blank" rel="noopener noreferrer">{project.demoLabel ?? 'Visita il progetto'} <span aria-hidden="true">↗</span></a>}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-next">
+      <div class="container-unified">
+        <p>Prossimo case study</p>
+        <a href={'/progetti/' + nextProject.slug + '/'} aria-label={'Esplora il progetto ' + nextProject.title}>{nextProject.title} <span aria-hidden="true">↗</span></a>
+        <div><a href="/contatti/">Parliamo di una collaborazione →</a></div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+<style>
+.project-hero{padding:clamp(3rem,7vw,6rem) 0 4.5rem;background:radial-gradient(circle at 84% 15%,rgb(var(--accent)/.08),transparent 45%)}
+.project-back{color:rgb(var(--muted));font-size:.86rem;text-decoration:none;border-bottom:1px solid rgb(var(--border));padding-bottom:.3rem}
+.project-back:hover,.project-live:hover{color:rgb(var(--accent))}
+.project-back:focus-visible,.project-live:focus-visible,.project-next a:focus-visible{outline:2px solid rgb(var(--accent));outline-offset:4px}
+.project-hero-content{display:grid;grid-template-columns:minmax(0,1fr) minmax(200px,.35fr);gap:3rem;align-items:end;margin-top:3.5rem}
+.project-eyebrow{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgb(var(--accent));margin-bottom:1.2rem}
+.project-eyebrow span{margin:0 .5rem;color:rgb(var(--muted))}
+.project-hero h1{font-size:clamp(3.6rem,8vw,7.5rem);font-weight:700;letter-spacing:-.06em;line-height:1.02;color:rgb(var(--ink))}
+.project-subtitle{font-size:clamp(1.25rem,2.3vw,1.9rem);font-weight:600;letter-spacing:-.025em;margin-top:1.4rem;max-width:31ch;color:rgb(var(--ink))}
+.project-facts{border-top:1px solid rgb(var(--border)/.3)}
+.project-facts div{display:flex;justify-content:space-between;align-items:start;gap:.7rem;border-bottom:1px solid rgb(var(--border)/.3);padding:.8rem 0;font-size:.8rem}
+.project-facts span{color:rgb(var(--muted))}
+.project-facts strong{text-align:right;color:rgb(var(--ink));font-weight:600;max-width:22ch}
+.project-intro{font-size:clamp(1.07rem,2vw,1.4rem);line-height:1.75;max-width:70ch;margin-top:3rem;color:rgb(var(--muted))}
+.project-story{padding:1rem 0 6rem}
+.project-row{display:grid;grid-template-columns:minmax(170px,.45fr) minmax(0,1fr);gap:clamp(2rem,6vw,7rem);border-top:1px solid rgb(var(--border)/.35);padding:3rem 0}
+.project-row h2{font-size:clamp(1.05rem,1.7vw,1.3rem);font-weight:700;color:rgb(var(--ink));letter-spacing:-.025em}
+.project-row h3{font-size:1.07rem;font-weight:700;color:rgb(var(--ink));margin:2rem 0 .8rem}
+.project-row p,.project-row li:not(.project-tech li){color:rgb(var(--muted));font-size:1.06rem;line-height:1.75;max-width:70ch}
+.project-row ul:not(.project-tech){padding-left:1.3rem;display:grid;gap:1rem}
+.project-row li::marker{color:rgb(var(--accent))}
+.project-row .project-tech{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.55rem}
+.project-tech li{font-size:.78rem;color:rgb(var(--ink));border:1px solid rgb(var(--border)/.35);padding:.4rem .7rem;border-radius:99px}
+.project-row .project-disclosure{font-size:.87rem;color:rgb(var(--muted));border-left:3px solid rgb(var(--accent));padding-left:1rem;margin-top:1.5rem}
+.project-live{display:inline-block;margin-top:1.8rem;color:rgb(var(--ink));font-weight:700;font-size:.92rem;text-decoration:none;border-bottom:2px solid rgb(var(--accent));padding-bottom:.4rem}
+.project-next{background:rgb(var(--surface));padding:4.5rem 0 6rem}
+.project-next p{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:rgb(var(--accent));font-weight:700}
+.project-next a{display:inline-block;margin:1rem 0;text-decoration:none;font-size:clamp(2rem,4vw,3.4rem);font-weight:700;letter-spacing:-.04em;color:rgb(var(--ink))}
+.project-next a:hover{color:rgb(var(--accent))}
+.project-next div a{font-size:.93rem;letter-spacing:0;border-bottom:1px solid rgb(var(--accent));margin-top:1.5rem}
+@media(max-width:700px){.project-hero-content,.project-row{grid-template-columns:1fr}.project-hero-content{gap:2rem}.project-row{gap:1.3rem;padding:2.2rem 0}.project-story{padding-bottom:3rem}.project-facts{max-width:500px}}
+</style>
