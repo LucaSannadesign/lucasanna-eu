@@ -2,156 +2,74 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import Section from '../components/Section.astro';
 ---
-
-<Layout 
-	title="Metodo di lavoro | UX, accessibilità e performance"
-	description="Dal brief alla pubblicazione: metodo di lavoro per siti web chiari, accessibili, performanti e orientati agli obiettivi."
-	canonical="https://www.lucasanna.eu/metodo/"
+<Layout
+  title="Metodo di sviluppo | Front-end, UI e qualità"
+  description="Come lavoro su progetti digitali: analisi del problema, UX/UI, sviluppo front-end, test e miglioramento continuo."
+  canonical="https://www.lucasanna.eu/metodo/"
 >
-	<Header />
-	<main>
-		<Section narrow>
-			<div class="reveal mb-12 md:mb-16">
-				<div class="max-w-3xl">
-					<h1 
-						class="font-bold mb-6"
-						style="font-size: var(--text-5xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight); line-height: var(--line-height-tight);"
-					>
-						Metodo
-					</h1>
-					<p 
-						style="font-size: var(--text-xl); color: rgb(var(--muted)); line-height: var(--line-height-relaxed);"
-					>
-						Come lavoro: un processo che parte dall'ascolto e arriva alla pubblicazione, passando per struttura, design e sviluppo. Ogni fase è pensata per costruire soluzioni che rispondano davvero alle necessità.
-					</p>
-				</div>
-			</div>
-
-			<div class="space-y-16 md:space-y-20">
-				<div style="border-left: 2px solid rgb(var(--border) / 0.15); padding-left: var(--space-8);">
-					<h2 
-						class="font-semibold mb-4"
-						style="font-size: var(--text-3xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
-					>
-						Ascolto
-					</h2>
-					<div style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed); max-width: 65ch;">
-						<p class="mb-4">
-							Prima di iniziare, analizzo obiettivi, pubblico e contesto. Ascolto le esigenze e identifico le sfide principali. Questa fase è fondamentale per costruire soluzioni che rispondano davvero alle necessità, non solo a quello che sembra necessario a prima vista.
-						</p>
-						<p>
-							Lavoro da anni con realtà locali e progetti da remoto. Ogni contesto ha le sue specificità: le capisco prima di proporre soluzioni.
-						</p>
-					</div>
-				</div>
-
-				<div style="border-left: 2px solid rgb(var(--border) / 0.15); padding-left: var(--space-8);">
-					<h2 
-						class="font-semibold mb-4"
-						style="font-size: var(--text-3xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
-					>
-						Struttura e contenuti
-					</h2>
-					<div style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed); max-width: 65ch;">
-						<p class="mb-4">
-							Definisco l'architettura dell'informazione e la gerarchia dei contenuti. Penso all'esperienza utente e a come guidare il visitatore verso gli obiettivi. La struttura è la base su cui costruire tutto il resto: se è solida, il resto funziona meglio.
-						</p>
-						<p class="mb-4">
-							<strong style="color: rgb(var(--ink));">Testi e struttura li costruisco io.</strong> Competenze specifiche in copywriting orientato alla conversione, tono di voce e microcopy UI. Ogni testo è pensato per guidare l'utente verso l'azione, senza essere invasivo. Microcopy che chiarisce, rassicura e facilita la navigazione.
-						</p>
-						<p>
-							Mappo i percorsi utente, identifico le azioni principali e organizzo i contenuti in modo logico e accessibile. Niente menu complessi o sezioni nascoste: tutto deve essere chiaro fin da subito.
-						</p>
-					</div>
-				</div>
-
-				<div style="border-left: 2px solid rgb(var(--border) / 0.15); padding-left: var(--space-8);">
-					<h2 
-						class="font-semibold mb-4"
-						style="font-size: var(--text-3xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
-					>
-						Design
-					</h2>
-					<div style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed); max-width: 65ch;">
-						<p class="mb-4">
-							Progetto interfacce chiare e funzionali. Prediligo un design minimalista che metta al centro i contenuti. Ogni elemento ha uno scopo preciso e contribuisce a creare un'esperienza coerente e piacevole.
-						</p>
-						<p>
-							Il design non è decorazione: è comunicazione. Scelgo tipografia, spaziature e colori in funzione della leggibilità e dell'accessibilità, non delle mode del momento.
-						</p>
-					</div>
-				</div>
-
-				<div style="border-left: 2px solid rgb(var(--border) / 0.15); padding-left: var(--space-8);">
-					<h2 
-						class="font-semibold mb-4"
-						style="font-size: var(--text-3xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
-					>
-						Sviluppo
-					</h2>
-					<div style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed); max-width: 65ch;">
-						<p class="mb-4">
-							Sviluppo con attenzione alle performance, accessibilità e SEO. Uso tecnologie moderne ma consolidate, evitando framework pesanti quando non servono. Il codice deve essere pulito, mantenibile e veloce.
-						</p>
-						<p>
-							Ogni sito deve funzionare su qualsiasi dispositivo, essere accessibile a tutti e caricarsi rapidamente. Questi non sono optional: sono requisiti di base.
-						</p>
-					</div>
-				</div>
-
-				<div style="border-left: 2px solid rgb(var(--border) / 0.15); padding-left: var(--space-8);">
-					<h2 
-						class="font-semibold mb-4"
-						style="font-size: var(--text-3xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
-					>
-						Ottimizzazione
-					</h2>
-					<div style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed); max-width: 65ch;">
-						<p class="mb-4">
-							Prima della pubblicazione, ottimizzo immagini, codice e configurazioni. Verifico accessibilità, performance e compatibilità. Niente va online senza essere stato testato e ottimizzato.
-						</p>
-						<p>
-							Dopo la pubblicazione, monitoro e ottimizzo in base ai feedback e ai dati reali. Un sito non è mai "finito": evolve in base alle necessità.
-						</p>
-					</div>
-				</div>
-
-				<div 
-					style="border-left: 4px solid rgb(var(--accent)); padding: var(--space-8); background: rgb(var(--accent) / 0.03); margin-left: calc(-1 * var(--space-8)); padding-right: var(--space-8);"
-				>
-					<h2 
-						class="font-semibold mb-4"
-						style="font-size: var(--text-3xl); color: rgb(var(--ink)); letter-spacing: var(--letter-spacing-tight);"
-					>
-						Consegna
-					</h2>
-					<div style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed); max-width: 65ch;">
-						<p class="mb-4">
-							Consegno un sito funzionante, documentato e pronto all'uso. Fornisco le credenziali e una guida rapida per gestire contenuti e aggiornamenti base. Il cliente deve essere autonomo nelle operazioni quotidiane.
-						</p>
-						<p>
-							Per aggiornamenti più complessi o manutenzione, possiamo concordare un supporto continuativo. Non vendo pacchetti a priori: valutiamo insieme cosa serve davvero.
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="mt-16 md:mt-20 pt-8 md:pt-12" style="border-top: 1px solid rgb(var(--border) / 0.15);">
-				<div style="font-size: var(--text-lg); color: rgb(var(--muted)); line-height: var(--line-height-relaxed); max-width: 65ch;">
-					<p class="mb-4">
-						<strong style="color: rgb(var(--ink));">Cosa serve per iniziare?</strong> Una direzione (obiettivi e pubblico). Testi e struttura li costruisco io: copywriting orientato alla conversione, tono di voce, microcopy UI e basi SEO. Tu mi dai il contesto: io lo trasformo in pagine chiare, credibili e misurabili.
-					</p>
-					<p class="mb-6">
-						<strong style="color: rgb(var(--ink));">Tempi?</strong> Dipendono dalla complessità. Un sito semplice può essere pronto in 3-4 settimane, progetti più articolati richiedono più tempo. Preferisco qualità e attenzione ai dettagli rispetto alla velocità.
-					</p>
-					<p>
-						Per un preventivo e dettagli dei servizi: <a href="https://www.lswebagency.com" class="link-editorial" style="color: rgb(var(--ink)); font-weight: var(--font-weight-medium);">LS Web Agency</a>.
-					</p>
-				</div>
-			</div>
-		</Section>
-	</main>
-	<Footer />
+  <Header />
+  <main id="contenuto">
+    <section class="method-hero">
+      <div class="container-unified">
+        <p class="method-kicker">Processo / Dal problema alla soluzione</p>
+        <h1>Un metodo che tiene insieme persone, interfacce e codice.</h1>
+        <p class="method-lead">Non considero design e sviluppo come fasi separate che si passano il lavoro. Le decisioni sull'esperienza utente influenzano il codice, e i vincoli tecnici aiutano a costruire interfacce migliori.</p>
+      </div>
+    </section>
+    <section class="method-list">
+      <div class="container-unified">
+        <article>
+          <span>01 / DISCOVERY</span>
+          <div><h2>Comprendere il problema</h2><p>Identifico obiettivi, vincoli, utenti e flussi importanti. Distinguo ciò che sappiamo da ciò che dobbiamo verificare: in questo modo le scelte progettuali hanno un motivo chiaro.</p></div>
+        </article>
+        <article>
+          <span>02 / STRUCTURE</span>
+          <div><h2>Organizzare l'esperienza</h2><p>Definisco gerarchie, contenuti, navigazione, stati, errori e microcopy. Progetto anche ciò che accade quando i dati non sono disponibili o un'azione non può andare a buon fine.</p></div>
+        </article>
+        <article>
+          <span>03 / INTERFACE</span>
+          <div><h2>Progettare componenti coerenti</h2><p>Traduco la direzione visiva in pattern riutilizzabili, tipografia leggibile, spaziature coerenti e comportamenti responsive. Accessibilità e chiarezza fanno parte del progetto fin dall'inizio.</p></div>
+        </article>
+        <article>
+          <span>04 / BUILD</span>
+          <div><h2>Sviluppare e integrare</h2><p>Realizzo l'interfaccia con tecnologie adeguate al contesto, dal markup semantico ai componenti interattivi. Dedico attenzione al confine fra front-end, API, dati e autorizzazioni.</p></div>
+        </article>
+        <article>
+          <span>05 / VERIFY</span>
+          <div><h2>Verificare i percorsi critici</h2><p>Controllo i flussi principali, i casi di errore, l'utilizzo da mobile e la leggibilità. Dove il progetto lo prevede, affianco verifiche automatiche e controlli manuali prima del rilascio.</p></div>
+        </article>
+        <article>
+          <span>06 / ITERATE</span>
+          <div><h2>Migliorare senza perdere controllo</h2><p>Raccolgo evidenze, documento le scelte e intervengo per priorità. Preferisco evoluzioni verificabili e manutenibili a cambiamenti che complicano il prodotto senza migliorarlo.</p></div>
+        </article>
+      </div>
+    </section>
+    <section class="method-cta">
+      <div class="container-unified">
+        <h2>Il metodo si vede nei progetti.</h2>
+        <p>Le schede raccontano scelte di interfaccia e implementazione, senza confondere lavoro tecnico, prodotto e promesse commerciali.</p>
+        <div><a href="/progetti/">Esplora i progetti ↗</a><a href="/contatti/">Valuta una collaborazione ↗</a></div>
+      </div>
+    </section>
+  </main>
+  <Footer />
 </Layout>
+<style>
+.method-hero{padding:clamp(4rem,8vw,8rem) 0 5rem;background:radial-gradient(circle at 85% 15%,rgb(var(--accent)/.09),transparent 45%)}
+.method-kicker,.method-list article>span{color:rgb(var(--accent));font-size:.77rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.method-hero h1{font-size:clamp(2.8rem,6vw,5.8rem);font-weight:700;letter-spacing:-.055em;line-height:1.06;color:rgb(var(--ink));max-width:16ch;margin:1.1rem 0 1.6rem}
+.method-lead{font-size:clamp(1.08rem,2vw,1.4rem);line-height:1.7;color:rgb(var(--muted));max-width:68ch}
+.method-list{padding:1rem 0 6rem}
+.method-list article{display:grid;grid-template-columns:minmax(150px,.35fr) minmax(0,1fr);gap:clamp(2rem,6vw,7rem);border-top:1px solid rgb(var(--border)/.3);padding:3rem 0}
+.method-list h2{font-size:clamp(1.6rem,3vw,2.6rem);font-weight:700;letter-spacing:-.04em;color:rgb(var(--ink));margin-bottom:1rem}
+.method-list article p{font-size:1.05rem;line-height:1.76;color:rgb(var(--muted));max-width:68ch}
+.method-cta{padding:5rem 0 6rem;background:rgb(var(--surface))}
+.method-cta h2{font-size:clamp(2rem,4vw,3.5rem);font-weight:700;line-height:1.1;letter-spacing:-.045em;color:rgb(var(--ink));max-width:22ch}
+.method-cta p{font-size:1.05rem;line-height:1.7;color:rgb(var(--muted));margin:1.5rem 0;max-width:60ch}
+.method-cta div div{display:flex;gap:1.5rem;flex-wrap:wrap}
+.method-cta a{color:rgb(var(--ink));font-size:.9rem;font-weight:700;text-decoration:none;border-bottom:1px solid rgb(var(--accent));padding-bottom:.3rem}
+.method-cta a:hover{color:rgb(var(--accent))}
+.method-cta a:focus-visible{outline:2px solid rgb(var(--accent));outline-offset:4px}
+@media(max-width:680px){.method-list article{grid-template-columns:1fr;gap:1.3rem;padding:2rem 0}}
+</style>
