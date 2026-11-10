@@ -15,13 +15,11 @@ export default defineConfig({
     sitemap({
       changefreq: "monthly",
       priority: 0.7,
-      lastmod: new Date(),
       filter: (page) => {
-        // Escludi /playground e /api/*
-        if (page.includes('/playground') || page.includes('/api/') || page.includes('/realizzazione-siti-web-sassari')) {
-          return false;
-        }
-        return true;
+        const pathname = new URL(page).pathname.replace(/\/?$/, '/');
+        // Non inserire in sitemap pagine di servizio interno, 404 o redirect 301.
+        return !['/404/', '/playground/', '/realizzazione-siti-web-sassari/'].includes(pathname)
+          && !pathname.startsWith('/api/');
       },
     }),
   ],
